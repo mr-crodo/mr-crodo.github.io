@@ -19,13 +19,13 @@ body {
     /* background-color: #1e4776; */
 
     /* sdes stavim fon */
-    /* background-image: url(/img/header-bg.jpg); */
+    background-image: url(/img/header-bg.jpg);
     /* ctob fon ne povtoralsa */
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     /* pozicioniruem eqo po centru */
-    /* background-position: center; */
+    background-position: center;
     /* rastagivaem izobrojeni tak ctob foto ne teralo svoystv */
-    /* background-size: cover; */
+    background-size: cover;
     
 }
 
