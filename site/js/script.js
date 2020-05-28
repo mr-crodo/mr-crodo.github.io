@@ -9,5 +9,5 @@ $(window).on("load", function () {
   $("a[rel='m_PageScroll2id']").mPageScroll2id();
 
   // Video bacground vide.js
-  $('#header').vide('/video/girls');
+  $('#header').vide('./site/video/girls');
 });
