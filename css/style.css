@@ -17,17 +17,6 @@ body {
     height: 100vh;
     /* Viewport Height - Visota vyuporta (okna) */
     
-    
-/*     background-color: #1e4776; */
-    
-    /* sdes stavim fon */
-/*     background-image: url(/img/header-bg.jpg); */
-    /* ctob fon ne povtoralsa */
-/*     background-repeat: no-repeat; */
-    /* pozicioniruem eqo po centru */
-/*     background-position: center; */
-    /* rastagivaem izobrojeni tak ctob foto ne teralo svoystv */
-/*     background-size: cover; */
 }
 
 .header-title {
