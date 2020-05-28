@@ -16,6 +16,17 @@ body {
     width: 100%;
     height: 100vh;
     
+    /* background-color: #1e4776; */
+
+    /* sdes stavim fon */
+    /* background-image: url(/img/header-bg.jpg); */
+    /* ctob fon ne povtoralsa */
+    /* background-repeat: no-repeat; */
+    /* pozicioniruem eqo po centru */
+    /* background-position: center; */
+    /* rastagivaem izobrojeni tak ctob foto ne teralo svoystv */
+    /* background-size: cover; */
+    
 }
 
 .header-title {
