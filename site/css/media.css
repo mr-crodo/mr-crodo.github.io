@@ -1,0 +1,166 @@
+/* Media zapros: dla ekranov shirinoy do 1110px */
+@media (max-width: 1140px) {
+  /* .header-title {}
+
+  .header-subtitle {} */
+
+  .cards {
+    width: calc(50% - 15px);
+  }
+
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  /* Footer */
+  .footer-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-row>*+* {
+    margin-bottom: 50px;
+  }
+
+  .footer-icons-list {
+    justify-content: center;
+    /* border: 1px solid green; */
+    /* margin-left: 30px; */
+
+  }
+
+  .footer-copyright-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .footer-copyright p {
+    font-size: 14px;
+  }
+
+  .footer-contacts {
+    font-size: 14px;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 19px;
+    text-align: center;
+    max-width: 350px;
+  }
+
+  .footer-icons p {
+    font-size: 14px;
+  }
+
+  /* .footer-contacts p {
+    font-size: 14px;
+    margin: 0;
+  } */
+
+
+}
+
+@media (max-width: 760px) {
+
+  /* Header */
+  .header-title {
+    font-size: 32px;
+  }
+
+  .header-subtitle {
+    font-size: 14px;
+  }
+
+  /* Portfolio */
+  .portfolio {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  .section-header {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-cards-wrapper {
+    justify-content: center;
+  }
+
+  .cards {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .cards:nth-last-child(2) {
+    margin-bottom: 30px;
+  }
+
+  .card-img {
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .cards p {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+  /* Footer  */
+
+  /* Footer */
+  .footer-row {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-row>*+* {
+    margin-bottom: 50px;
+  }
+
+  /* .footer-social-icons {
+    max-width: 290px;
+    border: 1px solid rgb(21, 255, 0);
+  } */
+
+  .footer-icons-list {
+    justify-content: center;
+
+  }
+
+  .footer-copyright-name {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .footer-copyright p {
+    font-size: 14px;
+  }
+
+  .footer-contacts {
+    font-size: 14px;
+  }
+
+  .footer-contacts p {
+    font-size: 14px;
+    margin: 0;
+    margin-top: 19px;
+  }
+
+  .footer-icons p {
+    font-size: 14px;
+  }
+
+  /* .footer-contacts p {
+    font-size: 14px;
+    margin: 0;
+  } */
+}
