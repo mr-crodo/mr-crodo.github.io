@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distance</title>
+  <link rel="stylesheet" href="//f-book/css/normalize.css">
+  <link rel="stylesheet" href="//f-book/css/style.css">
+  <link rel="stylesheet" href="//f-book/fonts/SF-Font-Pro.dmg">
+  <link rel="stylesheet" href="//f-book/css/media.css">
+
+  <link rel="shorcut icon" type="image/x-icon" href="//f-book/img/facebook.png">
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+
+<body>
+
+  <!--........................................................ 
+
+HEADER ili Shapka PRofila
+
+  ............................................................. -->
+
+  <header class="header">
+
+    <div class="header-block">
+
+      <!-- mobilnoe menu -->
+      <button class="m-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </button>
+
+
+
+      <div class="search">
+
+        <!-- Sdes budet ikonka poiska -->
+
+        <!-- 1111111111111111111111111111111111111111111111111111111 -->
+        <!-- Sdes mi opisivaem poisk -->
+
+        <form action="#" class="m-search">
+          <!-- eto svg kod kotoriy mi vzali s Figma pri najatiyi pravoy knopki
+           mishi i vibrali COPY/PASTE as SVG
+        notification eto uvedomleniya -->
+          <!-- <span class="m-search-title"></span> -->
+          <svg class="m-search-svg">
+            <use xlink:href="/f-book/svg/icons.svg#m-search-icon-m"></use>
+          </svg>
+
+          <input type="text" name="search" class="search-input" placeholder="Search...">
+
+          <button class="m-search-button" type="submit">
+            <svg class="m-search-svg-button">
+              <use xlink:href="/f-book/svg/icons.svg#m-search-icon-m"></use>
+            </svg>
+          </button>
+
+        </form>
+
+
+        <!-- 111111111111111111111111111111111111111111111111111111111 -->
+
+        <!-- Sdes konec ikonki poiska -->
+
+
+
+      </div>
+
+      <!-- Sdes budem opisivat vexnuyu navigaciyu -->
+      <div class="navigation">
+        <div class="user">
+          <img src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="avatar" class="user-avatar">
+          <span class="user-name">Nasib</span>
+        </div>
+        <nav class="navigation-panel">
+          <a href="#" class="navigation-link">Home</a>
+          <a href="#" class="navigation-link">Create</a>
+        </nav>
+        <div class="icons-panel">
+
+          <!-- sdes budut vstavlatsa ikonki -->
+          <a href="#" class="icon-link">
+            <!-- eto svg kod kotoriy mi vzali s Figma pri najatiyi pravoy knopki
+               mishi i vibrali COPY/PASTE as SVG -->
+
+            <!-- notification eto uvedomleniya -->
+            <span class="notification">2</span>
+            <svg width="24" height="24" class="header-icon">
+              <use xlink:href="/f-book/svg/icons.svg#users"></use>
+            </svg>
+
+          </a>
+
+          <a href="#" class="icon-link">
+
+            <!-- notification eto uvedomleniya -->
+            <span class="notification">3</span>
+            <svg width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#chat"></use>
+            </svg>
+
+          </a>
+
+          <a href="#" class="icon-link">
+
+            <!-- notification eto uvedomleniya -->
+            <span class="notification">8</span>
+            <svg width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#bell-icon">
+
+              </use>
+            </svg>
+
+          </a>
+
+          <a href="#" class="icon-link">
+            <svg width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#info-icons">
+
+              </use>
+            </svg>
+
+
+
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+
+
+
+  <!--........................................................ 
+
+Main and Side Bar
+
+  ............................................................. -->
+
+  <div class="container">
+    <div class="menu-sidebar">
+      <!-- suda mi skopirovali blok User kotoriy u nas uje bil -->
+
+      <div class="user">
+        <img src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="avatar" class="user-avatar">
+        <span class="user-name">Nasib Mammadli</span>
+      </div>
+
+      <!-- / .user  -->
+
+      <nav class="nav-group">
+
+        <!-- 1 kompanent bloka -->
+
+        <a href="#" class="nav-link active">
+          <svg width="24" height="24" class="header-icon">
+            <use xlink:href="/f-book/svg/icons.svg#news">
+
+            </use>
+          </svg>
+
+          <span class="nav-text">News Feed</span>
+        </a>
+        <!-- 2 kompanent bloka -->
+        <a href="#" class="nav-link">
+
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#message">
+
+            </use>
+          </svg>
+          <span class="nav-text">Messages</span>
+        </a>
+
+        <!-- 3 kompanent bloka -->
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#market">
+
+            </use>
+          </svg>
+
+
+          <span class="nav-text">Marketplace</span>
+        </a>
+
+
+
+      </nav>
+
+      <!-- Nav 2 side bar -->
+
+      <nav class="nav-group">
+        <h3 class="nav-title">Shortcuts</h3>
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#cup">
+
+            </use>
+          </svg>
+          <span class="nav-text">Product Design</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#cup">
+
+            </use>
+          </svg>
+          <span class="nav-text">UX & UI</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#cup">
+
+            </use>
+          </svg>
+          <span class="nav-text">Figma</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#cup">
+
+            </use>
+          </svg>
+          <span class="nav-text">Ant Design</span>
+        </a>
+      </nav>
+
+      <!--  3 blok side bar -->
+
+      <nav class="nav-group">
+        <h3 class="nav-title">Explore</h3>
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#pages">
+
+            </use>
+          </svg>
+
+          <span class="nav-text">Pages</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#grups">
+
+            </use>
+          </svg>
+
+          <span class="nav-text">Groups</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#events">
+
+            </use>
+          </svg>
+
+          <span class="nav-text">Events</span>
+        </a>
+
+        <a href="#" class="nav-link">
+          <svg width="24" height="24" class=header-icon>
+            <use xlink:href="/f-book/svg/icons.svg#games">
+
+            </use>
+          </svg>
+
+          <span class="nav-text">Games</span>
+        </a>
+      </nav>
+    </div>
+    <!-- /.menu-sidebar -->
+
+    <div class="main-feed">
+      <!-- Prover Sdesa -->
+      <div class="create-post">
+        <div class="create-post-header">
+          <h4 class="create-post-title">Create post</h4>
+        </div>
+        <!-- /.header -->
+        <div class="create-post-body">
+          <img src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="" class="user-avatar">
+          <div class="create-post-input" contenteditable="true">What’s on your mind, Nasib?</div>
+        </div>
+        <!-- /.body -->
+        <div class="create-post-footer">
+          <button class="tag">
+            <svg class="tag-icon" width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#photo">
+
+              </use>
+            </svg>
+
+            <span class="button-text">Photo/Video</span>
+
+          </button>
+          <button class="tag">
+            <svg class="tag-icon" width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#friends">
+
+              </use>
+            </svg>
+
+            <span class="button-text">Tag friends</span>
+          </button>
+          <button class="tag">
+            <svg class="tag-icon" width="24" height="24" class=header-icon>
+              <use xlink:href="/f-book/svg/icons.svg#feeling">
+
+              </use>
+            </svg>
+            <span class="button-text">Feeling/Activ...</span>
+          </button>
+          <button class="tag">...</button>
+        </div>
+        <!-- /.footer -->
+      </div>
+      <!-- /.create-post -->
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/bakuws.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">BAKU.WS</a>
+              <div class="post-info-time">
+                <span class="post-time">3 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Kriminal alemde Cert Rovshen kimi taninan Zeynalov Rovshen Mubariz oqlu, bugun seher saatlarinda evi terk
+            edarek 05.06.2020 il tarixde saat 00:00 bashliyan karantin rejimini geti shekilde pozaraq evi terk edib
+            kuceye zibil atmaqa cixmishdi. Geyd edak ki Zeynalov Rovshen 1993 il tevelludlu, evvellerde Lokbatan 10-cu
+            polis idaresini emekdashlari terefinnen toyuq ogurlugu ustunde saxlanilib.
+            Hal hazirda axtarishdadi. Ashagida ki shexsi kimse tanidigi zaman polis emekdashlarina heber etmayiniz xaish
+            olunur
+
+          </p>
+          <img src="//f-book/img/post/roshu2.jpg" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">2467</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/apatv.png" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">APA TV</a>
+              <div class="post-info-time">
+                <span class="post-time">1 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            EN SON MELUMAT <br>
+            APA TV-nin vergiyi xebere gore <br>
+            Zeynalov Rovshenin videosu yayildi...SOK SOK SOK !!!
+
+          </p>
+          <video width="550" height="400" controls="controls" src="//f-book/video/roshu3.mp4">
+
+
+          </video>
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">1405</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/QA-avatar.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Dev.education</a>
+              <div class="post-info-time">
+                <span class="post-time">Advertising</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Take a QA engineer course at International IT College коллед
+            4 months of theory and active practice💪
+            Show basic knowledge on testing and learn almost for free😎
+            Send an application and get a chance to pick up a grant covering 85% of the course price!
+            <br> Learn more: <a href="https://deveducation.com/">https://deveducation.com/</a>
+          </p>
+          <img src="//f-book/img/post/QA.jpg" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">15</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/stories/javid-cosmos.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Javid Cosmos</a>
+              <div class="post-info-time">
+                <span class="post-time">1 june at 23:24</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#friendsT"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Redesign is not an event - it is a process. Redesign never ends - these are steps taken to keep the user
+            experience relevant.
+            Today, when preparing a product, it is very difficult to set up a precise process and always follow it. We
+            need to be flexible and adapt quickly. We need to know for sure what the resulting product will look like.
+            However, users do not like the changes. It doesn't matter how comfortable and easy the new design is, they
+            are used to the old interface and now they have to learn something new.
+            The good news is that people get used to it in a short time, even if they don't like changes and redesigns.
+            In the first few weeks, they face difficulties, but everything goes smoothly.
+            Mobile Banking is constantly evolving around the world and is becoming an integral part of your smartphone.
+            We present to you the uBank by #Unibank application, which we have been working on and continuing to develop
+            for months, as a result of which we have undergone major changes, keeping pace with world practices,
+            standards and trends. Let's not forget that any system cannot change immediately, it just needs time
+            <br> Learn more: <a href=" https://unibank.az/az/umobile/index">https://unibank.az/az/umobile/index</a>
+          </p>
+          <img src="//f-book/img/post/unibank-2.png" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">2367</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/google.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Google Maps</a>
+              <div class="post-info-time">
+                <span class="post-time">3 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <div id='map' style='width: 550px; height: 600px;'></div>
+          <script>
+            mapboxgl.accessToken =
+              'pk.eyJ1IjoibXJjcm9kbyIsImEiOiJjazY5cDBnYnowZ2prM2RwbXZjOG1zMTBwIn0.OXhUF1nfFLIWWxCpweanaA';
+            var map = new mapboxgl.Map({
+              container: 'map', // container id
+              style: 'mapbox://styles/mapbox/streets-v11',
+              center: [-74.5, 40], // starting position
+              zoom: 9 // starting zoom
+            });
+
+            // Add zoom and rotation controls to the map.
+            map.addControl(new mapboxgl.NavigationControl());
+          </script>
+
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/dudy.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">вДудь</a>
+              <div class="post-info-time">
+                <span class="post-time">15 min</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <iframe width="550" height="315" src="https://www.youtube.com/embed/9lO06Zxhu88" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/post/bakuws.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">BAKU.WS</a>
+              <div class="post-info-time">
+                <span class="post-time">5 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#planet"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            SON DEGIGE BAKIDAKI VEZIYYET
+            <br> Korona virusla bela mubarize ediller
+            <!-- <br> Learn more: <a href=" https://antforfigma.com">https://antforfigma.com</a> -->
+          </p>
+          <video width="550" height="400" controls="controls" poster="//f-book/img/post/covid-19-1.jpg"
+            src="//f-book/video/covid-1.mp4">
+
+
+          </video>
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Nasib Mammadli</a>
+              <div class="post-info-time">
+                <span class="post-time">3 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#setting"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Did you know that all of this was made using only components and styles from Ant Desing <br> System for
+            Figma?
+            <br> Learn more: <a href=" https://antforfigma.com">https://antforfigma.com</a>
+          </p>
+          <img src="//f-book/img/post-image.jpg" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Nasib Mammadli</a>
+              <div class="post-info-time">
+                <span class="post-time">3 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#setting"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Did you know that all of this was made using only components and styles from Ant Desing <br> System for
+            Figma?
+            <br> Learn more: <a href=" https://antforfigma.com">https://antforfigma.com</a>
+          </p>
+          <img src="//f-book/img/post-image.jpg" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+
+      <div class="post">
+        <div class="post-header">
+          <div class="user">
+            <img class="user-avatar" src="//f-book/img/avatar/photo_2020-03-30_23-04-17.jpg" alt="avatar">
+
+            </img>
+            <div class="post-info">
+              <a href="#" class="post-author">Nasib Mammadli</a>
+              <div class="post-info-time">
+                <span class="post-time">3 hrs</span>
+                <svg width="14" height="14" class="setting-icon">
+                  <use xlink:href="/f-book/svg/icons.svg#setting"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <button class="post-header-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#dots">
+
+              </use>
+            </svg>
+          </button>
+        </div>
+        <!-- /.post-header -->
+        <div class="post-content">
+          <p class="post-text">
+            Did you know that all of this was made using only components and styles from Ant Desing <br> System for
+            Figma?
+            <br> Learn more: <a href=" https://antforfigma.com">https://antforfigma.com</a>
+          </p>
+          <img src="//f-book/img/post-image.jpg" alt="post-image" class="post-image">
+        </div>
+
+
+        <!-- /.post-content -->
+        <div class="likes">
+          <svg width="16" height="16" class="likes-icon">
+            <use xlink:href="/f-book/svg/icons.svg#like">
+
+            </use>
+          </svg>
+          <span class="likes-counter">23</span>
+        </div>
+
+        <!-- /.likes -->
+
+
+
+        <div class="post-footer">
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#like1">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Like</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#chat">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Comment</span>
+          </button>
+          <button class="post-button">
+            <svg width="24" height="24" class="post-button-icon">
+              <use xlink:href="/f-book/svg/icons.svg#share">
+
+              </use>
+            </svg>
+            <span class="post-button-text">Share</span>
+          </button>
+        </div>
+        <!-- /.post-footer -->
+      </div>
+    </div>
+    <!-- /.main-feed -->
+
+    <div class="right-sidebar">
+      <div class="stories">
+        <div class="stories-header">
+          <h4 class="story-title">Stories</h4>
+          <div class="story-buttons">
+            <!-- 1 ssilka -->
+            <a href="#" class="story-button-link">
+
+              <!-- ikonka dla svg -->
+              <svg width="16" height="16" class="stories-icon">
+                <use xlink:href="/f-book/svg/icons.svg#clock-circle">
+
+                </use>
+              </svg>
+
+              <span class="story-button-text">Archive</span>
+            </a>
+            <!-- 2ssilka -->
+            <a href="#" class="story-button-link">
+              <span class="story-button-text">Settings</span>
+            </a>
+          </div>
+          <!-- /.story-buttons -->
+        </div>
+        <!-- /.story-header -->
+        <a href="#" class="story-item-add">
+          <div class="story-image">+</div>
+          <div class="story-item-text">
+            <span class="story-title">
+              Add to your story
+            </span>
+            <span class="story-text">
+              Share a photo or video or write something
+            </span>
+          </div>
+        </a>
+        <!-- /.story-item-add -->
+        <a href="#" class="story-item">
+          <!-- praviy sayt bar 2 -->
+          <div class="story-image cosmos">
+
+          </div>
+          <div class="story-item-text">
+            <span class="story-title">
+              Javid Cosmos
+            </span>
+            <span class="story-text">
+              4 hours ago
+            </span>
+          </div>
+        </a> <!-- /.story-item -->
+
+        <a href="#" class="story-item">
+          <!-- praviy sayt bar 3 -->
+          <div class="story-image yuka"></div>
+
+          <div class="story-item-text">
+            <span class="story-title">
+              Юсуф Ханиф (يوسف)
+            </span>
+            <span class="story-text">
+              5 hours ago
+            </span>
+          </div>
+        </a> <!-- /.story-item -->
+
+        <a href="#" class="story-item">
+          <!-- side bar 4 -->
+          <div class="story-image jamal"></div>
+          <div class="story-item-text">
+            <span class="story-title">
+              Jamal Eminli
+            </span>
+            <span class="story-text">
+              6 hours ago
+            </span>
+          </div>
+        </a> <!-- /.story-item -->
+      </div>
+      <!-- /.stories -->
+    </div>
+    <!-- /.right-sidebar -->
+
+
+  </div>
+  </div>
+
+
+
+
+
+  <script src="//f-book/js/script.js"></script>
+</body>
+
+</html>
