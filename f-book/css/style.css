@@ -764,14 +764,14 @@ vertical-align: middle;
 }
 
 .yuka {
-  background-image: url(f-book/img/stories/yuka.jpg);
+  background-image: url(/f-book/img/stories/yuka.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
 .jamal {
-  background-image: url(f-book/img/stories/jamal.jpg);
+  background-image: url(/f-book/img/stories/jamal.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
