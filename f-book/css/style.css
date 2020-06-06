@@ -1,0 +1,778 @@
+* {
+  /* box otvecaet za pravilnoe praevlenie shirini */
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f5f5;
+  padding-top: 46px;
+}
+
+.header {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background: #0050b3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+.header-block {
+  max-width: 1200px;
+  margin: auto;
+  /* border: 1px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* POISK  ******************  START */
+
+.search {
+  /* margin: 50px auto; */
+  /* display: flex; */
+  width: 20px;
+  position: relative;
+  /* border: 1px solid red; */
+}
+
+.m-search {
+  margin: 0;
+  padding: 0;
+  height: 40px;
+  /* sdes mi ukajem ikonku svg */
+
+}
+
+.m-search-svg {
+  display: none;
+  display: block;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  fill: rgb(255, 250, 250);
+  position: relative;
+  top: 2px;
+  left: 85px;
+
+}
+
+/* .m-search-svg use {
+  left: 5px;
+} */
+
+.m-search-svg:hover {
+  fill: rgb(238, 68, 25);
+}
+
+.m-search-button {
+  /* sdes uberaem fon dla knobki */
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+  width: 42px;
+  position: relative;
+  z-index: 2;
+  top: -32px;
+  left: 85px;
+  /* border: 1px solid red; */
+  display: none;
+}
+
+.m-search-svg-button {
+  width: 32px;
+  height: 32px;
+  fill: #8C8C8C;
+
+  /* border: 2px solid red; */
+
+}
+
+.m-search-svg-button:hover {
+  fill: rgb(11, 113, 230);
+}
+
+
+.search-input {
+  padding: 5px 30px 5px 12px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 0 #000;
+  margin: 0;
+  border: none;
+  max-width: 130px;
+  background: #ffffff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  top: 10px;
+  font-size: 14px;
+  line-height: 22px;
+  position: absolute;
+  color: rgb(7, 7, 7);
+  top: 1px;
+  opacity: 0;
+  z-index: -1;
+
+  transition-duration: 0.5s;
+  transition-property: opacity;
+  appearance: none;
+
+}
+
+
+/* POISK ***************************** END */
+
+
+
+/* POISK ************************ ACTIVE */
+
+.search--active .search-input {
+  opacity: 1;
+  z-index: 1;
+}
+
+.search--active .m-search-button {
+  display: block;
+
+}
+
+..search--active .search--img {
+  display: none;
+}
+
+
+/* POISK ******************** ACTIVE ************** END */
+
+.m-menu {
+  border: none;
+  width: 32px;
+  height: 32px;
+  /* delaem knobku prozracnoy */
+  background-color: transparent;
+  padding: 0;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 12px;
+  /* align-items: start; */
+}
+
+.m-menu .line {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+
+  border-radius: 5px;
+}
+
+
+
+
+
+/* Sdes mi opisivaem Search */
+
+/* .search-input {
+  font-size: 14px;
+  line-height: 22px;
+
+  /* padding: 5px s verxu, 30px s prava, s nizu 5, i s levo 12px */
+/* padding: 5px 30px 5px 12px; */
+/* cto budet maximalno dopustimim */
+/* width: 336px; */
+/* no oqranicivaetsa 336px */
+
+/* sdes opisivayutsa stili dla Search */
+/* eqo uqli border radius i kant */
+/* background: #ffffff; */
+/* border: 1px solid #d9d9d9; */
+/* border-radius: 4px; */
+/* sdes opisivaetsa ikonka dla search */
+/* background-image: url(/img/search/search-icon.svg); */
+/* Sdes pishetsa svoystvo ctob ikonka ne povtoralos */
+/* background-repeat: no-repeat; */
+/* sdes poziciya i polojenie ikonkiz qde 12px eto otstup */
+/* Obrati vnimanie ti obyasnaew na english cto xocew */
+/* background-position: right 12px center; */
+
+.navigation {
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+}
+
+.navigation-panel {
+  /* etim mi pokazivaem cto kajdiy klas s dannom imenem s levo budet margin-left 12px */
+  /* margin-left: 12px; */
+  display: flex;
+  align-items: center;
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-left: 12px;
+}
+
+/* before oznacaet cto pered dannim klassom mojen poyavitsa vse cto zapishem v contente */
+.navigation-link::before {
+  /* display: inline-block; */
+  content: "";
+  width: 1px;
+  height: 16px;
+  background: #003a8c;
+  margin-right: 12px;
+}
+
+/* last child pokazivaet cto u posledneqo elementa doljen bit kakoe libo znacenie */
+
+.navigation-link:last-child::after {
+  content: "";
+  width: 1px;
+  height: 16px;
+  background: #003a8c;
+  margin-left: 12px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.icons-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.icon-link {
+  display: flex;
+  align-items: center;
+  margin-left: 17px;
+  position: relative;
+}
+
+/* sdes mi zapisali uvedomleniya */
+.notification {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background: #f5222d;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: normal;
+  font-size: 12px;
+  /* line-height: 22px; */
+  top: -8px;
+  right: -9px;
+}
+
+.header-icon {
+  fill: #002766;
+}
+
+.header-icon:hover {
+  fill: white;
+}
+
+.icon-link:last-child::before {
+  /* display: inline-block; */
+  content: "";
+  width: 1px;
+  height: 16px;
+  background: #003a8c;
+  margin-right: 12px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+}
+
+.menu-sidebar {
+  margin-top: 18px;
+  width: 192px;
+  margin-right: 12px;
+  /* border: 1px solid red; */
+}
+
+.menu-sidebar .user {
+  padding-left: 10px;
+}
+
+.menu-sidebar .user-avatar {
+  width: 24px;
+  height: 24px;
+}
+
+/* opisanie klass user name est i vishe no mi videlaem cto imenno 
+klass user name kotoriy v menu sidebar, a ne tot cto bashka yerde */
+
+.menu-sidebar .user-name {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+}
+
+.nav-group {
+  display: flex;
+  flex-direction: column;
+  /* ya opisal align-items center, no on ne primenaetsa */
+  /* align-items: center; */
+  /* Sdes nujen justify-content */
+  justify-content: center;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.nav-link {
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 4px;
+  color: #595959;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* border: 1px solid red; */
+}
+
+.nav-link.active {
+  background: #ffffff;
+  color: #262626;
+  /* border: 1px solid rgb(255, 0, 0); */
+}
+
+.nav-text {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+}
+
+.nav-title {
+  padding-left: 10px;
+  color: #262626;
+  font-size: 12px;
+  line-height: 20px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+.main-feed {
+  max-width: 588px;
+  margin-top: 18px;
+  flex-grow: 1;
+}
+
+.create-post {
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  background-repeat: 4px;
+  overflow: hidden;
+  max-width: 588px;
+  /* border: 1px solid red; */
+}
+
+.create-post-header {
+  padding: 9px 16px;
+  background: #f5f5f5;
+}
+
+.create-post-title {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #595959;
+  margin: 0;
+}
+
+.create-post-body {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 24px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.create-post-input {
+  width: 100%;
+  padding-top: 8px;
+
+  /* sdes mi propisivaem stili dla texta */
+  word-wrap: break-word;
+  /* etot stol ctob ne vivalivalsa input za predeli */
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.create-post-footer {
+  display: flex;
+  align-items: center;
+  padding: 0 16px 16px 16px;
+  flex-wrap: wrap;
+  /* border-top: 1px solid red; */
+}
+
+.create-post-footer:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e8e8e8;
+  margin-bottom: 16px;
+  /* border: 1px solid red; */
+}
+
+.tag {
+  background: #f5f5f5;
+  border-radius: 48px;
+  /* uberaem border */
+  border: none;
+  padding: 9px 12px;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
+  /* margin-bottom: 16px; */
+}
+
+.tag-icon {
+  margin-right: 8px;
+}
+
+.post {
+  background: #ffffff;
+  /* Elevation 1 */
+
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin: 16px 0;
+  padding: 16px;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.post-header-button {
+  background-color: #fff;
+  border: none;
+}
+
+.post-header .user-avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.post-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-author {
+  font-family: "SF Pro Display";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 600;
+  color: #0050b3;
+  text-decoration: none;
+  width: 100%;
+  /* border: 1px solid red; */
+}
+
+.post-time {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* border: 1px solid red; */
+  color: #8c8c8c;
+}
+
+/* Sdes naxoditsa tocka */
+
+.post-time::after {
+  display: inline-block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  margin-right: 6px;
+  margin-left: 6px;
+  /* vertikalnoe viravnivanie */
+  vertical-align: middle;
+}
+
+.post-info-time {
+  display: flex;
+  align-items: center;
+}
+
+.post-text {
+  font-family: "SF Pro Display";
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  margin-bottom: 16px;
+}
+
+.post-text a {
+  color: #096dd9;
+  text-decoration: none;
+}
+
+.post-image {
+  border: 1px solid #bfbfbf;
+  /* box-sizing: border-box; */
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.likes {
+  margin-top: 9px;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+}
+
+.likes-counter {
+  font-family: "SF Pro Display";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  margin-left: 4px;
+  color: #595959;
+}
+
+.post-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.post-button {
+  background-color: #fff;
+  /* border none uberaet obvotku s knobki */
+  border: none;
+  display: flex;
+  align-items: center;
+}
+
+.post-button-text {
+  font-family: "SF Pro Display";
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 600;
+  color: #595959;
+  margin-left: 8px;
+}
+
+.post-button-icon {
+  fill: #595959;
+}
+
+.post-button-icon:hover {
+  fill: rgb(0, 137, 228);
+  /* Цвет ссылки */
+}
+
+.post-footer:before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e8e8e8;
+  margin-bottom: 16px;
+}
+
+.right-sidebar {
+  max-width: 384px;
+  /* border: 1px solid yellow; */
+}
+
+.stories {
+  background: #fff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-top: 16px;
+  /* border: 1px solid red; */
+  padding: 16px;
+  padding-left: 24px;
+  margin-left: 24px;
+}
+
+.stories-icon {
+  fill: #0050b3;
+  /* border: 1px solid red; */
+}
+
+/* .story-button-text::after {
+  display: inline-block;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  margin-right: 6px;
+  margin-left: 6px;
+  vertikalnoe viravnivanie
+vertical-align: middle;
+} */
+
+.stories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  /* border: 1px solid rgb(0, 255, 13); */
+}
+
+.story-title {
+  margin: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.story-buttons {
+  display: flex;
+  /* border: 1p x solid red; */
+  align-items: center;
+}
+
+.story-button-link {
+  /* display: inline-flex;
+  align-items: center; */
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0050b3;
+  text-decoration: none;
+}
+
+.story-button-link:first-child::after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #bfbfbf;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 8px;
+  vertical-align: middle;
+}
+
+.stories-icon {
+  vertical-align: sub;
+}
+
+.story-item-add,
+.story-item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-bottom: 16px;
+}
+
+.story-image {
+  width: 48px;
+  height: 48px;
+  background: #f5f5f5;
+  border: 1px solid #d9d9d9;
+  /* eto postavili ctob element ne sjimalsa ili ne skukojivalsa */
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1890ff;
+  margin-right: 12px;
+}
+
+.story-title {
+  font-weight: 600;
+  font-style: 14px;
+  line-height: 22px;
+
+  color: #0050b3;
+}
+
+.story-item-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-text {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  width: 100%;
+  color: #8c8c8c;
+  /* display: block; */
+  /* ctob text ne uxidil za qranici a razmeshalsa snizu  */
+  word-wrap: none;
+}
+
+.cosmos {
+  background-image: url(/img/stories/javid-cosmos.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.yuka {
+  background-image: url(/img/stories/yuka.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.jamal {
+  background-image: url(/img/stories/jamal.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
