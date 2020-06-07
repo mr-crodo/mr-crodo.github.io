@@ -27,7 +27,7 @@ form.addEventListener('submit', function (event) {
 
 
   const taskText = taskInput.value;
-  
+
 
 
 
@@ -51,7 +51,7 @@ form.addEventListener('submit', function (event) {
   // insertAdjacentHTML danniy metod pozvolaet dobaavit razmetku vnutr bloka
   // est dve komandi odin afterbegin dobavlaet razmetku v nacalo
   // i esho afterend dobavlaet razmetku v konec
-  tasksList.insertAdjacentHTML('afterend', taskHtml);
+  tasksList.insertAdjacentHTML('afterbegin', taskHtml);
 
 
   // sdes mi udalaem stroku v voda posle najatiya knobki ctob ona viqladela krasivo
