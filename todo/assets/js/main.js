@@ -58,3 +58,18 @@ form.addEventListener('submit', function (event) {
   taskInput.value = "";
 
 });
+
+
+//  Dell Task 
+
+//cto proisxodi (' 1 kakoe sobitie proisxodit', 2 funkciya kotoraya proisxodit posle sobitiya)
+// Proslushku klika vnutri spiska s zadacami
+tasksList.addEventListener('click', function (event) {
+
+
+  // Sdes mi proveraem cto click proizoshol na knobke "Udalit"
+  if (event.target.getAttrubute("data-action") === "delete-task") {
+    // Obrashaemsa k roditely knobki (k tegu <li></li>) i udalaem eqo
+    event.target.parentElement.remove();
+  }
+});
