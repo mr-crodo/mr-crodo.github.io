@@ -1,16 +1,89 @@
+*,
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #E4E5E7;
-  padding-top: 100px;
+  font-family: cursive;
+  background-image: linear-gradient(145deg, #ee82ee, slateblue, #ffd86a, purple);
+  /* background-repeat: no-repeat; */
+  padding-top: 50px;
+  /* padding-bottom: 50px; */
+  height: 100vh;
+  /* max-width: 100vh;; */
+  margin: 0;
+  padding: 0;
 }
-.aside {
-  height: 400px;
+
+.container {
+ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
-.main {
-  height: 400px;
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
+
+#tasksList {
+  width: 100%;
+}
+
+.task-title {
+  width: 100%;
+}
+
+/* .aside {
+  max-height: 400px;
+} */
+
+/* .main {
+  max-height: 400px;
+} */
+
+.card {
+  display: flex;
+  /* align-items: center; */
+}
+
 .d-flex {
   display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
 }
+
+/* btn eto obshiy klass knopki */
+
+.btn-light {
+  margin-top: 20px;
+
+  /* centriruem knobku */
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: rgba(171, 135, 187, 0.438);
+}
+
+.btn-light:hover {
+  background: rgb(232, 95, 76);
+  /* при наведении курсора мышки */
+}
+
+.btn-light:active {
+  background: rgb(152, 15, 0);
+  /* при нажатии */
+}
+
 .task-title {
   font-weight: 400;
   padding-top: 5px;
