@@ -4,9 +4,21 @@
   padding: 0;
 }
 
+body {
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+}
+
+p {
+  padding: 0 0 20px 0;
+  line-height: 1.7em;
+}
+
 input[type="text"],
 input[type="password"],
-input[type="search"] {
+input[type="search"],
+input[type="email"] {
   color: #5d5d5d;
   width: 60%;
   padding: 8px;
@@ -19,8 +31,39 @@ textarea {
   border: solid 1px #f2f2f2;
 }
 
+h1,
+h2 {
+  font: normal 170% "century gothic", arial;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+  color: #000;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+/* styles for links */
+a,
+a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #aeb002;
+}
+
+ul {
+  margin: 2px 0 22px 17px;
+}
+
+ul li {
+  margin: 0 0 6px 0;
+  padding: 0 0 4px 5px;
+  line-height: 1.5em;
+}
+
+/* rgb(72, 153, 190 */
 .header {
-  background-color: darkslateblue;
+  background-color: #000;
   height: 177px;
   font-size: 0.8em;
   margin-left: 0;
@@ -132,19 +175,23 @@ ul.menu li a:hover {
   text-align: center;
 }
 
+/* ****** V slucae ceqo izmenay sdes ********** */
+
 .site-content {
-  max-width: 880px;
+  max-width: 1125px;
   overflow: hidden;
   margin: 20px auto 0 auto;
   background-color: white;
 }
 
-.sidebar-container {
+/* right side bar */
+
+.sidebar-container-right {
   float: right;
   width: 224px;
 }
 
-.sidebar {
+.sidebar-right {
   float: right;
   width: 222px;
   padding: 5%;
@@ -169,4 +216,110 @@ ul.menu li a:hover {
   padding: 8px;
   background-color: #fff;
   cursor: pointer;
+}
+
+.sidebar-right h2 {
+  color: #136cb2;
+}
+
+/* styles for links */
+
+.lables-passreg-text {
+  font-size: 0.7em;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.sidebar-right ul {
+  margin: 0;
+}
+
+.sidebar-right ul li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+
+.sidebar-right .rating-sidebar {
+  float: right;
+}
+
+/* ****left side bar ***********/
+
+.sidebar-container-left {
+  top: 0;
+  float: left;
+  width: 224px;
+}
+
+.sidebar-left {
+  float: left;
+  width: 222px;
+  padding: 5%;
+  margin: 0 0 16px 0;
+  border: solid 1px #f2f2f2;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* .sidebar h2 {
+  
+}
+
+.btnsearch {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+} */
+
+.btn {
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-left h2 {
+  color: #136cb2;
+}
+
+/* styles for links */
+
+.lables-passreg-text {
+  font-size: 0.7em;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.sidebar-left ul {
+  margin: 0;
+}
+
+.sidebar-left ul li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+
+.sidebar-left .rating-sidebar {
+  float: right;
+}
+
+/* ****************FOOTER********************* */
+
+footer {
+  width: 100%;
+  height: auto;
+  background: #000;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+footer a {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+footer nav a:hover {
+  border-bottom: 1px solid white;
 }

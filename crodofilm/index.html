@@ -13,7 +13,7 @@
   <meta name="keywords" content="onlayn, cinema, фильмы, фильмы hd, HD, filmi, filmi onlayn,
   фильмы смотреть, на русском, с русским переводом, онлайн фильмы">
   <title>Crodo-Film</title>
-  <link rel="shorcut icon" type="image/x-icon" href="/assets/svg/main-svg/film.svg">
+  <link rel="shorcut icon" type="image/x-icon" href="/assets/svg/social-svg/youtube.svg">
 </head>
 
 <body>
@@ -44,33 +44,33 @@
               <span class="text-svg">Главная</span></a>
           </li>
 
-          
-          <li><a href="#" class="icon-link">
-            <svg width="24" height="24" class="header-icon">
-            <use xlink:href="/assets/svg/icons.svg#film"></use>
-          </svg>
-          <span class="text-svg">Фильмы</span></a></li>
-
 
           <li><a href="#" class="icon-link">
-            <svg width="24" height="24" class="header-icon">
-              <use xlink:href="/assets/svg/icons.svg#serials"></use>
-            </svg>
-            <span class="text-svg">Сериалы</span></a></li>
+              <svg width="24" height="24" class="header-icon">
+                <use xlink:href="/assets/svg/icons.svg#film"></use>
+              </svg>
+              <span class="text-svg">Фильмы</span></a></li>
 
 
           <li><a href="#" class="icon-link">
-            <svg width="24" height="24" class="header-icon">
-              <use xlink:href="/assets/svg/icons.svg#rating"></use>
-            </svg>
-            <span class="text-svg">Рейтинг фильмов</span></a></li>
+              <svg width="24" height="24" class="header-icon">
+                <use xlink:href="/assets/svg/icons.svg#serials"></use>
+              </svg>
+              <span class="text-svg">Сериалы</span></a></li>
 
 
           <li><a href="#" class="icon-link">
-            <svg width="24" height="24" class="header-icon">
-              <use xlink:href="/assets/svg/icons.svg#contacts"></use>
-            </svg>
-            <span class="text-svg">Контакты</span></a></li>
+              <svg width="24" height="24" class="header-icon">
+                <use xlink:href="/assets/svg/icons.svg#rating"></use>
+              </svg>
+              <span class="text-svg">Рейтинг фильмов</span></a></li>
+
+
+          <li><a href="#" class="icon-link">
+              <svg width="24" height="24" class="header-icon">
+                <use xlink:href="/assets/svg/icons.svg#contacts"></use>
+              </svg>
+              <span class="text-svg">Контакты</span></a></li>
         </ul>
 
 
@@ -85,10 +85,12 @@
 
     <div class="site-content">
 
-      <div class="sidebar-container">
+      <!-- right site content -->
+
+      <div class="sidebar-container-right">
 
         <!-- search block -->
-        <div class="sidebar">
+        <div class="sidebar-right">
           <h2>поиск</h2>
           <form method="POST" action="#" id="search-form">
             <input class="btnsearch" type="search" name="search-field" placeholder="ваш запрос">
@@ -97,12 +99,124 @@
 
         </div>
 
+        <div class="sidebar-right">
+          <h2>Вход</h2>
+          <form method="POST" action="#" id="login">
+            <input type="email" name="login-field" placeholder="логин">
+            <input type="password" name="password-field" placeholder="пароль">
+            <input type="submit" class="btn" value="вход">
+            <div class="lables-passreg-text">
+              <span><a href="#">забыли пароль</a></span> | <span><a href="#">зарегистрироваться</a></span>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="sidebar-right">
+          <h2>news</h2>
+          <!-- ******** sdes nado zadat datu d;a sayta  ******* -->
+          <span>15.06.2020</span>
+          <p>Мы запустили расширенный поиск</p>
+          <a href="#">читать</a>
+        </div>
+
+        <div class="sidebar-right">
+          <h2>Рейтинг фильмов</h2>
+
+          <ul>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">3.4</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">5.6</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">8.2</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">7.5</span></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+
+      <!-- left site contend -->
+
+      <div class="sidebar-container-left">
+
+
+        <!-- search block -->
+        <div class="sidebar-left">
+          <h2>поиск</h2>
+          <form method="POST" action="#" id="search-form">
+            <input class="btnsearch" type="search" name="search-field" placeholder="ваш запрос">
+            <input type="submit" class="btn" value="найти">
+          </form>
+
+        </div>
+
+        <div class="sidebar-left">
+          <h2>Вход</h2>
+          <form method="POST" action="#" id="login">
+            <input type="email" name="login-field" placeholder="логин">
+            <input type="password" name="password-field" placeholder="пароль">
+            <input type="submit" class="btn" value="вход">
+            <div class="lables-passreg-text">
+              <span><a href="#">забыли пароль</a></span> | <span><a href="#">зарегистрироваться</a></span>
+            </div>
+          </form>
+        </div>
+
+
+        <div class="sidebar-left">
+          <h2>news</h2>
+          <!-- ******** sdes nado zadat datu d;a sayta  ******* -->
+          <span>15.06.2020</span>
+          <p>Мы запустили расширенный поиск</p>
+          <a href="#">читать</a>
+        </div>
+
+        <div class="sidebar-left">
+          <h2>Рейтинг фильмов</h2>
+
+          <ul>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">3.4</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">5.6</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">8.2</span></li>
+            <li><a href="#">Название фильмов</a><span class="rating-sidebar">7.5</span></li>
+          </ul>
+        </div>
+
       </div>
 
 
     </div>
 
 
+
+
+
+
+    <div class="footer">
+
+    </div>
+
+    <footer>
+      <nav>
+        <div class="topnav" myTopnav>
+          <a href="#">HOME</a>
+          <a href="#">PROJECTS</a>
+          <a href="#">BLOG</a>
+          <a href="#">CONTACT</a>
+          <a href="#">ABOUT</a>
+          <a href="#">SERVICES</a>
+          <a href="#">LOCATION</a>
+          <a href="#"></a>
+
+        </div>
+      </nav>
+
+      <div class="logo">
+        <a href="#"><img class="graficlogo" src="" alt=""></a>
+      </div>
+    </footer>
+
+    <!-- *************** -->
   </div>
 
 
