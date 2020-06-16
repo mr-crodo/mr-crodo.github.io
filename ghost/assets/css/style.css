@@ -1,0 +1,325 @@
+*,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 1.2em;
+  background-color: #fff;
+  color: #555;
+}
+
+p {
+  padding: 0 0 20px 0;
+  line-height: 1.7em;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"] {
+  color: #5d5d5d;
+  width: 60%;
+  padding: 8px;
+}
+
+input,
+textarea {
+  outline: none;
+  border: none;
+  border: solid 1px #f2f2f2;
+}
+
+h1,
+h2 {
+  font: normal 170% "century gothic", arial;
+  margin: 0 0 15px 0;
+  padding: 15px 0 5px 0;
+  color: #000;
+}
+
+h2 {
+  font-size: 140%;
+}
+
+/* styles for links */
+a,
+a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #aeb002;
+}
+
+ul {
+  margin: 2px 0 22px 17px;
+}
+
+ul li {
+  margin: 0 0 6px 0;
+  padding: 0 0 4px 5px;
+  line-height: 1.5em;
+}
+
+/* rgb(72, 153, 190 */
+.header {
+  background-color: #000;
+  height: 177px;
+  font-size: 0.8em;
+  margin-left: 0;
+  margin-right: 0;
+  min-width: 900px;
+}
+
+.main,
+.logo,
+.menubar,
+.site-content,
+.footer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  width: 880px;
+  padding-bottom: 20px;
+  /* border: 1px solid red; */
+}
+
+.logo h1,
+.logo h2 {
+  font: normal 300% "centery gothic", arial, sans-serif;
+  margin: 0 0 0 9px;
+}
+
+.logo-text h1,
+.logo-text h1 a,
+.logo-text h1 a:hover {
+  padding: 22px 0 0 0;
+  color: #fff;
+  letter-spacing: 0.1em;
+  /* properties for text-decoration: none, underline, line-throught; overline*/
+  text-decoration: none;
+}
+
+.logo-text h2 {
+  font-size: 0.9em;
+  padding: 4px 0 0 0;
+  color: #999;
+}
+
+.menubar {
+  max-width: 900px;
+  height: 46px;
+}
+
+/* sdes mi zadali float rigt ctobi blok menu sdelat s prava roditelskoqo elementa */
+ul.menu {
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; */
+  float: right;
+}
+
+/* sdes sdelali float rigt ctobi ulojit eqo vdol */
+ul.menu li {
+  /* display: flex; */
+  float: left;
+  padding: 0 0 0 9px;
+  list-style: none;
+  margin: 1px 2px 0 0;
+  text-align: center;
+}
+
+/* ul.menu li a {
+  font: normal 100% 'trebuchet ms', sans-serif;
+  display: block;
+  height: 60px;
+  padding: 6px 35px 5px 28px;
+  color: #fff;
+  text-decoration: none;
+} */
+
+ul.menu li.selected a {
+  color: #aeb002;
+}
+
+ul.menu li a:hover {
+  color: #e4ec04;
+}
+
+.icon-link {
+  font: normal 100% "trebuchet ms", sans-serif;
+  display: block;
+  height: 40px;
+  padding: 6px 35px 5px 28px;
+  color: #fff;
+  text-decoration: none;
+  /* align-items: center; */
+  text-align: center;
+
+  /* position: relative; */
+}
+
+.header-icon {
+  position: relative;
+  top: 6px;
+  /* left: 10px; */
+  /* margin-top: 20px; */
+}
+
+.text-svg {
+  /* height: 60px; */
+
+  text-align: center;
+}
+
+/* ****** V slucae ceqo izmenay sdes ********** */
+
+.site-content {
+  max-width: 1125px;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  background-color: white;
+}
+
+/* right side bar */
+
+.sidebar-container-right {
+  float: right;
+  width: 224px;
+}
+
+.sidebar-right {
+  float: right;
+  width: 222px;
+  padding: 5%;
+  margin: 0 0 16px 0;
+  border: solid 1px #f2f2f2;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* .sidebar h2 {
+  
+}
+
+.btnsearch {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+} */
+
+.btn {
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-right h2 {
+  color: #136cb2;
+}
+
+/* styles for links */
+
+.lables-passreg-text {
+  font-size: 0.7em;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.sidebar-right ul {
+  margin: 0;
+}
+
+.sidebar-right ul li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+
+.sidebar-right .rating-sidebar {
+  float: right;
+}
+
+/* ****left side bar ***********/
+
+.sidebar-container-left {
+  top: 0;
+  float: left;
+  width: 224px;
+}
+
+.sidebar-left {
+  float: left;
+  width: 222px;
+  padding: 5%;
+  margin: 0 0 16px 0;
+  border: solid 1px #f2f2f2;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* .sidebar h2 {
+  
+}
+
+.btnsearch {
+  height: 30px;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+} */
+
+.btn {
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.sidebar-left h2 {
+  color: #136cb2;
+}
+
+/* styles for links */
+
+.lables-passreg-text {
+  font-size: 0.7em;
+  margin-top: 3%;
+  margin-left: 2%;
+}
+
+.sidebar-left ul {
+  margin: 0;
+}
+
+.sidebar-left ul li {
+  list-style-type: none;
+  margin: 0 0 0 0;
+}
+
+.sidebar-left .rating-sidebar {
+  float: right;
+}
+
+/* ****************FOOTER********************* */
+
+footer {
+  width: 100%;
+  height: auto;
+  background: #000;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 25px;
+}
+
+footer a {
+  color: white;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+footer nav a:hover {
+  border-bottom: 1px solid white;
+}
