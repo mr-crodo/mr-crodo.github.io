@@ -28,7 +28,7 @@ body {
 }
 
 .search-input {
-  background-image: url(/assets/svg/search-icon.svg);
+  background-image: url(/ghost/assets/svg/search-icon.svg);
   width: 500px;
   height: 100px;
   background-repeat: no-repeat;
