@@ -5,49 +5,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Охотники за привидениями: Наследники</title>
+  <link rel="shorcut icon" type="image/x-icon" href="/assets/svg/cf1.svg">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/ghost/assets/css/normalize.css">
-  <link rel="stylesheet" href="/ghost/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!-- /ghost/ -->
 </head>
 
 <body>
-<header class="header">
+  <header class="header">
 
-  <div class="logo">
-    <a href="#">
-      <svg width="104" height="104" class="header-icon">
-        <use xlink:href="/ghost/assets/svg/icons.svg#logo"></use>
-      </svg>
-    </a>
+    <div class="logo">
+      <a href="/">
+        <svg width="104" height="104" class="header-icon">
+          <use xlink:href="assets/svg/icons.svg#logo"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- stroka poiska -->
+    <input type="search" class="search-input" placeholder="Поиск по фильмам...">
+
+    <nav class="navigation">
+      <a href="#" class="navigation-link">Фильмы</a>
+      <a href="#" class="navigation-link">ТВ</a>
+      <a href="#" class="navigation-link">Новости</a>
+      <a href="#" class="navigation-link">О сервисе</a>
+    </nav>
+
+
+    <div class="button-group">
+      <button class="button sign-up">Регистрация</button>
+      <button class="button login">Войти</button>
+    </div>
+  </header>
+
+  <div class="film">
+
+    <!-- .container|c -->
+
+    <div class="container">
+<div class="film-wrapper">
+  <div class="film-trailer"></div>
+  <!-- /.film-trailer -->
+
+  <div class="film-text"></div>
+  <!-- /.film-text -->
+
+</div>
+<!-- /.film-wrapper -->
+
+    </div>
+    <!-- /.container -->
   </div>
-
-  <div class="line"></div>
-
-  <!-- stroka poiska -->
-  <input type="text" class="search-input" placeholder="Поиск по фильмам...">
-
-  <nav class="navigation">
-    <a href="#" class="navigation-link">Фильмы</a>
-    <a href="#" class="navigation-link">ТВ</a>
-    <a href="#" class="navigation-link">Новости</a>
-    <a href="#" class="navigation-link">О сервисе</a>
-  </nav>
-
-
-  <div class="button-group">
-    <button class="button sign-up">Регистрация</button>
-    <button class="button login">Войти</button>
-  </div>
-</header>
+  <!-- /.film -->
 
 
 
 
 
 
-  <script src="/ghost/assets/js/film.js"></script>
+  <script src="/assets/js/film.js"></script>
 
 </body>
 

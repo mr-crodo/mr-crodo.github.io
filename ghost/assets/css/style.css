@@ -11,12 +11,20 @@ body {
   padding-left: 34px;
   /* dla toqo ctobi sdelat polosku snizu */
   border-bottom: 1px solid #d4d4d4;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
 }
 
 .header-icon {
   height: 100%;
   fill: #fff;
+}
+
+.header-icon:hover {
+  fill: rgb(148, 255, 127);
+}
+
+.header-icon:active {
+  fill: aqua;
 }
 
 .line {
@@ -27,8 +35,8 @@ body {
 }
 
 .search-input {
-  background-image: url(/ghost//assets/svg/search-icon.svg);
-  width: 500px;
+  background-image: url(/assets/svg/search-icon.svg);
+  width: 40%;
   height: 100px;
   background-repeat: no-repeat;
   /* pozivioniruem ikonku poiska */
@@ -43,7 +51,12 @@ body {
   color: #a5a5a5;
   margin-left: 34px;
   border-radius: 10px;
+  outline: none;
   /* margin-right: 100px; */
+}
+
+.search-input:focus {
+  outline-style: dotted;
 }
 
 .navigation {
@@ -60,23 +73,51 @@ body {
   text-decoration: none;
   font-style: normal;
   font-weight: normal;
-  text-align: center;
-  height: 80px;
+
+  /* text-align: center;
   display: flex;
-  align-items: center;
+  height: 80px;
+  align-items: center; */
+
+  position: relative;
+
   font-size: 18px;
   line-height: 21px;
   color: #363636;
   margin-right: 18px;
 }
 
-.navigation-link:hover {
-  color: #0fe4e4;
+.navigation-link::after {
+  content: "";
+  position: absolute;
+  /* width: 0%; */
+  width: 100%;
+  bottom: 0;
+  /* right: 0; */
+  left: 0;
+  /* transition: width 0.2s; */
+  transition: transform 0.2s;
+  transform: scaleX(0);
+
+  height: 1px;
+  background-color: #000;
+}
+
+.navigation-link:hover::after {
+  /* width: 100%; */
+  transform: scaleX(1);
+
   /* при наведении курсора мышки */
+  /* font-weight: 900; */
+}
+
+.navigation-link:hover {
+  color: rgb(40, 58, 218);
 }
 
 .navigation-link:active {
-  color: rgb(40, 58, 218);
+  color: rgb(72, 194, 47);
+
   /* при нажатии */
 }
 
@@ -86,6 +127,8 @@ body {
 } */
 
 .button-group {
+  display: flex;
+  align-items: center;
   height: 100%;
 }
 
