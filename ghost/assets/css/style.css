@@ -8,7 +8,12 @@ body {
   color: #363636;
 }
 
+button {
+  outline: none;
+}
+
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,7 +21,7 @@ body {
   padding-left: 34px;
   /* dla toqo ctobi sdelat polosku snizu */
   border-bottom: 1px solid #d4d4d4;
-  /* background-color: #f2f2f2; */
+  background-color: #f2f2f2;
 }
 
 .header-icon {
@@ -40,7 +45,7 @@ body {
 }
 
 .search-input {
-  background-image: url(/ghost/assets/svg/search-icon.svg);
+  background-image: url(/assets/svg/search-icon.svg);
   width: 40%;
   height: 100px;
   background-repeat: no-repeat;
@@ -212,6 +217,8 @@ body {
 
 .poster {
   /* skruqleniya v pravom verxnem uqlu */
+  display: flex;
+  /* margin-bottom: 0; */
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
   max-width: 358px;
@@ -268,7 +275,7 @@ body {
   font-weight: normal;
   font-size: 14px;
   line-height: 150%;
-  min-width: 514px;
+  max-width: 514px;
   color: #000;
   margin-bottom: 50px;
 }
@@ -409,4 +416,46 @@ body {
   font-size: 16px;
   line-height: 19px;
   color: #a5a5a5;
+}
+
+.news {
+  background: #F3F3F3;
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+.section-news-title {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+  margin-bottom: 65px;
+}
+
+.news-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-card {
+  /* eto razmer kartocek dla flexa */
+  flex-basis: 23%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+.news-date {
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+}
+
+.news-title {
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  margin-top: 14px;
+  color: #000000;
 }
