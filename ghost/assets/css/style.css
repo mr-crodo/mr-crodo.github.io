@@ -21,7 +21,7 @@ button {
   padding-left: 34px;
   /* dla toqo ctobi sdelat polosku snizu */
   border-bottom: 1px solid #d4d4d4;
-  background-color: #f2f2f2;
+  /* background-color: #f2f2f2; */
 }
 
 .header-icon {
@@ -45,7 +45,7 @@ button {
 }
 
 .search-input {
-  background-image: url(/assets/svg/search-icon.svg);
+  background-image: url(/ghost/assets/svg/search-icon.svg);
   width: 40%;
   height: 100px;
   background-repeat: no-repeat;
@@ -221,8 +221,8 @@ button {
   /* margin-bottom: 0; */
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  max-width: 358px;
-  max-height: 464px;
+  width: 358px;
+  height: 464px;
 }
 
 .trailer-button {
@@ -458,4 +458,38 @@ button {
   line-height: 16px;
   margin-top: 14px;
   color: #000000;
+}
+
+/* knopka dla mobile */
+
+
+.mobile-buttons {
+  display: none;
+}
+
+.m-menu-button,
+.search-button {
+  /* width: 20px;
+  height: 20px; */
+  padding: 5px;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+
+}
+
+.menu-line {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+  /* flex-basis: 16px; */
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 40px;
+}
+
+  {
+  background-color: #fff;
+  border: none;
 }

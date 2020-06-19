@@ -1,5 +1,4 @@
 @media (max-width: 1486px) {
-
   .search-input {
     width: 30%;
     margin-left: 20px;
@@ -11,9 +10,6 @@
   }
 }
 
-
-
-
 @media (max-width: 1200px) {
   .header {
     height: 90px;
@@ -21,8 +17,14 @@
     /* padding-left: 20px; */
   }
 
+  .header-icon {
+    width: 60px;
+    height: 60px;
+  }
+
   .search-input {
     width: 20%;
+    height: 70px;
     margin-left: 20px;
     font-size: 14px;
   }
@@ -51,14 +53,11 @@
   }
 
   .line {
-
     margin-left: 20px;
   }
-
 }
 
 @media (max-width: 991px) {
-
   .header {
     width: 100%;
   }
@@ -92,11 +91,9 @@
 
   .film-description,
   .about-film {
-
     /* font-size: 12px; */
     margin-bottom: 30px;
     margin-right: 30px;
-
   }
 
   .about-text-bold {
@@ -117,12 +114,19 @@
     flex-basis: 48%;
     margin-bottom: 20px;
   }
-
 }
 
 @media (max-width: 768px) {
   .container {
     max-width: 560px;
+  }
+
+  .header {
+    height: 80px;
+  }
+
+  .search-input {
+    height: 50px;
   }
 
   .film {
@@ -138,5 +142,137 @@
     /* koqda oder 0 tekst vnizu kartinki , koqda -1 sverxu kartinki */
     order: -1;
     margin-bottom: 30px;
+  }
+
+  .cast {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .news {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  /* 777777777 */
+
+  .button-group {
+    display: none;
+  }
+
+  .search-input {
+    display: none;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .mobile-buttons {
+    display: block;
+  }
+
+  .header {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+
+
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 95%;
+  }
+
+  /* .header-logo:after {
+  display: none;
+} */
+
+
+
+
+
+
+
+  /* .search-input {
+    width: 16px;
+    height: 16px;
+    
+
+  }
+
+  pole poiska srabativaet koqda ya na neqo klikayu
+  .search-input:focus {
+    width: auto;
+  } */
+
+
+
+  .film-trailer,
+  .poster {
+    width: 100%;
+  }
+
+  .film-trailer {
+    margin-bottom: 30px;
+  }
+
+  .film-text {
+    order: 1;
+    margin-bottom: 0;
+  }
+
+  .film-title {
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 12px;
+    color: #363636;
+  }
+
+  .film-subtitle {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 26px;
+  }
+
+  .film-description {
+    font-size: 14px;
+    line-height: 150%;
+    color: #000000;
+    margin-bottom: 40px;
+  }
+
+  .about-film {
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .about-text-bold {
+    display: inline-block;
+  }
+
+  .card {
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .tabs {
+    margin-bottom: 35px;
+  }
+
+  .cast {
+    padding-bottom: 50px;
+  }
+
+  .news-card {
+    flex-basis: 100%;
   }
 }
