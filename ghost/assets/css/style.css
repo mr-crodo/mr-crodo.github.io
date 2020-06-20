@@ -16,12 +16,19 @@ button {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 104px;
   padding-left: 34px;
   /* dla toqo ctobi sdelat polosku snizu */
   border-bottom: 1px solid #d4d4d4;
   /* background-color: #f2f2f2; */
+}
+
+.m-menu {
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
 }
 
 .header-icon {
@@ -136,6 +143,10 @@ button {
    пока кнопка в фокусе, то есть когда пользователь нажал на кнопку, но ещё не щёлкнул курсором мышки в другое место окна браузера. Без :focus невозможно объединить visibility: hidden; и transition. Если слишком быстро убрать мышку, то элемент повиснет в "половинном" состоянии, например, ссылка будет прозрачна, но по ней можно делать переход.
 } */
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .button-group {
   display: flex;
   align-items: center;
@@ -235,6 +246,7 @@ button {
   padding-bottom: 25px;
   padding-top: 25px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .trailer-button:hover {
@@ -419,7 +431,10 @@ button {
 }
 
 .news {
-  background: #F3F3F3;
+  background-image: url(/ghost/assets/img/41707776_images_4681731424.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #333333;
   padding-top: 70px;
   padding-bottom: 100px;
 }
@@ -428,7 +443,7 @@ button {
   font-weight: 900;
   font-size: 24px;
   line-height: 28px;
-  color: #000000;
+  color: #fff;
   margin-bottom: 65px;
 }
 
@@ -436,12 +451,15 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
 }
 
 .news-card {
   /* eto razmer kartocek dla flexa */
   flex-basis: 23%;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: tomato;
+  color: #fff;
   padding: 30px;
   border-radius: 5px;
 }
@@ -449,7 +467,7 @@ button {
 .news-date {
   font-size: 14px;
   line-height: 16px;
-  color: #000000;
+  color: #fff;
 }
 
 .news-title {
@@ -457,7 +475,7 @@ button {
   font-size: 14px;
   line-height: 16px;
   margin-top: 14px;
-  color: #000000;
+  color: #fff;
 }
 
 /* knopka dla mobile */
@@ -489,7 +507,8 @@ button {
   border-radius: 40px;
 }
 
-  {
+/* ne pomny nazvanie */
+/* {
   background-color: #fff;
   border: none;
-}
+} */

@@ -14,8 +14,9 @@
   .header {
     height: 90px;
     width: 100%;
-    /* padding-left: 20px; */
+    padding-left: 20px;
   }
+
 
   .header-icon {
     width: 60px;
@@ -125,13 +126,71 @@
     height: 80px;
   }
 
-  .search-input {
+  .m-menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    left: 0;
+    top: 68px;
+    right: 0;
+    height: calc(100% - 68px);
+    bottom: 0;
+    background: #5671f6;
+  }
+
+  .m-menu.active {
+    display: flex;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+
+  .button-group {
+    height: auto;
+    flex-direction: column;
+  }
+
+  /* .search-input {
     height: 50px;
+  } */
+
+  .search-input {
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    background-image: none;
+    margin: 0;
+  }
+
+  .navigation-link {
+    color: #ffffff;
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+
+  .navigation-link:last-child {
+    margin-bottom: 18px;
+  }
+
+  .sign-up {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    margin-bottom: 30px;
   }
 
   .film {
     padding-top: 50px;
     padding-bottom: 60px;
+    margin: auto;
   }
 
   .film-wrapper {
@@ -156,13 +215,13 @@
 
   /* 777777777 */
 
-  .button-group {
+  /* .button-group {
     display: none;
-  }
+  } */
 
-  .search-input {
+  /* .search-input {
     display: none;
-  }
+  } */
 
   .line {
     display: none;
@@ -170,6 +229,7 @@
 
   .mobile-buttons {
     display: block;
+    margin-left: auto;
   }
 
   .header {
@@ -182,6 +242,8 @@
 
 @media (max-width: 576px) {
   .container {
+    /* margin-right: 28px;
+    margin-left: 28px; */
     width: 95%;
   }
 
@@ -216,9 +278,23 @@
 
   .film-trailer {
     margin-bottom: 30px;
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+
+  .section-title {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+
+  .card {
+    margin-right: 28px;
+    margin-left: 28px;
   }
 
   .film-text {
+    /* margin-right: 28px; */
+    margin-left: 28px;
     order: 1;
     margin-bottom: 0;
   }
