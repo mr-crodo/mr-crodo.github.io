@@ -72,9 +72,9 @@ button {
   /* margin-right: 100px; */
 }
 
-.search-input:focus {
+/* .search-input:focus {
   outline-style: dotted;
-}
+} */
 
 .navigation {
   display: flex;
@@ -204,6 +204,7 @@ button {
 }
 
 .container {
+
   max-width: 1130px;
   margin: auto;
 }
@@ -390,7 +391,7 @@ button {
   flex-wrap: wrap;
 }
 
-.card {
+.card-f {
   display: flex;
   align-items: center;
   /* eto svoystvo dla flex elementov ctob pomestit kartocki esli 4 karti to 25% */
@@ -431,10 +432,10 @@ button {
 }
 
 .news {
-  background-image: url(/ghost/assets/img/41707776_images_4681731424.jpg);
+  /* background-image: url(/ghost/assets/img/41707776_images_4681731424.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #333333;
+  /* background-color: #333333; */
   padding-top: 70px;
   padding-bottom: 100px;
 }
@@ -447,12 +448,7 @@ button {
   margin-bottom: 65px;
 }
 
-.news-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
 
-}
 
 .news-card {
   /* eto razmer kartocek dla flexa */
@@ -493,9 +489,24 @@ button {
   background-color: #fff;
   border: none;
   cursor: pointer;
+
+  /* sam postavil */
+
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-top: 0;
 }
 
-.search-button {}
+.search-button {
+  background-color: #fff;
+  border: none;
+
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  margin-top: 0;
+}
 
 
 
@@ -516,3 +527,31 @@ button {
   background-color: #fff;
   border: none;
 } */
+
+.film-onlayn {
+  max-width: 980px;
+  margin: auto;
+  margin-top: 80px;
+  border-radius: 10px;
+
+}
+
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  height: 0;
+  overflow: hidden;
+}
+
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
+}
+
+/* slider */
