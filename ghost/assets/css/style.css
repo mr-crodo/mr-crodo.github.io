@@ -536,7 +536,7 @@ button {
   overflow: hidden;
 }
 
-.thumb-wrap object param {
+.thumb-wrap iframe {
   position: absolute;
   top: 0;
   left: 0;
