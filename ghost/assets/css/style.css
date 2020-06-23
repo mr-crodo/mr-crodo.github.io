@@ -204,7 +204,6 @@ button {
 }
 
 .container {
-
   max-width: 1130px;
   margin: auto;
 }
@@ -448,8 +447,6 @@ button {
   margin-bottom: 65px;
 }
 
-
-
 .news-card {
   /* eto razmer kartocek dla flexa */
   flex-basis: 23%;
@@ -475,7 +472,6 @@ button {
 }
 
 /* knopka dla mobile */
-
 
 .mobile-buttons {
   display: none;
@@ -508,14 +504,11 @@ button {
   margin-top: 0;
 }
 
-
-
 .m-menu-button .menu-line {
   display: block;
   width: 42px;
   height: 8px;
   background-color: #5671f6;
-  ;
   /* flex-basis: 16px; */
   margin-top: 5px;
   margin-bottom: 5px;
@@ -533,7 +526,6 @@ button {
   margin: auto;
   margin-top: 80px;
   border-radius: 10px;
-
 }
 
 .thumb-wrap {
@@ -544,7 +536,7 @@ button {
   overflow: hidden;
 }
 
-.thumb-wrap iframe {
+.thumb-wrap object param {
   position: absolute;
   top: 0;
   left: 0;
