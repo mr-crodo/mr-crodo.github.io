@@ -36,7 +36,7 @@ h2 {
   font: normal 170% "century gothic", arial;
   margin: 0 0 15px 0;
   padding: 15px 0 5px 0;
-  color: #000;
+  color: #212029;
 }
 
 h2 {
@@ -63,7 +63,8 @@ ul li {
 
 /* rgb(72, 153, 190 */
 .header {
-  background-color: #000;
+  /* background: linear-gradient(157.1deg, #562ec2 29.59%, #a07efe 73.59%); */
+  background: #111;
   height: 177px;
   font-size: 0.8em;
   margin-left: 0;
@@ -78,6 +79,11 @@ ul li {
 .footer {
   margin-left: auto;
   margin-right: auto;
+}
+
+.site-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo {
@@ -187,11 +193,14 @@ ul.menu li a:hover {
 /* right side bar */
 
 .sidebar-container-right {
+  border: 1px solid rgb(0, 255, 98);
   float: right;
   width: 224px;
+  margin-left: 30px;
 }
 
 .sidebar-right {
+  border: 1px solid rgb(30, 180, 30);
   float: right;
   width: 222px;
   padding: 5%;
@@ -246,9 +255,12 @@ ul.menu li a:hover {
 /* ****left side bar ***********/
 
 .sidebar-container-left {
+  /* display: block; */
   top: 0;
   float: left;
+  margin-right: 30px;
   width: 224px;
+  border: 1px solid red;
 }
 
 .sidebar-left {
@@ -303,12 +315,30 @@ ul.menu li a:hover {
   float: right;
 }
 
+/* ***************VIDEO************************ */
+
+.film-video {
+  display: flex;
+  max-width: 100%;
+}
+.film-video iframe {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  padding-right: 40px;
+  border-width: 0;
+  outline-width: 0; */
+}
+
 /* ****************FOOTER********************* */
 
 footer {
   width: 100%;
   height: auto;
-  background: #000;
+  background: #212029;
+  /* background: linear-gradient(157.1deg, #562ec2 29.59%, #a07efe 73.59%); */
   margin: 0 auto;
   text-align: center;
   padding-top: 25px;
@@ -322,4 +352,223 @@ footer a {
 
 footer nav a:hover {
   border-bottom: 1px solid white;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.logo-1 a {
+  font-size: 52px;
+  margin-right: 50px;
+  text-decoration: none;
+}
+
+.footer-batman {
+  width: 120px;
+  height: 120px;
+  margin-right: 50px;
+  fill: black;
+}
+
+.footer-batman:hover {
+  fill: aqua;
+}
+
+.footer-game {
+  width: 120px;
+  height: 120px;
+  margin-right: 50px;
+}
+
+.footer-game:hover {
+  fill: red;
+  color: #e4ec04;
+}
+
+.footer-cat {
+  width: 100px;
+  height: 100px;
+}
+
+.footer-cat:hover {
+  fill: gainsboro;
+}
+
+.footer-down {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-1 {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.social-2 {
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+}
+
+.social-ico {
+  border-radius: 10px;
+  display: flex;
+  /* flex-basis: auto; */
+  margin: 10px;
+}
+
+.codepen {
+  width: 60px;
+  height: 60px;
+}
+
+.codepen:hover {
+}
+
+.email {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.email:hover {
+  fill: #b23121;
+}
+
+.facebook {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.facebook:hover {
+  fill: #1778f2;
+}
+
+.github-kote {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.github-kote:hover {
+  /* background: linear-gradient(157.1deg, #562EC2 29.59%, #A07EFE 73.59%); */
+  fill: #666666;
+}
+
+.instagram {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.instagram:hover {
+  fill: #c13584;
+
+  /* background: #d6249f;
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25); */
+}
+
+.linkedin {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.linkedin:hover {
+  fill: #006097;
+}
+
+.odnoklassniki {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.odnoklassniki:hover {
+  fill: #ee8208;
+}
+
+.overflowing {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.overflowing:hover {
+}
+
+.pinterest {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.pinterest:hover {
+  fill: #f0002a;
+}
+
+.telegram {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.telegram:hover {
+  fill: #0088cc;
+}
+
+.twitter {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.twitter:hover {
+  fill: #1da1f2;
+}
+
+.vk {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.vk:hover {
+  fill: #5181b8;
+}
+
+.whatsapp {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp:hover {
+  fill: #4fce5d;
+}
+
+.wordpress {
+  fill: #bdbdbd;
+  width: 28px;
+  height: 28px;
+}
+
+.wordpress:hover {
+  fill: #00749c;
 }
