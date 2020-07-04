@@ -93,7 +93,7 @@
 // $(function () {
 
 
-  
+
 //   $('[name="city"]').fias({
 //   type: $.fias.type.city,
 //       change: function (obj) {
@@ -479,8 +479,35 @@ const city = [
   'Ярославль',
 ]
 
+
+
+
+const showCity = (input, list) => {
+  list.textContent = '';
+
+  if (input.value !== '') {
+
+    const filterCity = city.filter((item) => {
+      const fixItem = item.toLowerCase();
+      return fixItem.includes(input.value.toLowerCase());
+
+    });
+
+    filterCity.forEach((item) => {
+      const li = document.createElement('li');
+      li.classList.add('dropdown__city');
+      li.textContent = item;
+      list.append(li)
+    });
+
+}
+
+};
+
+
+
 inputCitiesFrom.addEventListener('input', () => {
-console.log("sobitie input");
+  showCity(inputCitiesFrom, dropdownCitiesFrom)
 });
 
 // function show() {
@@ -489,8 +516,3 @@ console.log("sobitie input");
 
 // show();
 
-const get = () => {
-  console.log('Vizov get');
-};
-
-get();
