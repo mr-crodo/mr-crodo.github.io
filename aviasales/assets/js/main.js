@@ -139,13 +139,12 @@
 
 
 
-
-
+// 
 const formSearch = document.querySelector('.form-search'),
   inputCitiesFrom = document.querySelector('.input__cities-from'),
   dropdownCitiesFrom = document.querySelector('.dropdown__cities-from'),
   inputCitiesTo = document.querySelector('.input__cities-to'),
-  dropdownCitiesTo = document.querySelector('dropdown_cities-to'),
+  dropdownCitiesTo = document.querySelector('.dropdown__cities-to'),
   inputDateDepart = document.querySelector('.input__date-depart');
 
 
@@ -153,6 +152,8 @@ const formSearch = document.querySelector('.form-search'),
 // ctobi ne ispolzovat bolshoe kolicestvo massivov dla stran
 // KfkdT6z4FnBynBKknQ8t6Kr7b5e2BHei
 
+
+// Baza dannix Qorodov Rossiyi
 
 const city = [
   'Абакан',
@@ -480,6 +481,8 @@ const city = [
 ]
 
 
+// Funkcii
+
 
 
 const showCity = (input, list) => {
@@ -500,19 +503,48 @@ const showCity = (input, list) => {
       list.append(li)
     });
 
-}
+  }
 
 };
 
 
+const selectCity = (event, input, list) => {
+  const target = event.target;
+  // sdes mi zadaems s bolshoy ili s malenoy bukvi vse budet nacinatsa
+  if (target.tagName.toLowerCase() === 'li') {
+    input.value = target.textContent;
+    list.textContent = '';
+  }
+}
+
+
+// Obrobotki sobotiy
 
 inputCitiesFrom.addEventListener('input', () => {
-  showCity(inputCitiesFrom, dropdownCitiesFrom)
+  showCity(inputCitiesFrom, dropdownCitiesFrom);
 });
 
-// function show() {
-//   console.log('Vizov shov');
-// }
 
-// show();
+inputCitiesTo.addEventListener('input', () => {
+  showCity(inputCitiesTo, dropdownCitiesTo);
+});
 
+
+dropdownCitiesFrom.addEventListener('click', (event) => {
+  selectCity(event, inputCitiesFrom, dropdownCitiesFrom);
+});
+
+
+dropdownCitiesTo.addEventListener('click', (event) => {
+  selectCity(event, inputCitiesTo, dropdownCitiesTo);
+});
+
+
+// dropdownCitiesTo.addEventListener('click', (event) => {
+//   const target = event.target;
+//   // sdes mi zadaems s bolshoy ili s malenoy bukvi vse budet nacinatsa
+//   if (target.tagName.toLowerCase() === 'li') {
+//     inputCitiesTo.value = target.textContent;
+//     dropdownCitiesTo.textContent = '';
+//   }
+// });
