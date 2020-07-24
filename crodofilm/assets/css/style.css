@@ -1,3 +1,49 @@
+@font-face {
+  font-family: "San Francisco", sans-serif;
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Black.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Bold.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Extrabold.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Light.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Medium.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Regular.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Semibold.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Thin3.otf);
+  src: url(/assets/fonts/SanFrancisco/San\Francisco-Ultralight3.otf);
+}
+
+@font-face {
+  font-family: "Google Sans", sans-serif;
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Bold.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Bold.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Bold.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Bold.woff2);
+
+  src: url(/assets/fonts/GoogleSans/GoogleSans-BoldItalic.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-BoldItalic.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-BoldItalic.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-BoldItalic.woff2);
+
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Italic.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Italic.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Italic.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Italic.woff2);
+
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Medium.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Medium.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Medium.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Medium.woff2);
+
+  src: url(/assets/fonts/GoogleSans/GoogleSans-MediumItalic.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-MediumItalic.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-MediumItalic.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-MediumItalic.woff2);
+
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Regular.eot);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Regular.ttf);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Regular.woff);
+  src: url(/assets/fonts/GoogleSans/GoogleSans-Regular.woff2);
+}
+
 *,
 * {
   margin: 0;
@@ -33,9 +79,9 @@ textarea {
 
 h1,
 h2 {
-  font: normal 170% "century gothic", arial;
+  font: normal 170% "Google Sans", sans-serif;
   margin: 0 0 15px 0;
-  padding: 15px 0 5px 0;
+  /* padding: 15px 0 5px 0; */
   color: #212029;
 }
 
@@ -48,7 +94,7 @@ a,
 a:hover {
   outline: none;
   text-decoration: none;
-  color: #aeb002;
+  color: #e87e04;
 }
 
 ul {
@@ -63,8 +109,12 @@ ul li {
 
 /* rgb(72, 153, 190 */
 .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* background: linear-gradient(157.1deg, #562ec2 29.59%, #a07efe 73.59%); */
-  background: #111;
+  background: #1b1b1b;
+  /* background: #562ec2; */
   height: 177px;
   font-size: 0.8em;
   margin-left: 0;
@@ -87,14 +137,13 @@ ul li {
 }
 
 .logo {
-  width: 880px;
   padding-bottom: 20px;
   /* border: 1px solid red; */
 }
 
 .logo h1,
 .logo h2 {
-  font: normal 300% "centery gothic", arial, sans-serif;
+  font: normal 300% "Google Sans", sans-serif;
   margin: 0 0 0 9px;
 }
 
@@ -102,7 +151,7 @@ ul li {
 .logo-text h1 a,
 .logo-text h1 a:hover {
   padding: 22px 0 0 0;
-  color: #fff;
+  color: #e87e04;
   letter-spacing: 0.1em;
   /* properties for text-decoration: none, underline, line-throught; overline*/
   text-decoration: none;
@@ -136,6 +185,8 @@ ul.menu li {
   list-style: none;
   margin: 1px 2px 0 0;
   text-align: center;
+  /* border: 1px solid red; */
+  margin-left: 10px;
 }
 
 /* ul.menu li a {
@@ -148,23 +199,28 @@ ul.menu li {
 } */
 
 ul.menu li.selected a {
-  color: #aeb002;
+  color: #e87e04;
+}
+
+ul.menu li.selected a:hover {
+  color: #e89e04;
 }
 
 ul.menu li a:hover {
-  color: #e4ec04;
+  color: #e89e04;
 }
 
 .icon-link {
-  font: normal 100% "trebuchet ms", sans-serif;
+  font: normal 100% "San Francisco", sans-serif;
   display: block;
   height: 40px;
-  padding: 6px 35px 5px 28px;
+  /* padding: 6px 35px 5px 28px; */
+  /* margin-left: 5px; */
   color: #fff;
   text-decoration: none;
   /* align-items: center; */
   text-align: center;
-
+  /* border: 1px solid red; */
   /* position: relative; */
 }
 
@@ -181,6 +237,93 @@ ul.menu li a:hover {
   text-align: center;
 }
 
+/* TODO: Button */
+
+.buttons-groub {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.regestration {
+  display: flex;
+  margin-bottom: 20px;
+  
+  /* border: 1px solid red; */
+  width: 300px;
+  justify-content: center;
+}
+
+.button-login,
+.button-reg {
+  margin: 10px;
+
+
+}
+
+.button-reg .log,
+.button-login .log {
+  border-style: none;
+  background: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 30px;
+  padding-left: 30px;
+  font-family: "San Francisco", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  /* or 22px */
+  color: #707a89;
+  
+}
+
+.log:hover {
+  /* padding-top: 18px;
+  padding-bottom: 18px;
+  padding-right: 35px;
+  padding-left: 35px; */
+  background: #e89e04;
+}
+
+/* TODO: lang */
+.language {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* border: 1px solid red; */
+}
+
+.flag {
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  /* border: 1px solid red; */
+}
+
+.azer-logo img,
+.russ-logo img,
+.eng-logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.azer-logo img:hover,
+.russ-logo img:hover,
+.eng-logo img:hover {
+  fill: #b23121;
+  width: 45px;
+  height: 45px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
+}
+
 /* ****** V slucae ceqo izmenay sdes ********** */
 
 .site-content {
@@ -193,14 +336,14 @@ ul.menu li a:hover {
 /* right side bar */
 
 .sidebar-container-right {
-  border: 1px solid rgb(0, 255, 98);
+  /* border: 1px solid rgb(0, 255, 98); */
   float: right;
   width: 224px;
   margin-left: 30px;
 }
 
 .sidebar-right {
-  border: 1px solid rgb(30, 180, 30);
+  /* border: 1px solid rgb(30, 180, 30); */
   float: right;
   width: 222px;
   padding: 5%;
@@ -220,15 +363,18 @@ ul.menu li a:hover {
   padding: 5px;
   text-align: center;
 } */
-
 .btn {
   padding: 8px;
-  background-color: #fff;
+  background-color: #457adc;
   cursor: pointer;
 }
 
+.btn:hover {
+  background-color: #e89e04;
+}
+
 .sidebar-right h2 {
-  color: #136cb2;
+  color: #707a89;
 }
 
 /* styles for links */
@@ -260,7 +406,7 @@ ul.menu li a:hover {
   float: left;
   margin-right: 30px;
   width: 224px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .sidebar-left {
@@ -271,6 +417,9 @@ ul.menu li a:hover {
   border: solid 1px #f2f2f2;
   border-radius: 5px;
   background-color: #f9f9f9;
+  /* background-color: #1B1B1B; */
+  /* background-color: #707A89; */
+  /* background-color: #FFFCE9; */
 }
 
 /* .sidebar h2 {
@@ -291,8 +440,12 @@ ul.menu li a:hover {
 }
 
 .sidebar-left h2 {
-  color: #136cb2;
+  /* color: #136cb2; */
+  /* color: #E87E04; */
+  color: #707a89;
 }
+/* color: #34495E */
+/* color: #23527C */
 
 /* styles for links */
 
@@ -314,30 +467,45 @@ ul.menu li a:hover {
 .sidebar-left .rating-sidebar {
   float: right;
 }
+/* ! CONTENT */
+.content {
+  text-align: left;
+  width: 610px;
+  padding: 0 0 0 5px;
+  float: left;
+
+  border: 1px solid red;
+}
+
+.content a {
+  text-decoration: none;
+}
 
 /* ***************VIDEO************************ */
 
-.film-video {
+
+
+/* .film-video {
   display: flex;
   max-width: 100%;
 }
 .film-video iframe {
-  /* position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 80%;
   height: 100%;
   padding-right: 40px;
   border-width: 0;
-  outline-width: 0; */
-}
+  outline-width: 0;
+} */
 
 /* ****************FOOTER********************* */
 
 footer {
   width: 100%;
   height: auto;
-  background: #212029;
+  background: #1b1b1b;
   /* background: linear-gradient(157.1deg, #562ec2 29.59%, #a07efe 73.59%); */
   margin: 0 auto;
   text-align: center;
@@ -404,6 +572,7 @@ footer nav a:hover {
   justify-content: space-around;
 }
 
+/* !Social */
 .social {
   display: flex;
   flex-direction: column;
@@ -414,39 +583,56 @@ footer nav a:hover {
 
 .social-1 {
   display: flex;
+  flex-wrap: wrap;
   /* align-items: center;
   justify-content: center; */
 }
 
 .social-2 {
   display: flex;
+  flex-wrap: wrap;
   /* align-items: center;
   justify-content: center; */
+  /* border: 1px solid red; */
 }
 
 .social-ico {
   border-radius: 10px;
   display: flex;
+  width: 40px;
+  height: 40px;
+
   /* flex-basis: auto; */
   margin: 10px;
+  /* border: 1px solid green; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.codepen {
+/* .codepen {
   width: 60px;
   height: 60px;
+  
 }
 
 .codepen:hover {
-}
+} */
 
 .email {
   fill: #bdbdbd;
   width: 28px;
   height: 28px;
+  /* border: 1px solid blue; */
 }
 
 .email:hover {
   fill: #b23121;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .facebook {
@@ -457,6 +643,11 @@ footer nav a:hover {
 
 .facebook:hover {
   fill: #1778f2;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .github-kote {
@@ -468,6 +659,11 @@ footer nav a:hover {
 .github-kote:hover {
   /* background: linear-gradient(157.1deg, #562EC2 29.59%, #A07EFE 73.59%); */
   fill: #666666;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .instagram {
@@ -478,6 +674,11 @@ footer nav a:hover {
 
 .instagram:hover {
   fill: #c13584;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 
   /* background: #d6249f;
   background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -492,6 +693,11 @@ footer nav a:hover {
 
 .linkedin:hover {
   fill: #006097;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .odnoklassniki {
@@ -502,15 +708,28 @@ footer nav a:hover {
 
 .odnoklassniki:hover {
   fill: #ee8208;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .overflowing {
   fill: #bdbdbd;
   width: 28px;
   height: 28px;
+  width: 32px;
+  height: 32px;
 }
 
 .overflowing:hover {
+  fill: #f0002a;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .pinterest {
@@ -521,6 +740,11 @@ footer nav a:hover {
 
 .pinterest:hover {
   fill: #f0002a;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .telegram {
@@ -531,6 +755,11 @@ footer nav a:hover {
 
 .telegram:hover {
   fill: #0088cc;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .twitter {
@@ -541,6 +770,11 @@ footer nav a:hover {
 
 .twitter:hover {
   fill: #1da1f2;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .vk {
@@ -551,6 +785,11 @@ footer nav a:hover {
 
 .vk:hover {
   fill: #5181b8;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .whatsapp {
@@ -561,6 +800,11 @@ footer nav a:hover {
 
 .whatsapp:hover {
   fill: #4fce5d;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
 
 .wordpress {
@@ -571,4 +815,9 @@ footer nav a:hover {
 
 .wordpress:hover {
   fill: #00749c;
+  width: 42px;
+  height: 42px;
+  transition-property: height, width, background-color;
+  transition-duration: 1s;
+  transition-timing-function: ease-in, ease, linear;
 }
