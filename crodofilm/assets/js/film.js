@@ -1,4 +1,4 @@
-git
+
 
 // **************** etot kod menaet svg zalivku v img elemente
 
