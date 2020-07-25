@@ -94,7 +94,7 @@ a,
 a:hover {
   outline: none;
   text-decoration: none;
-  color: #e87e04;
+  color: #e8046e;
 }
 
 ul {
@@ -151,7 +151,7 @@ ul li {
 .logo-text h1 a,
 .logo-text h1 a:hover {
   padding: 22px 0 0 0;
-  color: #e87e04;
+  color: #e8046e;
   letter-spacing: 0.1em;
   /* properties for text-decoration: none, underline, line-throught; overline*/
   text-decoration: none;
@@ -199,15 +199,15 @@ ul.menu li {
 } */
 
 ul.menu li.selected a {
-  color: #e87e04;
+  color: #e8046e;
 }
 
 ul.menu li.selected a:hover {
-  color: #e89e04;
+  color: #e8046e;
 }
 
 ul.menu li a:hover {
-  color: #e89e04;
+  color: #e8046e;
 }
 
 .icon-link {
@@ -287,7 +287,7 @@ ul.menu li a:hover {
   padding-bottom: 18px;
   padding-right: 35px;
   padding-left: 35px; */
-  background: #e89e04;
+  background: #e8046e;
 }
 
 /* TODO: lang */
@@ -367,10 +367,11 @@ ul.menu li a:hover {
   padding: 8px;
   background-color: #457adc;
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .btn:hover {
-  background-color: #e89e04;
+  background-color: #e8046e;
 }
 
 .sidebar-right h2 {
@@ -524,7 +525,7 @@ footer nav a:hover {
 
 .logo-footer {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   margin: 50px;
 }
