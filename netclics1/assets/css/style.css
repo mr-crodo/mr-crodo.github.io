@@ -7,22 +7,22 @@
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("/assets/fonts/MuseoSansCyrl-500.woff2") format("woff2"),
-    url("/assets/fonts/MuseoSansCyrl-500.woff") format("woff");
+    src: url("/netclics1/assets/fonts/MuseoSansCyrl-500.woff2") format("woff2"),
+    url("/netclics1/assets/fonts/MuseoSansCyrl-500.woff") format("woff");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("/assets/fonts/MuseoSansCyrl-700.woff2") format("woff2"),
-    url("/assets/fonts/MuseoSansCyrl-700.woff") format("woff");
+    src: url("/netclics1/assets/fonts/MuseoSansCyrl-700.woff2") format("woff2"),
+    url("/netclics1/assets/fonts/MuseoSansCyrl-700.woff") format("woff");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("/assets/fonts/MuseoSansCyrl-900.woff2") format("woff2"),
-    url("/assets/fonts/MuseoSansCyrl-900.woff") format("woff");
+    src: url("/netclics1/assets/fonts/MuseoSansCyrl-900.woff2") format("woff2"),
+    url("/netclics1/assets/fonts/MuseoSansCyrl-900.woff") format("woff");
     font-weight: 900;
 }
 
