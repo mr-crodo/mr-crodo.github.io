@@ -7,22 +7,22 @@
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("../fonts/MuseoSansCyrl-500.woff2") format("woff2"),
-    url("../fonts/MuseoSansCyrl-500.woff") format("woff");
+    src: url("/assets/fonts/MuseoSansCyrl-500.woff2") format("woff2"),
+    url("/assets/fonts/MuseoSansCyrl-500.woff") format("woff");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("../fonts/MuseoSansCyrl-700.woff2") format("woff2"),
-    url("../fonts/MuseoSansCyrl-700.woff") format("woff");
+    src: url("/assets/fonts/MuseoSansCyrl-700.woff2") format("woff2"),
+    url("/assets/fonts/MuseoSansCyrl-700.woff") format("woff");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Museo Sans";
-    src: url("../fonts/MuseoSansCyrl-900.woff2") format("woff2"),
-    url("../fonts/MuseoSansCyrl-900.woff") format("woff");
+    src: url("/assets/fonts/MuseoSansCyrl-900.woff2") format("woff2"),
+    url("/assets/fonts/MuseoSansCyrl-900.woff") format("woff");
     font-weight: 900;
 }
 
@@ -42,7 +42,7 @@ body {
     margin: 0;
 
     background-color: rgb(255, 255, 255);
-    font-family: Museo Sans, Arial, sans-serif;
+    font-family: 'Museo Sans', Arial, sans-serif;
     font-weight: 500;
     font-size: 16px;
     color: black;
