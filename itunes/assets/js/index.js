@@ -1,16 +1,16 @@
 //TODO: sdes mi pishem export ctobi eksportirovat kode s druqix JS faylov
 
 import {
+  videoPlayerInit
+} from './videoPlayer.js';
+
+import {
   radioPlayerInit
 } from './radioPlayer.js';
 
 import {
   musicPlayerInit
 } from './musicPlayer.js';
-
-import {
-  videoPlayerInit
-} from './videoPlayer.js';
 
 // Document eto DOM derevo
 // ? dalee mi mi budem polucat elementi so stranici,
