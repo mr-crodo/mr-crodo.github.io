@@ -326,8 +326,12 @@ ul.menu li a:hover {
 
 /* ****** V slucae ceqo izmenay sdes ********** */
 
+hr {
+  border: solid 1px #f3f3f3;
+}
+
 .site-content {
-  max-width: 1125px;
+  max-width: 1200px;
   overflow: hidden;
   margin: 20px auto 0 auto;
   background-color: white;
@@ -475,7 +479,7 @@ ul.menu li a:hover {
   padding: 0 0 0 5px;
   float: left;
 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .content a {
@@ -487,10 +491,17 @@ ul.menu li a:hover {
 
 }
 
-.films_block img {
+.films__block img {
   border-radius: 5px;
   border: solid 5px #dad7d5;
   width: 22%;
+}
+
+
+/* * POST */
+
+.posts .posts__content {
+  font-size: 0.8em;
 }
 /* ***************VIDEO************************ */
 
