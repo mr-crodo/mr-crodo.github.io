@@ -482,6 +482,16 @@ ul.menu li a:hover {
   text-decoration: none;
 }
 
+.films_block {
+  margin-bottom: 5%;
+
+}
+
+.films_block img {
+  border-radius: 5px;
+  border: solid 5px #dad7d5;
+  width: 22%;
+}
 /* ***************VIDEO************************ */
 
 
