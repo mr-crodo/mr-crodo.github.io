@@ -33,16 +33,16 @@ export const radioPlayerInit = () => {
       radio.classList.remove('play');
       // ******
       // ? add
-      radioStop.classList.add('fa-play');
+      radioStop.classList.add('fa-play-circle');
       // ? dell
-      radioStop.classList.remove('fa-stop');
+      radioStop.classList.remove('fa-stop-circle');
     } else {
       // **********
       // ? когда музыка будет останавливатся мы будем добавлять класс play
       radio.classList.add('play');
       // *********
-      radioStop.classList.add('fa-stop');
-      radioStop.classList.remove('fa-play');
+      radioStop.classList.add('fa-stop-circle');
+      radioStop.classList.remove('fa-play-circle');
     }
   };
 

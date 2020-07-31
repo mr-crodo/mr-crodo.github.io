@@ -64,16 +64,16 @@
 						<p class="video-time video-time__total">00:00</p>
 						<!-- ************************************ -->
 						<!-- ! a sdes dobavlaem dla smeni zvuka -->
-						<span class="fa fa-volume-down video-icon"></span>
+						<button class="fa fa-volume-down video-icon"></button>
 						<!-- ? a mejdu nimi stavim esho odin range -->
 						<!-- todo: step-eto shad dvijeniya kontrollera,
 							todo:  value- eto to reshebie kotoroe uje est v danniy moment, min max - minimalnoe i max znacenie -->
 						<input type="range" class="video-volume" min="0" max="100" step="1" value="100">
-						<span class="fa fa-volume-up video-icon"></span>
+						<button class="fa fa-volume-up video-icon"></button>
 						<!-- ************************************* -->
 
 						<!-- ! sdes mi propisali fa ikonku dla fullScreen mojno i p teg postavit i span -->
-						<p class="fa fa-external-link video-fullscreen video-icon"></p>
+						<button class="fa fa-external-link video-fullscreen video-icon"></button>
 					</nav>
 				</div>
 			</div>
@@ -104,9 +104,10 @@
 
 					<!-- !!!!!!!!!!!!!!!!!!! -->
 					<!-- * SOUND for audio -->
-					<span class="fa fa-volume-down audio-icon"></span>
+					<!-- <button class="fa fa-volume-off hide"></button> -->
+					<button class="audio-volume-down fa fa-volume-down audio-icon"></button>
 					<input type="range" class="audio-volume" min="0" max="100" step="1" value="100">
-					<span class="fa fa-volume-up video-icon"></span>
+					<button class="audio-volume-up fa fa-volume-up video-icon"></button>
 					<!-- ****************** -->
 				</nav>
 			</footer>
@@ -196,11 +197,13 @@
 				</div>
 			</div>
 			<footer class="footer-fix radio-footer">
-				<button class="radio-stop fa fa-play"></button>
+				<button class="radio-stop fa fa-play-circle"></button>
 
-				<span class="fa fa-volume-down radio-icon"></span>
-					<input type="range" class="radio-volume" min="0" max="100" step="1" value="100">
-					<span class="fa fa-volume-up radio-icon"></span>
+				<!-- !!!!!!!!!!!!!!!!!!! -->
+				<!-- * SOUND for audio -->
+				<button class="fa fa-volume-down radio-icon"></button>
+				<input type="range" class="radio-volume" min="0" max="100" step="1" value="100">
+				<button class="fa fa-volume-up radio-icon"></button>
 			</footer>
 		</article>
 	</main>

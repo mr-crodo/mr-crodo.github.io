@@ -19,6 +19,17 @@ export const musicPlayerInit = () => {
   const audioTimePassed = document.querySelector('.audio-time__passed');
   const audioTimeTotal = document.querySelector('.audio-time__total');
 
+  //**** */ sdes dobavlaem konstantu k knobkaam dla izmenenie zvuka po knobkam
+  const audioVolumeDown = document.querySelector('.audio-volume-down');
+  const audioVolumeUp = document.querySelector('.audio-volume-up');
+  // **********
+
+  // ****SOUND*****
+  // !constanta dla zimenenie zvuka
+  const audioVolume = document.querySelector('.audio-volume');
+  // *********
+
+
   // todo Sdes mi dobavili muziki v massiv
   const playlist = ['hello', 'flow', 'speed'];
   // todo Eto index toqo treka s kotoroqo budet nacinatsa pesni
@@ -215,5 +226,75 @@ export const musicPlayerInit = () => {
     audioPlayer.currentTime = progress;
   });
 
+// ! sdes mi sddelali umensheniye zvuka po polzunku 
+  audioVolume.addEventListener('input', () => {
+    audioPlayer.volume = audioVolume.value / 100;
+  });
 
-}
+  audioPlayer.volume = 0.5;
+
+  audioVolume.value = audioPlayer.volume * 100;
+
+  console.log(audioVolume.value);
+
+
+  audioVolumeDown.addEventListener('click', (e) => {
+
+    // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
+    audioVolume.value--;
+    
+
+
+
+    
+//     console.log(e);
+//     if (target.classList.contains('audio-volume-down')) {
+// console.log('target')
+//     };
+  });
+  
+
+
+//   audioNavigation.addEventListener('click', event => {
+//     const target = event.target;
+// // console.log(target);
+
+
+//     // ? eto uslovie koqda klikali po knobki play
+//     // todo: metod 'contains' proveraet est li tam takoy klass kotoriy mi ukazali v skobkax
+//!     if (target.classList.contains('audio-volume-down')) {
+
+//       // audioVolume.addEventListener('input', () => {
+//       //   audioPlayer.volume = audioVolume.value / 100;
+//       // });
+    
+//       // audioPlayer.volume = 0.5;
+    
+//       // audioVolume.value = audioPlayer.volume * 100;
+
+
+//       // // ? mi budem menat u audio klass list menat play
+//       // // * toggle rabotaet tak esli etoqo klassa tam net on eqo dobavit esli on est to uberet
+//       // audio.classList.toggle('play');
+//       // // ? dalee mu budem dobavlat ili uberat klass s pomoshyu metoda toggle
+//       // // ? u nas uje est fa play mi budem dobavlat fa play
+//       // // ? i fa play budem uberat esli on uje est vse eto pri najatii
+//       // audioButtonPlay.classList.toggle('fa-play');
+//       // audioButtonPlay.classList.toggle('fa-pause');
+
+
+//       // // todo otsuda mojem zapuskat i muziku, muziku budem zapuskat po usloviyu
+//       // if (audioPlayer.paused) {
+//       //   // ? esli pause to play
+//       //   audioPlayer.play();
+//       // } else {
+//       //   // ? inace vo vsex druqix slucayax a sdes on odin pause
+//       //   audioPlayer.pause();
+//       // }
+//     };
+//   });
+
+
+  
+
+};
