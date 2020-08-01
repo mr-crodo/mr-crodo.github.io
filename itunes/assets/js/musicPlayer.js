@@ -44,7 +44,7 @@ export const musicPlayerInit = () => {
     // ! kartinki pesen
     // sydaje mi dobavlaem kartinku muziki, dobavlaem tak je po puti src
     // ! u mena oshibka bila v src puti qde ya zabil napisat qlavnuyu papku v kotoroy lejit papka audio
-    audioImg.src = `./assets/audio/${track}.jpg`;
+    audioImg.src = `./itunes/assets/audio/${track}.jpg`;
 
     // !nazvanie pesen
     // sdes mi dobavili nazvanie pesni v zaranee ustanovlenniy shablon tksta,
@@ -54,7 +54,7 @@ export const musicPlayerInit = () => {
     // sdes mi berem pesnu iz papki
     // ? propisivaya emu put ispolzuem interpolaciyu eto znak $
     // ! mi ukazivaem cto berem pesni s track, kotoriy beret pesni v toje vrema s massiva
-    audioPlayer.src = `./assets/audio/${track}.mp3`;
+    audioPlayer.src = `./itunes/assets/audio/${track}.mp3`;
 
 
     // ! isPlayed funkciyu mi propisali a ne audioPlayer.paused ctob esli pesna ne zapushena i pereklycenna
@@ -226,7 +226,7 @@ export const musicPlayerInit = () => {
     audioPlayer.currentTime = progress;
   });
 
-// ! sdes mi sddelali umensheniye zvuka po polzunku 
+  // ! sdes mi sddelali umensheniye zvuka po polzunku 
   audioVolume.addEventListener('input', () => {
     audioPlayer.volume = audioVolume.value / 100;
   });
@@ -242,59 +242,59 @@ export const musicPlayerInit = () => {
 
     // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
     audioVolume.value--;
-    
 
 
 
-    
-//     console.log(e);
-//     if (target.classList.contains('audio-volume-down')) {
-// console.log('target')
-//     };
+
+
+    //     console.log(e);
+    //     if (target.classList.contains('audio-volume-down')) {
+    // console.log('target')
+    //     };
   });
-  
 
 
-//   audioNavigation.addEventListener('click', event => {
-//     const target = event.target;
-// // console.log(target);
+
+  //   audioNavigation.addEventListener('click', event => {
+  //     const target = event.target;
+  // // console.log(target);
 
 
-//     // ? eto uslovie koqda klikali po knobki play
-//     // todo: metod 'contains' proveraet est li tam takoy klass kotoriy mi ukazali v skobkax
-//!     if (target.classList.contains('audio-volume-down')) {
+  //     // ? eto uslovie koqda klikali po knobki play
+  //     // todo: metod 'contains' proveraet est li tam takoy klass kotoriy mi ukazali v skobkax
+  //!     if (target.classList.contains('audio-volume-down')) {
 
-//       // audioVolume.addEventListener('input', () => {
-//       //   audioPlayer.volume = audioVolume.value / 100;
-//       // });
-    
-//       // audioPlayer.volume = 0.5;
-    
-//       // audioVolume.value = audioPlayer.volume * 100;
+  //       // audioVolume.addEventListener('input', () => {
+  //       //   audioPlayer.volume = audioVolume.value / 100;
+  //       // });
 
+  //       // audioPlayer.volume = 0.5;
 
-//       // // ? mi budem menat u audio klass list menat play
-//       // // * toggle rabotaet tak esli etoqo klassa tam net on eqo dobavit esli on est to uberet
-//       // audio.classList.toggle('play');
-//       // // ? dalee mu budem dobavlat ili uberat klass s pomoshyu metoda toggle
-//       // // ? u nas uje est fa play mi budem dobavlat fa play
-//       // // ? i fa play budem uberat esli on uje est vse eto pri najatii
-//       // audioButtonPlay.classList.toggle('fa-play');
-//       // audioButtonPlay.classList.toggle('fa-pause');
+  //       // audioVolume.value = audioPlayer.volume * 100;
 
 
-//       // // todo otsuda mojem zapuskat i muziku, muziku budem zapuskat po usloviyu
-//       // if (audioPlayer.paused) {
-//       //   // ? esli pause to play
-//       //   audioPlayer.play();
-//       // } else {
-//       //   // ? inace vo vsex druqix slucayax a sdes on odin pause
-//       //   audioPlayer.pause();
-//       // }
-//     };
-//   });
+  //       // // ? mi budem menat u audio klass list menat play
+  //       // // * toggle rabotaet tak esli etoqo klassa tam net on eqo dobavit esli on est to uberet
+  //       // audio.classList.toggle('play');
+  //       // // ? dalee mu budem dobavlat ili uberat klass s pomoshyu metoda toggle
+  //       // // ? u nas uje est fa play mi budem dobavlat fa play
+  //       // // ? i fa play budem uberat esli on uje est vse eto pri najatii
+  //       // audioButtonPlay.classList.toggle('fa-play');
+  //       // audioButtonPlay.classList.toggle('fa-pause');
 
 
-  
+  //       // // todo otsuda mojem zapuskat i muziku, muziku budem zapuskat po usloviyu
+  //       // if (audioPlayer.paused) {
+  //       //   // ? esli pause to play
+  //       //   audioPlayer.play();
+  //       // } else {
+  //       //   // ? inace vo vsex druqix slucayax a sdes on odin pause
+  //       //   audioPlayer.pause();
+  //       // }
+  //     };
+  //   });
+
+
+
 
 };
