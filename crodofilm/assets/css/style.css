@@ -134,6 +134,7 @@ ul li {
 .site-content {
   display: flex;
   justify-content: space-between;
+  /* border: 1px solid red; */
 }
 
 .logo {
@@ -199,7 +200,7 @@ ul.menu li {
 } */
 
 ul.menu li.selected a {
-  color: #e8046e;
+  color: #b10555;
 }
 
 ul.menu li.selected a:hover {
@@ -248,7 +249,7 @@ ul.menu li a:hover {
 .regestration {
   display: flex;
   margin-bottom: 20px;
-  
+
   /* border: 1px solid red; */
   width: 300px;
   justify-content: center;
@@ -257,8 +258,6 @@ ul.menu li a:hover {
 .button-login,
 .button-reg {
   margin: 10px;
-
-
 }
 
 .button-reg .log,
@@ -279,7 +278,6 @@ ul.menu li a:hover {
   line-height: 1.4;
   /* or 22px */
   color: #707a89;
-  
 }
 
 .log:hover {
@@ -306,6 +304,22 @@ ul.menu li a:hover {
   /* border: 1px solid red; */
 }
 
+.social-ico a .fa-at:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #1da1f2;
+}
+
+.fa-facebook:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+
 .azer-logo img,
 .russ-logo img,
 .eng-logo img {
@@ -319,9 +333,11 @@ ul.menu li a:hover {
   fill: #b23121;
   width: 45px;
   height: 45px;
-  transition-property: height, width, background-color;
-  transition-duration: 1s;
-  transition-timing-function: ease-in, ease, linear;
+  /* transition-property: height, width, background-color;
+  transition-duration: 0.5s; */
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+  /* transition-timing-function: ease-in, ease, linear; */
 }
 
 /* ****** V slucae ceqo izmenay sdes ********** */
@@ -449,6 +465,7 @@ hr {
   /* color: #E87E04; */
   color: #707a89;
 }
+
 /* color: #34495E */
 /* color: #23527C */
 
@@ -472,8 +489,10 @@ hr {
 .sidebar-left .rating-sidebar {
   float: right;
 }
+
 /* ! CONTENT */
 .content {
+  /* display: flex; */
   text-align: left;
   width: 610px;
   padding: 0 0 0 5px;
@@ -486,26 +505,67 @@ hr {
   text-decoration: none;
 }
 
-.films_block {
+.films__block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  /* flex-direction: column; */
   margin-bottom: 5%;
-
+  justify-content: center;
+  text-align: center;
+  /* border: 1px solid blue; */
 }
 
 .films__block img {
-  border-radius: 5px;
-  border: solid 5px #dad7d5;
-  width: 22%;
+  
+  
+  width: 90%;
 }
 
+.film-w {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 1%;
+  width: 20%;
+  border-radius: 5px;
+  border: solid 5px #dad7d5;
+}
+
+/* * OBVODNA PRI NAVEDENII */
+.film-w:hover {
+  box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #e8046e;
+}
+
+.trailer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  /* border: 5px solid #922525; */
+  border-radius: 10px;
+  padding-bottom: 5px;
+  /* margin: 5px; */
+  /* padding-top: 5px; */
+  cursor: pointer;
+  text-decoration: none;
+
+}
+
+.trailer-button-text {
+  text-align: center;
+  font-size: 1em;
+  margin-left: 5px;
+}
 
 /* * POST */
 
 .posts .posts__content {
   font-size: 0.8em;
 }
+
 /* ***************VIDEO************************ */
-
-
 
 /* .film-video {
   display: flex;
@@ -526,6 +586,8 @@ hr {
 
 footer {
   width: 100%;
+  display: flex;
+  flex-direction: column;
   height: auto;
   background: #1b1b1b;
   /* background: linear-gradient(157.1deg, #562ec2 29.59%, #a07efe 73.59%); */
@@ -534,10 +596,22 @@ footer {
   padding-top: 25px;
 }
 
+/* .topnav {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+  width: 200px;
+} */
+
+.footer-anc .topnav a {
+  text-decoration: none;
+}
+
 footer a {
   color: white;
-  font-size: 14px;
+  font-size: 1rem;
   margin-left: 10px;
+  text-decoration: none;
 }
 
 footer nav a:hover {
@@ -547,6 +621,7 @@ footer nav a:hover {
 .logo-footer {
   display: flex;
   justify-content: space-evenly;
+  /* justify-content: space-around; */
   align-items: center;
   margin: 50px;
 }
@@ -568,17 +643,6 @@ footer nav a:hover {
   fill: aqua;
 }
 
-.footer-game {
-  width: 120px;
-  height: 120px;
-  margin-right: 50px;
-}
-
-.footer-game:hover {
-  fill: red;
-  color: #e4ec04;
-}
-
 .footer-cat {
   width: 100px;
   height: 100px;
@@ -591,7 +655,27 @@ footer nav a:hover {
 .footer-down {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+
+/* * My GAME */
+
+.logo-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-game {
+  width: 120px;
+  height: 120px;
+  margin-right: 10px;
+}
+
+.footer-game:hover {
+  fill: #e8046e;
+  /* color: #e4ec04; */
 }
 
 /* !Social */
@@ -619,18 +703,239 @@ footer nav a:hover {
 }
 
 .social-ico {
+  position: relative;
   border-radius: 10px;
   display: flex;
   width: 40px;
   height: 40px;
-
+  /* padding-right: 10px; */
+  padding-top: 5px;
   /* flex-basis: auto; */
   margin: 10px;
   /* border: 1px solid green; */
   justify-content: center;
   align-items: center;
   text-align: center;
+  cursor: pointer;
 }
+
+.social-ico a {
+  text-decoration: none;
+}
+
+.social-ico a .fa {
+  font-size: 2em;
+  color: #333;
+}
+
+.fa-at::before {
+  display: flex;
+  font-family: fontAwesome;
+  /* position: absolute; */
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-at:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #1da1f2;
+}
+
+.fa-facebook:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-facebook:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #3b5998;
+}
+
+.fa-git:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-git:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #bd2c00;
+}
+
+
+.fa-linkedin:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-linkedin:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #0077b5;
+}
+
+.fa-instagram:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-instagram:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #833ab4;
+}
+
+.fa-telegram:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-telegram:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #0088cc;
+}
+
+
+.fa-odnoklassniki:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-odnoklassniki:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #ed812b;
+}
+
+
+.fa-twitter:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-twitter:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #1da1f2;
+}
+
+.fa-pinterest:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-pinterest:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #bd081c;
+}
+
+.fa-vk:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-vk:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #45668e;
+}
+
+.fa-whatsapp:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-whatsapp:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #25d366;
+}
+
+.fa-wordpress:before {
+  display: flex;
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.social-ico a .fa-wordpress:hover {
+  justify-content: center;
+  font-size: 3em;
+  text-align: center;
+  color: #21759b;
+}
+
+
+/* .fa-at:nth-child(1)::before {
+  content: '\f1fa';
+  color: #ffa930;
+  border-top: 4px solid #1da1f2;
+} */
+
+.fa-facebook::before {
+  font-family: fontAwesome;
+  font-size: 1em;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+
+.fa-facebook::before:hover {
+  height: 100%;
+}
+
+.fa-facebook:nth-child(2)::before {
+  content: '\f39e';
+  color: #3b5998;
+}
+
+
 
 /* .codepen {
   width: 60px;

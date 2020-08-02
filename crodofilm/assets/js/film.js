@@ -1,4 +1,12 @@
-
+// ! dla Burger Menu
+$(document).ready(function () {
+  const nMenuBtn = $(".m-menu-button");
+  const nMenu = $(".m-menu");
+  nMenuBtn.on('click', function () {
+    nMenu.toggleClass('active');
+    $('body').toggleClass('no-scroll');
+  });
+});
 
 // **************** etot kod menaet svg zalivku v img elemente
 
@@ -262,3 +270,10 @@ $('img.wordpress').each(function () {
   }, 'xml');
 });
 
+
+//  ETO DLA FANCYBOX
+// $('.card-deck a').fancybox({
+//   caption : function( instance, item ) {
+//     return $(this).parent().find('.card-text').html();
+//   }
+// });
