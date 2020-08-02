@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en, ru">
 
 <head>
   <meta charset="UTF-8">
@@ -24,8 +24,9 @@
     <div class="header-slogan">Верстка сайтов на HTML и CSS HTML5 CSS3 JS jQuery</div>
 
     <div class="header-arrow">
-      <a href="#portfolio" rel="m_PageScroll2id" ] class="header-arrow">
-        <i class="fa fa-chevron-down" aria-hidden="true"></i>
+      <a href="#portfolio" rel="m_PageScroll2id" class="header-arrow">
+
+        <i class="fa fa-chevron-down" aria-hidden="true" alt="Arrow down"></i>
       </a>
     </div>
 
@@ -42,7 +43,7 @@
     <div class="container">
 
       <div class="title">
-        Портфолио
+        <p>Портфолио</p>
       </div>
 
 
@@ -53,7 +54,7 @@
 
           <div class="portfolio-item">
             <div class="porfolio-item-img">
-              <img src="/assets/img/portfolio/project_organica.jpg" alt="Макет Органика">
+              <img src="/assets/img/ghost.png" alt="Макет Органика">
             </div>
             <!-- /.porfolio-item-img -->
             <div class="portfolio-item-title">
@@ -74,7 +75,7 @@
 
           <div class="portfolio-item">
             <div class="porfolio-item-img">
-              <img src="/assets/img/portfolio/project_apollo.jpg" alt="Учебный макет Аполло">
+              <img src="/assets/img/itunes.jpg" alt="Учебный макет Аполло">
             </div>
             <!-- /.porfolio-item-img -->
             <div class="portfolio-item-title">
@@ -95,7 +96,28 @@
 
           <div class="portfolio-item">
             <div class="porfolio-item-img">
-              <img src="/assets/img/portfolio/project_portfolio.jpg" alt="">
+              <img src="/assets/img/netclics.png" alt="">
+            </div>
+            <!-- /.porfolio-item-img -->
+            <div class="portfolio-item-title">
+              <a href="#">Личный сайт портфолио</a>
+            </div>
+            <!-- /.portfolio-item-title -->
+            <div class="portfolio-item-text">
+              <p>Верстка личного сайта портфолио на котором вы сейчас находитесь.</p>
+            </div>
+            <!-- /.portfolio-item-text -->
+          </div>
+          <!-- /.portfolio-item -->
+
+        </div>
+        <!-- /.col-4 -->
+
+        <div class="col-4">
+
+          <div class="portfolio-item">
+            <div class="porfolio-item-img">
+              <img src="/assets/img/todo.jpg" alt="">
             </div>
             <!-- /.porfolio-item-img -->
             <div class="portfolio-item-title">
@@ -123,13 +145,65 @@
     <!-- /.container -->
 
   </div>
+  <!-- /.portfolio -->
+
+  <!-- ****************
+                           *FOOTER
+  *                 -->
+
+  <div class="footer">
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-3">
+          <p class="footer__name">© Мамедов Насиб ☺</p>
+          <p>HTML верстка и разработка сайтов</p>
+
+        </div>
+        
+        <!-- /.col-4 -->
+
+        <div class="col-3">
+          <p class="footer__social">Мои профили в социальных сетях:</p>
+          <p class="footer__social-icons">
+            <a href="#" target="_blank"><i class="fa fa-vk" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          </p>
+        </div>
+        <!-- /.col-4 -->
+
+        <div class="col-3">
+          <div class="butto-vk">
+            <!-- ! если мы ставим target="_blank" тогда страница откроется в новой строке -->
+            <a class="button" target="_blank" href="#">
+              связаться ВКОНТАКТЕ
+            </a>
+          </div>
+          <p>Напишите мне, чтобы заказать<br> или узнать стоимость верстки вашего сайта</p>
+        </div>
+        <!-- /.col-4 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.footer -->
+
 
 
 
 
 
   <script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <!--* eto dla scrola  tak je est odin kod dla scrola stranici-->
   <script src="/assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+
+  <!-- * Biblioteka dla video, tak je est nebolshoy kod v JS -->
+  <script src="/assets/libs/vide/jquery.vide.min.js"></script>
 </body>
 
 </html>
