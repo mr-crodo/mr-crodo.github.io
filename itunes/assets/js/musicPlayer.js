@@ -99,6 +99,7 @@ export const musicPlayerInit = () => {
   // todo budem znat na kakuyu knobku najal polzovatel i zapuskat audio
   audioNavigation.addEventListener('click', event => {
     const target = event.target;
+    //  console.log(target);
 
     // ? eto uslovie koqda klikali po knobki play
     // todo: metod 'contains' proveraet est li tam takoy klass kotoriy mi ukazali v skobkax
@@ -229,29 +230,35 @@ export const musicPlayerInit = () => {
   // ! sdes mi sddelali umensheniye zvuka po polzunku 
   audioVolume.addEventListener('input', () => {
     audioPlayer.volume = audioVolume.value / 100;
+    console.log(audioPlayer);
   });
 
   audioPlayer.volume = 0.5;
 
   audioVolume.value = audioPlayer.volume * 100;
 
-  console.log(audioVolume.value);
+  // console.log(audioVolume.value);
 
 
-  audioVolumeDown.addEventListener('click', (e) => {
+  //   audioVolumeDown.addEventListener('click', (e) => {
 
-    // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
-    audioVolume.value--;
+  //     // if (audioVolume.value <= 100) {
+
+  //     // }
+  //     // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
+  //     audioVolume.value--;
+  //     audioVolume.value();
+  //     console.log(audioVolume.value);
 
 
 
 
 
-    //     console.log(e);
-    //     if (target.classList.contains('audio-volume-down')) {
-    // console.log('target')
-    //     };
-  });
+  // //     console.log(e);
+  // //     if (target.classList.contains('audio-volume-down')) {
+  // // console.log('target')
+  // //     };
+  //   });
 
 
 

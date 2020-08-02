@@ -8,6 +8,13 @@ export const radioPlayerInit = () => {
   //  ? сдесь мы ставим Алл что означает все radio-item
   const radioItem = document.querySelectorAll('.radio-item');
   const radioStop = document.querySelector('.radio-stop');
+  
+// ** Dobavlaem Zvuko menalku
+const radioPlayer = document.querySelector('.radio-player');
+
+const radioVolume = document.querySelector('.radio-volume');
+// *****
+
   // *********
   //  ! dalee mi budem rabotat s konstruktorom audio
   // ? Audio eto qlobalnaya funkciya konstruktor-eto funkciya sozdaet obyekt
@@ -134,4 +141,17 @@ export const radioPlayerInit = () => {
     changeIconPlay();
   })
 
+
+
+// *** ZVUK ****
+radioVolume.addEventListener('input', (e) => {
+  radioPlayerInit.volume = radioVolume.value / 100;
+  console.log(e);
+
+});
+
+radioPlayer.volume = 0.5;
+radioVolume.value = radioPlayerInit.volume * 100;
+
+// *******
 };
