@@ -8,6 +8,10 @@ export const radioPlayerInit = () => {
   //  ? сдесь мы ставим Алл что означает все radio-item
   const radioItem = document.querySelectorAll('.radio-item');
   const radioStop = document.querySelector('.radio-stop');
+
+  const audioVolume = document.querySelector('.audio-volume');
+
+  let prevVolume = 0.5;
   
 // ** Dobavlaem Zvuko menalku
 const radioPlayer = document.querySelector('.radio-player');
@@ -143,15 +147,41 @@ const radioVolume = document.querySelector('.radio-volume');
 
 
 
-// *** ZVUK ****
-radioVolume.addEventListener('input', (e) => {
-  radioPlayerInit.volume = radioVolume.value / 100;
-  console.log(e);
+// // *** ZVUK ****
+// radioVolume.addEventListener('input', () => {
+//   radio.volume = radioVolume.value / 100;
+//   console.log(radio.volume);
+// });
 
-});
 
-radioPlayer.volume = 0.5;
-radioVolume.value = radioPlayerInit.volume * 100;
 
-// *******
+// radio.volume = 0.5;
+// radioVolume.value = radio.volume * 100;
+
+// // *******V
+
+ radioVolume.addEventListener('input', () => {
+   audio.volume = radioVolume.value / 100;
+console.log(audio)
+ })
+
+ radio.volume = 0.5;
+
+ audioVolume.value = audio.volume * 100;
+
+
+
+// audioVolumeDown.addEventListener('click', () => {
+//   if (audio.volume) {
+//     prevVolume = audio.volume;
+//     audio.volume = 0;
+//     audioVolume.value = audio.volume * 100;
+
+//   } else {
+//     audio.volume = prevVolume;
+//     audioVolume.value = audio.volume * 100;
+//   }
+  
+// });
+
 };

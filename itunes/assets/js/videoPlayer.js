@@ -201,6 +201,8 @@ export const videoPlayerInit = () => {
     // nam daje ne prishlos delat obratnoe viplnenie zakritie fullscren po kliku
   });
 
+  
+
   // * ZVUK
   // ! sdes s pomosyu obrabotcika sobitiya izmenaem uroven zvuka
   videoVolume.addEventListener('input', () => {
@@ -211,5 +213,4 @@ export const videoPlayerInit = () => {
   videoPlayer.volume = 0.5;
 
   videoVolume.value = videoPlayer.volume * 100;
-
 };

@@ -28,7 +28,7 @@ export const musicPlayerInit = () => {
   // !constanta dla zimenenie zvuka
   const audioVolume = document.querySelector('.audio-volume');
   // *********
-
+  // let prevVolume = 0.5;
 
   // todo Sdes mi dobavili muziki v massiv
   const playlist = ['hello', 'flow', 'speed'];
@@ -44,7 +44,7 @@ export const musicPlayerInit = () => {
     // ! kartinki pesen
     // sydaje mi dobavlaem kartinku muziki, dobavlaem tak je po puti src
     // ! u mena oshibka bila v src puti qde ya zabil napisat qlavnuyu papku v kotoroy lejit papka audio
-    audioImg.src = `./itunes/assets/audio/${track}.jpg`;
+    audioImg.src = `./assets/audio/${track}.jpg`;
 
     // !nazvanie pesen
     // sdes mi dobavili nazvanie pesni v zaranee ustanovlenniy shablon tksta,
@@ -54,7 +54,7 @@ export const musicPlayerInit = () => {
     // sdes mi berem pesnu iz papki
     // ? propisivaya emu put ispolzuem interpolaciyu eto znak $
     // ! mi ukazivaem cto berem pesni s track, kotoriy beret pesni v toje vrema s massiva
-    audioPlayer.src = `./itunes/assets/audio/${track}.mp3`;
+    audioPlayer.src = `./assets/audio/${track}.mp3`;
 
 
     // ! isPlayed funkciyu mi propisali a ne audioPlayer.paused ctob esli pesna ne zapushena i pereklycenna
@@ -230,40 +230,53 @@ export const musicPlayerInit = () => {
   // ! sdes mi sddelali umensheniye zvuka po polzunku 
   audioVolume.addEventListener('input', () => {
     audioPlayer.volume = audioVolume.value / 100;
-    console.log(audioPlayer);
+    // console.log(audioPlayer);
   });
 
   audioPlayer.volume = 0.5;
+  // console.log(audioPlayer);
 
   audioVolume.value = audioPlayer.volume * 100;
 
   // console.log(audioVolume.value);
 
 
-  //   audioVolumeDown.addEventListener('click', (e) => {
+  audioVolumeDown.addEventListener('click', (e) => {
 
-  //     // if (audioVolume.value <= 100) {
+    // audioPlayer.volume = audioVolume.value--;
+    // if (audio.volume) {
+    //   prevVolume = audio.volume;
+    //   audio.volume = 0;
+    //   audioVolume.value = audio.volume * 100;
+    // } else {
+    //   audio.volume = prevVolume;
+    //   audioVolume.value = audio.volume * 100;
+    // }
 
-  //     // }
-  //     // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
-  //     audioVolume.value--;
-  //     audioVolume.value();
-  //     console.log(audioVolume.value);
+    // if (audioVolume.value <= 100) {
+
+    // }
+    // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
+    audioVolume.value--;
+    // audioPlayer();
+    console.log(audioVolume.value);
 
 
 
+    //     console.log(e);
+    //     if (target.classList.contains('audio-volume-down')) {
+    // console.log('target')
+    //     };
+  });
+
+  audioVolumeUp.addEventListener('click', (e) => {
+    audioVolume.value++;
+  })
 
 
-  // //     console.log(e);
-  // //     if (target.classList.contains('audio-volume-down')) {
-  // // console.log('target')
-  // //     };
-  //   });
 
-
-
-  //   audioNavigation.addEventListener('click', event => {
-  //     const target = event.target;
+    // audioNavigation.addEventListener('click', event => {
+    //   const target = event.target;
   // // console.log(target);
 
 
