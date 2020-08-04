@@ -12,6 +12,10 @@ export const radioPlayerInit = () => {
   const audioVolume = document.querySelector('.audio-volume');
 
   let prevVolume = 0.5;
+
+  const radioVolumeOff = document.querySelector('radio-volume-off');
+  const radioVolumeDown = document.querySelector('radio-volume-down');
+  const radioVolumeUp = document.querySelector('radio-volume-up');
   
 // ** Dobavlaem Zvuko menalku
 const radioPlayer = document.querySelector('.radio-player');
@@ -182,6 +186,18 @@ console.log(audio)
 //     audioVolume.value = audio.volume * 100;
 //   }
   
+// });
+
+// audioVolumeDown.addEventListener('click', (e) => {
+
+//   // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
+//   audioVolume.value--;
+//   console.log(audioVolume.value);
+
+// });
+
+// audioVolumeUp.addEventListener('click', (e) => {
+//   audioVolume.value++;
 // });
 
 };

@@ -5,30 +5,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport"
 		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/assets/favicon/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/assets/favicon/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="57x57" href="/itunes/assets/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/itunes/assets/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/itunes/assets/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/itunes/assets/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/itunes/assets/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/itunes/assets/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/itunes/assets/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/itunes/assets/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/itunes/assets/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/itunes/assets/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/itunes/assets/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/itunes/assets/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/itunes/assets/favicon/favicon-16x16.png">
 	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/assets/favicon/ms-icon-144x144.png">
+	<meta name="msapplication-TileImage" content="/itunes/assets/favicon/ms-icon-144x144.png">
 	<meta name="theme-color" content="#ffffff">
-	<script src="https://use.fontawesome.com/fd6de61138.js"></script>
+	<!-- <script src="https://use.fontawesome.com/fd6de61138.js"></script> -->
 	<title>ЯTunes</title>
 	<!-- ! sddes v index js mi dobavlaem modul kotoriy qovorit cto mi 
 	! mojem ispolzovat modulnuyu sistemu -->
-	<script src="/assets/js/index.js" type="module" defer></script>
-	<link rel="stylesheet" href="/assets/styles/normalize.css">
-	<!-- <link rel="stylesheet" href="/assets/styles/font-awesome.min.css"> -->
-	<link rel="stylesheet" href="/assets/styles/style.min.css">
+	<script src="/itunes/assets/js/index.js" type="module" defer></script>
+	<link rel="stylesheet" href="/itunes/assets/styles/normalize.css">
+	<link rel="stylesheet" href="/itunes/assets/styles/font-awesome.min.css">
+	<link rel="stylesheet" href="/itunes/assets/styles/style.min.css">
 </head>
 
 <body>
@@ -55,21 +55,25 @@
 		<article class="player-block video">
 			<div class="container">
 				<div class="video-container">
-					<video src="/assets/video/rocket_launching.mp4" class="video-player" poster="/assets/video/play.svg"></video>
+					<video src="/itunes/assets/video/rocket_launching.mp4" class="video-player"
+						poster="/itunes/assets/video/play.svg"></video>
 					<nav class="video-navigation">
 						<button class="video-button video-button__play fa fa-play"></button>
 						<button class="video-button video-button__stop fa fa-stop"></button>
 						<p class="video-time video-time__passed">00:00</p>
 						<input type="range" class="video-progress" min="0" max="100" step="0.1" value="0">
 						<p class="video-time video-time__total">00:00</p>
+
+
 						<!-- ************************************ -->
 						<!-- ! a sdes dobavlaem dla smeni zvuka -->
-						<button class="fa fa-volume-down video-icon"></button>
+						<button class="video-volume-off fa fa-volume-off"></button>
+						<button class="video-volume__down fa fa-volume-down"></button>
 						<!-- ? a mejdu nimi stavim esho odin range -->
 						<!-- todo: step-eto shad dvijeniya kontrollera,
 							todo:  value- eto to reshebie kotoroe uje est v danniy moment, min max - minimalnoe i max znacenie -->
 						<input type="range" class="video-volume" min="0" max="100" step="1" value="100">
-						<button class="fa fa-volume-up video-icon"></button>
+						<button class="video-volume__up fa fa-volume-up video-icon"></button>
 						<!-- ************************************* -->
 
 						<!-- ! sdes mi propisali fa ikonku dla fullScreen mojno i p teg postavit i span -->
@@ -83,10 +87,10 @@
 			<div class="container">
 				<div class="audio-container">
 					<div class="audio-cover">
-						<img class="audio-img" src="/assets/audio/hello.jpg" alt="обложка">
+						<img class="audio-img" src="/itunes/assets/audio/hello.jpg" alt="обложка">
 					</div>
 					<h3 class="audio-header">Крути пластинку</h3>
-					<audio class="audio-player" src="/assets/audio/hello.mp3"></audio>
+					<audio class="audio-player" src="/itunes/assets/audio/hello.mp3"></audio>
 				</div>
 			</div>
 			<footer class="footer-fix audio-footer">
@@ -105,7 +109,7 @@
 					<!-- !!!!!!!!!!!!!!!!!!! -->
 					<!-- * SOUND for audio -->
 					<!-- <button class="fa fa-volume-off hide"></button> -->
-					<button class="audio-volume-off"><i class="fas fa-volume-mute"></i></button>
+					<button class="audio-volume-offf fa fa-volume-off"></button>
 					<button class="audio-volume-down fa fa-volume-down audio-icon"></button>
 					<input type="range" class="audio-volume" min="0" max="100" step="1" value="100">
 					<button class="audio-volume-up fa fa-volume-up video-icon"></button>
@@ -120,7 +124,7 @@
 				<div class="radio-container">
 					<div class="radio-player">
 						<div class="radio-cover">
-							<img class="radio-cover__img" src="/assets/radio/start.jpg" alt="обложка">
+							<img class="radio-cover__img" src="/itunes/assets/radio/start.jpg" alt="обложка">
 						</div>
 						<h3 class="radio-header__big">Выбери радиостанцию</h3>
 					</div>
@@ -130,7 +134,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/RTLGroove.png" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/RTLGroove.png" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="RTLGroove" name="radioStantion"
 										data-radio-stantion="http://shoutcast.rtl.it:3040/">
@@ -141,7 +145,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/Energy.png" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/Energy.png" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="energy" name="radioStantion"
 										data-radio-stantion="http://ic4.101.ru:8000/region_energy_161">
@@ -152,7 +156,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/Record.jpg" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/Record.jpg" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="recordRus" name="radioStantion"
 										data-radio-stantion="http://air.radiorecord.ru:8102/rus_320">
@@ -163,7 +167,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/slowRadio.jpg" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/slowRadio.jpg" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="slowRadio" name="radioStantion"
 										data-radio-stantion="http://air.radiorecord.ru:8102/mdl_320">
@@ -174,7 +178,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/dorojnoe.png" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/dorojnoe.png" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="roadRadio" name="radioStantion"
 										data-radio-stantion="http://dorognoe.hostingradio.ru:8000/dorognoe">
@@ -185,7 +189,7 @@
 							<li class="radio-item">
 								<label>
 									<div class="radio-check">
-										<img class="radio-img" src="/assets/radio/90.jpg" alt="обложка">
+										<img class="radio-img" src="/itunes/assets/radio/90.jpg" alt="обложка">
 									</div>
 									<input class="radio-btn" type="radio" id="90years" name="radioStantion"
 										data-radio-stantion="http://online.radiorecord.ru:8102/sd90_320">
@@ -202,9 +206,10 @@
 
 				<!-- !!!!!!!!!!!!!!!!!!! -->
 				<!-- * SOUND for audio -->
-				<button class="fa fa-volume-down radio-icon"></button>
+				<button class="radio-volume-off fa fa-volume-off"></button>
+				<button class="radio-volume-down fa fa-volume-down"></button>
 				<input type="range" class="radio-volume" min="0" max="100" step="1" value="100">
-				<button class="fa fa-volume-up radio-icon"></button>
+				<button class="radio-volume-up fa fa-volume-up"></button>
 			</footer>
 		</article>
 	</main>

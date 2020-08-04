@@ -20,6 +20,7 @@ export const musicPlayerInit = () => {
   const audioTimeTotal = document.querySelector('.audio-time__total');
 
   //**** */ sdes dobavlaem konstantu k knobkaam dla izmenenie zvuka po knobkam
+  let audioVolumeOfff = document.querySelector('audio-volume-offf');
   const audioVolumeDown = document.querySelector('.audio-volume-down');
   const audioVolumeUp = document.querySelector('.audio-volume-up');
   // **********
@@ -44,7 +45,7 @@ export const musicPlayerInit = () => {
     // ! kartinki pesen
     // sydaje mi dobavlaem kartinku muziki, dobavlaem tak je po puti src
     // ! u mena oshibka bila v src puti qde ya zabil napisat qlavnuyu papku v kotoroy lejit papka audio
-    audioImg.src = `./assets/audio/${track}.jpg`;
+    audioImg.src = `./itunes/assets/audio/${track}.jpg`;
 
     // !nazvanie pesen
     // sdes mi dobavili nazvanie pesni v zaranee ustanovlenniy shablon tksta,
@@ -54,7 +55,7 @@ export const musicPlayerInit = () => {
     // sdes mi berem pesnu iz papki
     // ? propisivaya emu put ispolzuem interpolaciyu eto znak $
     // ! mi ukazivaem cto berem pesni s track, kotoriy beret pesni v toje vrema s massiva
-    audioPlayer.src = `./assets/audio/${track}.mp3`;
+    audioPlayer.src = `./itunes/assets/audio/${track}.mp3`;
 
 
     // ! isPlayed funkciyu mi propisali a ne audioPlayer.paused ctob esli pesna ne zapushena i pereklycenna
@@ -238,45 +239,29 @@ export const musicPlayerInit = () => {
 
   audioVolume.value = audioPlayer.volume * 100;
 
-  // console.log(audioVolume.value);
+  console.log(audioVolume.value);
 
 
   audioVolumeDown.addEventListener('click', (e) => {
 
-    // audioPlayer.volume = audioVolume.value--;
-    // if (audio.volume) {
-    //   prevVolume = audio.volume;
-    //   audio.volume = 0;
-    //   audioVolume.value = audio.volume * 100;
-    // } else {
-    //   audio.volume = prevVolume;
-    //   audioVolume.value = audio.volume * 100;
-    // }
-
-    // if (audioVolume.value <= 100) {
-
-    // }
     // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
     audioVolume.value--;
-    // audioPlayer();
     console.log(audioVolume.value);
 
-
-
-    //     console.log(e);
-    //     if (target.classList.contains('audio-volume-down')) {
-    // console.log('target')
-    //     };
   });
 
   audioVolumeUp.addEventListener('click', (e) => {
     audioVolume.value++;
-  })
+  });
+
+  // !  Почему то выдает ошибку 
+  // audioVolumeOfff.addEventListener('click', (e) => {
+  //   audioPlayer.off;
+  // });
 
 
-
-    // audioNavigation.addEventListener('click', event => {
-    //   const target = event.target;
+  // audioNavigation.addEventListener('click', event => {
+  //   const target = event.target;
   // // console.log(target);
 
 

@@ -33,6 +33,10 @@ export const videoPlayerInit = () => {
   // ? sdes stavim konstantu dla toqo ctobi sdelat video na ves ekran ili full screen
   const videoFullscreen = document.querySelector('.video-fullscreen');
 
+  // Zvuk Knobka
+  const videoVolumeOff = document.querySelector('video-volume-off');
+  const videoVolumeDown = document.querySelector('video-volume__down');
+  const videoVolumeUp = document.querySelector('video-volume__up');
   
 
 
@@ -213,4 +217,24 @@ export const videoPlayerInit = () => {
   videoPlayer.volume = 0.5;
 
   videoVolume.value = videoPlayer.volume * 100;
+  console.log(videoVolume.value);
+
+
+
+  // * Уменшение громкости по нашатию на кнобку
+
+  // ! выдает ошибку
+  // videoVolumeDown.addEventListener('click', (e) => {
+
+  //   // ! sdes mi sdelali umenshenie shkali qromkosti na edenicu po kliku knobki
+  //   videoVolume.value--;
+  //   console.log(videoVolume.value);
+
+  // });
+
+  // videoVolumeUp.addEventListener('click', (e) => {
+  //  videoVolume.value++;
+  // });
+
+
 };
