@@ -1,0 +1,48 @@
+/* ! когда мы ставим сюда margin=0, padding=0 а не в body
+! то во всех елементах mO pO убераются  */
+
+*,* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #010001;
+  font-family: 'Roboto', sans-serif;
+  /* zadaem  otstup s verxu cerez bady */
+  padding-top: 53px;
+}
+
+.header {
+  display: flex;
+  /* space beatven raskidivaet elementi po stranice */
+  justify-content: space-between;
+  /* zadaem kriteriy dla toqo ctobi mojno bilo ottcentrirovat izobrajenie */
+  max-width: 1230px;
+  /* sctob shaka bila rezinovoy */
+  width: 90%;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.list {
+  display: flex;
+  /* border: 1px solid rgb(72, 255, 0); */
+  list-style: none;
+}
+
+/* eto ssilki */
+.item-link {
+font-size: 12px;
+line-height: 14px;
+/* identical to box height */
+color: #FFFFFF;
+/* Inside Auto Layout */
+/* flex: none;
+order: 0;
+align-self: center;
+margin: 20px 0px; */
+text-decoration: none;
+margin-left: 10px;
+margin-right: 10px;
+}
