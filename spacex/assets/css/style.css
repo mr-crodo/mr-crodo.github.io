@@ -1,14 +1,16 @@
 /* ! когда мы ставим сюда margin=0, padding=0 а не в body
 ! то во всех елементах mO pO убераются  */
 
-*,* {
+*,
+* {
   margin: 0;
   padding: 0;
 }
 
 body {
   background: #010001;
-  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
   /* zadaem  otstup s verxu cerez bady */
   padding-top: 53px;
 }
@@ -33,16 +35,88 @@ body {
 
 /* eto ssilki */
 .item-link {
-font-size: 12px;
-line-height: 14px;
-/* identical to box height */
-color: #FFFFFF;
-/* Inside Auto Layout */
-/* flex: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #ffffff;
+  /* Inside Auto Layout */
+  /* flex: none;
 order: 0;
 align-self: center;
 margin: 20px 0px; */
-text-decoration: none;
-margin-left: 10px;
-margin-right: 10px;
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.item-link-z {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #808080;
+  /* Inside Auto Layout */
+
+  /* flex: none;
+order: 0;
+align-self: center; */
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+/* ! section */
+
+.main {
+  text-align: center;
+  border: 1px solid red;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+.title {
+  font-size: 64px;
+  line-height: 75px;
+  /* identical to box height */
+  margin-top: 0;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 26px;
+  color: #ffffff;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  /* or 22px */
+  /* text-align: center; */
+  text-transform: lowercase;
+  /* ? mi mojem sdelat perenos po <br> a mojem oqranicit shirinu */
+  max-width: 268px;
+  /* ? posle etoqo ctobi virovnat po centru delaem margin: auto */
+  margin: auto;
+  /* text-align: center; */
+  color: #ffffff;
+}
+
+/* ! sdes sdelaem polosku po centru */
+.description::after {
+  /* ? eto kontent ili vnutrennost poloski */
+  content: '';
+  display: block;
+  width: 1px;
+  height: 60px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 26px;
+}
+
+.video {
+  height: 500px;
+  width: 100%;
 }
