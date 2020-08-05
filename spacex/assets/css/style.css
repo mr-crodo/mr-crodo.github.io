@@ -24,7 +24,7 @@ body {
   /* sctob shaka bila rezinovoy */
   width: 90%;
   margin: auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .list {
@@ -51,7 +51,7 @@ margin: 20px 0px; */
   margin-right: 10px;
 }
 
-.item-link-z {
+.secondary-nav .item-link {
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -71,7 +71,7 @@ align-self: center; */
 
 .main {
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   padding-top: 120px;
   padding-bottom: 30px;
 }
@@ -102,12 +102,13 @@ align-self: center; */
   margin: auto;
   /* text-align: center; */
   color: #ffffff;
+  /* border: 1px solid green; */
 }
 
 /* ! sdes sdelaem polosku po centru */
 .description::after {
   /* ? eto kontent ili vnutrennost poloski */
-  content: '';
+  content: "";
   display: block;
   width: 1px;
   height: 60px;
@@ -116,7 +117,71 @@ align-self: center; */
   margin-top: 26px;
 }
 
+/* * v princepi nekotorie znaveniya video  header i section povtorayutsa 
+* im mojno bilo zadat obshiy klass i odni parametri */
+
 .video {
-  height: 500px;
-  width: 100%;
+  /* margin-top: 10px; */
+  max-width: 1230px;
+  width: 90%;
+  margin: auto;
+  height: 750px;
+}
+
+.features {
+  position: relative;
+  max-width: 1230px;
+  width: 90%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.4;
+  /* or 34px */
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  /* color: #FFFFFF; */
+}
+
+.table {
+  margin-bottom: 218px;
+}
+
+.table-column {
+  width: 300px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 179.69%;
+}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+}
+.features-text {
+  max-width: 490px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.rocket {
+  position: absolute;
+  top: 300px;
+  right: 0;
+  z-index: 99;
+
+  /* max-width: 444px;
+  max-height: 1200px; */
 }

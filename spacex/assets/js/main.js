@@ -3,14 +3,15 @@
 // mi rel='m_PageScroll2id' dobavili v header ssilku to
 //  cto xoteli sdelat scroll
 
-$(window).on("load", function () {
 
-  // Pagescroll to ID
-  $("a[rel='m_PageScroll2id']").mPageScroll2id();
+// $(window).on("load", function () {
 
-  // Video bacground vide.js
-  $('#header').vide('/site/video/girls');
-});
+//   // Pagescroll to ID
+//   $("a[rel='m_PageScroll2id']").mPageScroll2id();
+
+//   // Video bacground vide.js
+//   $('#header').vide('/site/video/girls');
+// });
 
 // import requests
 // import base64
@@ -30,3 +31,6 @@ var instance = new vidbg('.video', {
   // overlayColor: '#000', // The overlay color as a HEX
   // overlayAlpha: 0.3 // The overlay alpha. Think of this as the last integer in RGBA()
 });
+
+// ! dla parallax efekta relact js
+var rellax = new Rellax('.rocket');
