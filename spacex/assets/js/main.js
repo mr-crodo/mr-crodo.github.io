@@ -32,5 +32,9 @@ var instance = new vidbg('.video', {
   // overlayAlpha: 0.3 // The overlay alpha. Think of this as the last integer in RGBA()
 });
 
-// ! dla parallax efekta relact js
+// ! dla parallax efekta rellax js
 var rellax = new Rellax('.rocket');
+
+if (document.body.clientWidth < 576) {
+  rellax.destroy();
+};
