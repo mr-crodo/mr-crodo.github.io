@@ -95,6 +95,7 @@ a:hover {
   outline: none;
   text-decoration: none;
   color: #e8046e;
+  transition: 0.5s ease-out;
 }
 
 ul {
@@ -156,6 +157,8 @@ ul li {
   letter-spacing: 0.1em;
   /* properties for text-decoration: none, underline, line-throught; overline*/
   text-decoration: none;
+  transition: 0.5s ease-out;
+  /* border: 1px solid red; */
 }
 
 .logo-text h2 {
@@ -205,6 +208,7 @@ ul.menu li.selected a {
 
 ul.menu li.selected a:hover {
   color: #e8046e;
+  
 }
 
 ul.menu li a:hover {
@@ -536,6 +540,7 @@ hr {
 /* * OBVODNA PRI NAVEDENII */
 .film-w:hover {
   box-shadow: 0 0 0 2px rgb(255, 255, 255), 0 0 0 4px #e8046e;
+  transition: 0.5s ease-out;
 }
 
 .trailer-button {
@@ -1147,4 +1152,173 @@ footer nav a:hover {
   transition-property: height, width, background-color;
   transition-duration: 1s;
   transition-timing-function: ease-in, ease, linear;
+}
+
+
+/* ************************************************************ */
+
+/* ! Professiona.hrml */
+
+.b-post__infotable {
+  display: flex;
+}
+
+.b-post__infotable_left {
+  max-width: 200px;
+  /* border: 1px solid rgb(0, 255, 0); */
+  /* max-height: 200px; */
+}
+
+.madal-img {
+  /* border: 1px solid red; */
+  max-width: 200px;
+  border-radius: 3px;
+}
+
+.show-trailer {
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 9px 0 9px 0;
+  background-color: #212121;
+  color: #bdbdbd;
+  clear: both;
+  /* margin-bottom: 20px; */
+  width: 100%;
+}
+
+/*! right */
+/* .b-post__infotable_right {
+  display: flex;
+} */
+
+/* ! Vzal s HDrezka */
+.b-post__info {
+  color: #444;
+  width: 100%;
+  /* border: 1px solid blue; */
+  margin-left: 20px;
+}
+.b-post__info td {
+  /* background-color: #00749c; */
+  font-size: 14px;
+  padding: 2px 0;
+  vertical-align: top;
+  text-align: left;
+  /* border: 1px solid red; */
+}
+.b-post__info .l {
+  color: #000;
+  font-weight: bold;
+  font-size: 10px;
+  
+  /* width: 130px; */
+  /* border: 1px solid green; */
+  padding-right: 10px;
+  /* margin-right: 20px; */
+  /* margin-left: 60px; */
+}
+.b-post__info .l.inline {
+  display: inline-block;
+  /* border: 1px solid yellow; */
+}
+
+.b-post__info 
+.b-post__info .rd {
+  padding-bottom: 15px;
+  font-size: 12px;
+  /* background-color: #f21784; */
+}
+.b-post__info a {
+  color: #00a0b0;
+  /* color: #474747; */
+  text-decoration: underline;
+}
+.b-post__info a:hover {
+  text-decoration: none;
+}
+.b-post__info h2 {
+  display: inline;
+}
+.b-post__info_rates {
+  color: #000;
+  /* display: inline-block; */
+  /* float: left; */
+  margin-right: 15px;
+  margin-bottom: 7px;
+  white-space: nowrap;
+}
+.b-post__info_rates a {
+  color: #000;
+}
+.b-post__info_rates i {
+  color: #777;
+  font-style: normal;
+}
+.b-post__info_rates:nth-child(2) {
+  margin-right: 0;
+}
+.b-sidelinks__link show-trailer {
+  clear: both;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.b-post__rating_table td {
+  background-color: #1b1b1b;
+  width: 50%;
+}
+.b-post__rating_table .label {
+  font-weight: bold;
+  text-align: right;
+}
+.b-post__rating {
+  font-size: 24px;
+  height: 19px;
+  padding-left: 10px;
+  /* background-color: #006097; */
+}
+.b-post__rating .b-rating {
+  display: inline-block;
+  vertical-align: top;
+}
+.b-post__rating .num {
+  color: #2e849d;
+}
+.b-post__rating .votes {
+  color: #777;
+  cursor: help;
+  font-size: 12px;
+}
+
+/* ! HD rezka konec */
+
+
+
+
+/* .b-post__info {
+  font-size: 14px;
+}
+
+.l h2 {
+  font-size: 14;
+  font-weight: 700;
+  line-height: 20;
+} */
+
+
+/* ! это видео */
+.thumb-wrap {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  max-height: 100%;
+  overflow: hidden;
+  border: 1px solid red;
+}
+.thumb-wrap iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-width: 0;
+  outline-width: 0;
 }
