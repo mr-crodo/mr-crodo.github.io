@@ -19,3 +19,12 @@ $(window).on("load", function () {
 // HackboxURL = "https://www.hackthebox.eu/api/invite/generate"
 // JSONDATA = requests.post( HackboxURL )
 // print base64.b64decode(json.loads(JSONDATA.text)["data"]["code"])
+
+
+// ! modal okno
+
+// $('#myModal').on('shown.bs.modal', function () {
+//   $('#myInput').trigger('focus')
+// })
+
+const myModal = $.modal()
