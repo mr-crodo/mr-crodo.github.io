@@ -5,8 +5,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 	<title>Document</title>
-	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="/assets/libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700&amp;subset=cyrillic-ext" rel="stylesheet">
 
 </head>
@@ -15,7 +15,7 @@
 
 	<header class="header">
 		<div class="container text-center">
-			<img src="img/logo/logo.svg" width="92" alt="Суши и пицца">
+			<img src="/assets/img/logo/logo.svg" width="92" alt="Суши и пицца">
 			<div class="display-4">Доставка роллов</div>
 			<p class="lead">Оперативно и вкусно</p>
 		</div>
@@ -29,16 +29,16 @@
 					<!-- Ролл -->
 					<div class="col-md-6">
 						<div class="card mb-4">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
+							<img class="product-img" src="/assets/img/roll/philadelphia.jpg" alt="">
 							<div class="card-body text-center">
 								<h4 class="item-title">Филадельфия хит ролл</h5>
 								<p><small class="text-muted">6 шт.</small></p>
 
 								<div class="details-wrapper">
-									<div class="items">
-										<div class="items__control">-</div>
-										<div class="items__current">1</div>
-										<div class="items__control">+</div>
+									<div class="items counter-wrapper">
+										<div class="items__control" data-action="minus">-</div>
+										<div class="items__current" data-counter="1">1</div>
+										<div class="items__control" data-action="plus">+</div>
 									</div>
 
 									<div class="price">
@@ -57,16 +57,16 @@
 					<!-- Ролл -->
 					<div class="col-md-6">
 						<div class="card mb-4">
-							<img class="product-img" src="img/roll/california-tempura.jpg" alt="">
+							<img class="product-img" src="/assets/img/roll/california-tempura.jpg" alt="">
 							<div class="card-body text-center">
 								<h4 class="item-title">Калифорния темпура</h5>
 								<p><small class="text-muted">6 шт.</small></p>
 
 								<div class="details-wrapper">
-									<div class="items">
-										<div class="items__control">-</div>
-										<div class="items__current">1</div>
-										<div class="items__control">+</div>
+									<div class="items counter-wrapper">
+										<div class="items__control" data-action="minus">-</div>
+										<div class="items__current" data-counter="1">1</div>
+										<div class="items__control" data-action="plus">+</div>
 									</div>
 
 									<div class="price">
@@ -85,16 +85,16 @@
 					<!-- Ролл -->
 					<div class="col-md-6">
 						<div class="card mb-4">
-							<img class="product-img" src="img/roll/zapech-california.jpg" alt="">
+							<img class="product-img" src="/assets/img/roll/zapech-california.jpg" alt="">
 							<div class="card-body text-center">
 								<h4 class="item-title">Запеченый ролл «Калифорния»</h5>
 								<p><small class="text-muted">6 шт.</small></p>
 
 								<div class="details-wrapper">
-									<div class="items">
-										<div class="items__control">-</div>
-										<div class="items__current">1</div>
-										<div class="items__control">+</div>
+									<div class="items counter-wrapper">
+										<div class="items__control" data-action="minus">-</div>
+										<div class="items__current" data-counter="1">1</div>
+										<div class="items__control" data-action="plus">+</div>
 									</div>
 
 									<div class="price">
@@ -114,16 +114,16 @@
 					<!-- Ролл -->
 					<div class="col-md-6">
 						<div class="card mb-4">
-							<img class="product-img" src="img/roll/philadelphia.jpg" alt="">
+							<img class="product-img" src="/assets/img/roll/philadelphia.jpg" alt="">
 							<div class="card-body text-center">
 								<h4 class="item-title">Филадельфия</h5>
 								<p><small class="text-muted">6 шт.</small></p>
 
 								<div class="details-wrapper">
-									<div class="items">
-										<div class="items__control">-</div>
-										<div class="items__current">1</div>
-										<div class="items__control">+</div>
+									<div class="items counter-wrapper">
+										<div class="items__control" data-action="minus">-</div>
+										<div class="items__current" data-counter="1">1</div>
+										<div class="items__control" data-action="plus">+</div>
 									</div>
 
 									<div class="price">
@@ -145,7 +145,7 @@
 			<div class="col-md-4">
 
 				<!-- Корзина Пустая -->
-				<div class="card mb-4">
+				<div class="card mb-4 d-none">
 					<div class="card-body">
 						<h5 class="card-title">Ваш заказ</h5>
 						<div class="alert alert-secondary" role="alert">
@@ -156,7 +156,7 @@
 				<!-- // Корзина Пустая -->
 
 				<!-- Корзина Полная -->
-				<div class="card">
+				<div class="card d-none">
 					<div class="card-body">
 						<h5 class="card-title">Ваш заказ</h5>
 						
@@ -167,7 +167,7 @@
 							<div class="cart-item">
 								<div class="cart-item__top">
 									<div class="cart-item__img">
-										<img src="img/roll/philadelphia.jpg" alt="">
+										<img src="/assets/img/roll/philadelphia.jpg" alt="">
 									</div>
 									<div class="cart-item__desc">
 										<div class="cart-item__title">Филадельфия хит ролл</div>
@@ -198,7 +198,7 @@
 							<div class="cart-item">
 								<div class="cart-item__top">
 									<div class="cart-item__img">
-										<img src="img/roll/philadelphia.jpg" alt="">
+										<img src="/assets/img/roll/philadelphia.jpg" alt="">
 									</div>
 									<div class="cart-item__desc">
 										<div class="cart-item__title">Филадельфия хит ролл</div>
@@ -229,7 +229,7 @@
 							<div class="cart-item">
 								<div class="cart-item__top">
 									<div class="cart-item__img">
-										<img src="img/roll/philadelphia.jpg" alt="">
+										<img src="/assets/img/roll/philadelphia.jpg" alt="">
 									</div>
 									<div class="cart-item__desc">
 										<div class="cart-item__title">Филадельфия хит ролл</div>
@@ -290,7 +290,7 @@
 		</div>
 	</div>
 
-	<script src="js/main.js"></script>
+	<script src="/assets/js/main.js"></script>
 </body>
 
 </html>

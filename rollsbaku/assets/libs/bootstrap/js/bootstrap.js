@@ -613,7 +613,7 @@
     ACTIVE: '.active',
     ACTIVE_ITEM: '.active.carousel-item',
     ITEM: '.carousel-item',
-    ITEM_IMG: '.carousel-item img',
+    ITEM_/assets/img: '.carousel-item /assets/img',
     NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
@@ -845,7 +845,7 @@
         }
       };
 
-      $(this._element.querySelectorAll(Selector$2.ITEM_IMG)).on(Event$2.DRAG_START, function (e) {
+      $(this._element.querySelectorAll(Selector$2.ITEM_/assets/img)).on(Event$2.DRAG_START, function (e) {
         return e.preventDefault();
       });
 
@@ -2637,7 +2637,7 @@
     h5: [],
     h6: [],
     i: [],
-    img: ['src', 'alt', 'title', 'width', 'height'],
+    /assets/img: ['src', 'alt', 'title', 'width', 'height'],
     li: [],
     ol: [],
     p: [],
