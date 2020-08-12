@@ -5212,7 +5212,7 @@
     h2: [],
     h3: [],
     h4: [],
-    h5: [],
+    h4: [],
     h6: [],
     i: [],
     /assets/img: ['src', 'alt', 'title', 'width', 'height'],
