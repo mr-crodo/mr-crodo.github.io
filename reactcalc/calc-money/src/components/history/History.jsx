@@ -2,8 +2,8 @@ import React from 'react';
 import HistoryItem from './HistoryItem';
 
 
-const History = ({ transactions }) => {
-console.log(transactions)
+const History = ({ transactions, delTransaction }) => {
+ 
 
   return (
     <section className="history">
@@ -15,6 +15,7 @@ console.log(transactions)
                                     <HistoryItem 
                                             key={item.id}
                                             transaction={item}
+                                            delTransaction={delTransaction}
                                             
                                             />)}
 
