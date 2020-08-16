@@ -67,9 +67,9 @@
     max-width: 760px;
   }
 
-  .navigation {
+  /* .navigation {
     display: none;
-  }
+  } */
 
   .search-input {
     margin-right: auto;
@@ -117,9 +117,13 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 855px) {
   .container {
     max-width: 560px;
+  }
+
+  .navigation {
+    display: none;
   }
 
   .header {
@@ -213,41 +217,22 @@
     padding-bottom: 70px;
   }
 
-  /* 777777777 */
-
-  /* .button-group {
-    display: none;
-  } */
-
-  /* .search-input {
-    display: none;
-  } */
-
   .line {
     display: none;
   }
 
   .mobile-buttons {
     display: flex;
-    /* width: 230px; */
     justify-content: space-between;
-    
-
     margin-left: auto;
-
   }
-
-  /* .search-box {
-    margin-right: 20px;
-    margin-bottom: 2px;
-  } */
 
   .header {
     padding-left: 2.5%;
     padding-right: 2.5%;
   }
 
-/* new search for mobile */
+/*! new search for mobile */
   .search-box {
     position: absolute;
     top: 15px;
@@ -255,15 +240,8 @@
     transform: translate(-0%, 10%);
     background: #5671f6;
     height: 40px;
-    /* width: 40px; */
     border-radius: 50px;
-    /* padding: 10px; */
-
-    /* background-color: #fff; */
     border: none;
-
-
-
   }
 
   .search-btn {
@@ -299,15 +277,13 @@
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
-    
   }
 
   .search-box:hover>.search-txt {
     width: 100px;
     padding: 0 6px;
   }
-
-  /* new search for mobile end */
+  /*! new search for mobile end */
 
 
   /* SLider */
@@ -320,33 +296,8 @@
 
 @media (max-width: 576px) {
   .container {
-    /* margin-right: 28px;
-    margin-left: 28px; */
     width: 95%;
   }
-
-  /* .header-logo:after {
-  display: none;
-} */
-
-
-
-
-
-
-
-  /* .search-input {
-    width: 16px;
-    height: 16px;
-    
-
-  }
-
-  pole poiska srabativaet koqda ya na neqo klikayu
-  .search-input:focus {
-    width: auto;
-  } */
-
 
 
   .film-trailer,
