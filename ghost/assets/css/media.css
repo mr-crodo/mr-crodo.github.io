@@ -113,7 +113,7 @@
 
   .news-card {
     flex-basis: 48%;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 }
 
@@ -217,7 +217,7 @@
     padding-bottom: 70px;
   }
 
-  
+
 
   .line {
     display: none;
@@ -234,7 +234,7 @@
     padding-right: 2.5%;
   }
 
-/*! new search for mobile */
+  /*! new search for mobile */
   .search-box {
     position: absolute;
     top: 15px;
@@ -285,6 +285,7 @@
     width: 100px;
     padding: 0 6px;
   }
+
   /*! new search for mobile end */
 
 
@@ -316,15 +317,19 @@
   .section-title {
     margin-right: 28px;
     margin-left: 28px;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 23px;
   }
 
   .card-f {
     margin-right: 28px;
     margin-left: 28px;
+
   }
 
   .film-text {
-    
+
     /* margin-right: 28px; */
     margin-left: 28px;
     order: 1;
