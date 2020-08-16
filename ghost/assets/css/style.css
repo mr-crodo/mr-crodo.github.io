@@ -50,7 +50,7 @@ button {
 }
 
 .search-input {
-  background-image: url(/assets/svg/search-icon.svg);
+  background-image: url(/ghost/assets/svg/search-icon.svg);
   width: 40%;
   height: 100px;
   background-repeat: no-repeat;
@@ -425,7 +425,7 @@ button {
 }
 
 .news {
-  /* background-image: url(/assets/img/41707776_images_4681731424.jpg); */
+  /* background-image: url(/ghost/assets/img/41707776_images_4681731424.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #f3f3f3;
