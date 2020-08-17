@@ -612,7 +612,7 @@
     ACTIVE: '.active',
     ACTIVE_ITEM: '.active.carousel-item',
     ITEM: '.carousel-item',
-    ITEM_/assets/img: '.carousel-item /assets/img',
+    ITEM_/rollsbaku/assets/img: '.carousel-item /rollsbaku/assets/img',
     NEXT_PREV: '.carousel-item-next, .carousel-item-prev',
     INDICATORS: '.carousel-indicators',
     DATA_SLIDE: '[data-slide], [data-slide-to]',
@@ -844,7 +844,7 @@
         }
       };
 
-      $(this._element.querySelectorAll(Selector$2.ITEM_/assets/img)).on(Event$2.DRAG_START, function (e) {
+      $(this._element.querySelectorAll(Selector$2.ITEM_/rollsbaku/assets/img)).on(Event$2.DRAG_START, function (e) {
         return e.preventDefault();
       });
 
@@ -5215,7 +5215,7 @@
     h4: [],
     h6: [],
     i: [],
-    /assets/img: ['src', 'alt', 'title', 'width', 'height'],
+    /rollsbaku/assets/img: ['src', 'alt', 'title', 'width', 'height'],
     li: [],
     ol: [],
     p: [],

@@ -212,7 +212,7 @@ figure {
   margin: 0 0 1rem;
 }
 
-/assets/img {
+/rollsbaku/assets/img {
   vertical-align: middle;
   border-style: none;
 }
@@ -509,12 +509,12 @@ mark,
   content: "\2014\00A0";
 }
 
-./assets/img-fluid {
+./rollsbaku/assets/img-fluid {
   max-width: 100%;
   height: auto;
 }
 
-./assets/img-thumbnail {
+./rollsbaku/assets/img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
@@ -527,7 +527,7 @@ mark,
   display: inline-block;
 }
 
-.figure-/assets/img {
+.figure-/rollsbaku/assets/img {
   margin-bottom: 0.5rem;
   line-height: 1;
 }
@@ -4882,7 +4882,7 @@ input[type="button"].btn-block {
   margin-left: -0.625rem;
 }
 
-.card-/assets/img-overlay {
+.card-/rollsbaku/assets/img-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -4891,18 +4891,18 @@ input[type="button"].btn-block {
   padding: 1.25rem;
 }
 
-.card-/assets/img {
+.card-/rollsbaku/assets/img {
   width: 100%;
   border-radius: calc(0.25rem - 1px);
 }
 
-.card-/assets/img-top {
+.card-/rollsbaku/assets/img-top {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
 }
 
-.card-/assets/img-bottom {
+.card-/rollsbaku/assets/img-bottom {
   width: 100%;
   border-bottom-right-radius: calc(0.25rem - 1px);
   border-bottom-left-radius: calc(0.25rem - 1px);
@@ -4968,11 +4968,11 @@ input[type="button"].btn-block {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-/assets/img-top,
+  .card-group > .card:not(:last-child) .card-/rollsbaku/assets/img-top,
   .card-group > .card:not(:last-child) .card-header {
     border-top-right-radius: 0;
   }
-  .card-group > .card:not(:last-child) .card-/assets/img-bottom,
+  .card-group > .card:not(:last-child) .card-/rollsbaku/assets/img-bottom,
   .card-group > .card:not(:last-child) .card-footer {
     border-bottom-right-radius: 0;
   }
@@ -4980,11 +4980,11 @@ input[type="button"].btn-block {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-/assets/img-top,
+  .card-group > .card:not(:first-child) .card-/rollsbaku/assets/img-top,
   .card-group > .card:not(:first-child) .card-header {
     border-top-left-radius: 0;
   }
-  .card-group > .card:not(:first-child) .card-/assets/img-bottom,
+  .card-group > .card:not(:first-child) .card-/rollsbaku/assets/img-bottom,
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
@@ -10310,7 +10310,7 @@ a.text-dark:focus {
     display: table-header-group;
   }
   tr,
-  /assets/img {
+  /rollsbaku/assets/img {
     page-break-inside: avoid;
   }
   p,
