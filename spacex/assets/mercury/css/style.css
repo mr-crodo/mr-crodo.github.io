@@ -1,0 +1,357 @@
+/* ! когда мы ставим сюда margin=0, padding=0 а не в body
+! то во всех елементах mO pO убераются  */
+
+*,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #010001;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  /* zadaem  otstup s verxu cerez bady */
+  padding-top: 53px;
+}
+
+.header {
+  display: flex;
+  /* space beatven raskidivaet elementi po stranice */
+  justify-content: space-between;
+  /* zadaem kriteriy dla toqo ctobi mojno bilo ottcentrirovat izobrajenie */
+  max-width: 1230px;
+  /* sctob shaka bila rezinovoy */
+  width: 90%;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+.list {
+  display: flex;
+  /* border: 1px solid rgb(72, 255, 0); */
+  list-style: none;
+}
+
+.item {
+  /* width: 20px; */
+  height: 20px;
+}
+
+/* eto ssilki */
+.item-link {
+  font-style: normal;
+  font-weight: normal;
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #ffffff;
+  /* Inside Auto Layout */
+  /* flex: none;
+order: 0;
+align-self: center;
+margin: 20px 0px; */
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  /* width: 100%; */
+  /* -webkit-transition: opacity .6s linear;
+  transition: opacity .6s linear */
+}
+/* .item {
+  border: 1px solid red;
+} */
+
+/* .item-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+  -webkit-transition: -webkit-transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: -webkit-transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: transform .6s cubic-bezier(.19, 1, .22, 1);
+  transition: transform .6s cubic-bezier(.19, 1, .22, 1), -webkit-transform .6s cubic-bezier(.19, 1, .22, 1)
+} */
+
+.item-link:hover {
+  color: #fff;
+  border-bottom: 1px solid #ffffff;
+  transition: 0.5s ease-out;
+  
+}
+
+/* .item-link:hover:after {
+  border-bottom: 1px solid #ffffff;
+  transform: none;
+  transition: opacity 0.6s linear 0s;
+  outline: rgb(255, 0, 0) dashed 1px;
+
+  -webkit-transition-duration: .4s;
+  transition-duration: .4s;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: left center;
+  transform-origin: left center
+  
+} */
+
+.act {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  /* color: #408090; */
+  /* Inside Auto Layout */
+  /* flex: none;
+order: 0;
+align-self: center;
+margin: 20px 0px; */
+  text-decoration: none;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-bottom: 1px solid #ffffff;
+  /* transition: 0.5s ease-out; */
+}
+
+.secondary-nav .item-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #808080;
+  /* Inside Auto Layout */
+
+  /* flex: none;
+order: 0;
+align-self: center; */
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.secondary-nav .item-link:hover {
+  color: #b2b0b2;
+  border-bottom: 1px solid #ffffff;
+  transition: 0.5s ease-out;
+}
+
+/* ! section */
+
+.main {
+  /* border: 1px solid red; */
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+
+
+.title {
+  font-size: 64px;
+  line-height: 75px;
+  /* identical to box height */
+  margin-top: 0;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 26px;
+  color: #ffffff;
+}
+
+.description {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4;
+  /* or 22px */
+  /* text-align: center; */
+  text-transform: lowercase;
+  /* ? mi mojem sdelat perenos po <br> a mojem oqranicit shirinu */
+  max-width: 268px;
+  /* ? posle etoqo ctobi virovnat po centru delaem margin: auto */
+  margin: auto;
+  /* text-align: center; */
+  color: #ffffff;
+  /* border: 1px solid green; */
+}
+
+/* ! sdes sdelaem polosku po centru */
+.description::after {
+  /* ? eto kontent ili vnutrennost poloski */
+  content: "";
+  display: block;
+  width: 1px;
+  height: 60px;
+  background-color: #fff;
+  margin: auto;
+  margin-top: 26px;
+}
+
+/* * v princepi nekotorie znaveniya video  header i section povtorayutsa 
+* im mojno bilo zadat obshiy klass i odni parametri */
+
+.video {
+  /* margin-top: 10px; */
+  max-width: 1230px;
+  width: 90%;
+  margin: auto;
+  height: 750px;
+}
+
+.features {
+  position: relative;
+  /* display: flex;
+  justify-content: space-around;
+  align-items: center; */
+  max-width: 1230px;
+  width: 90%;
+  margin: auto;
+  padding: 100px 0;
+}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1.4;
+  /* or 34px */
+  text-transform: uppercase;
+  margin-bottom: 45px;
+  /* color: #FFFFFF; */
+}
+
+.table {
+  margin-bottom: 218px;
+}
+
+.table-column {
+  width: 300px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 179.69%;
+}
+
+.text-gray {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 179.69%;
+  /* or 32px */
+
+  color: #b2b0b2;
+}
+
+.features-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 140%;
+}
+
+.features-text {
+  max-width: 490px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 29px;
+}
+
+.rocket {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: 99;
+  max-width: 400px;
+  /* max-width: 144px;
+  max-height: 800px; */
+}
+
+/* ! Footer */
+.footer {
+  /* border: 1px solid red; */
+  /* padding-bottom: 130px;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  margin-top: 507px; */
+  /* height: 360px; */
+  padding: 130px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .logo {
+  margin-bottom: 43px;
+}
+
+.footer-nav {
+  margin-bottom: 28px;
+}
+
+.footer-nav .item-link {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* height: 40px; */
+  /* border: 1px solid black; */
+  /* identical to box height */
+  /* margin: 20px 0px; */
+}
+
+.footer-text {
+  font-size: 18px;
+  line-height: 21px;
+  color: #808080;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.footer-link {
+  color: #808080;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #b2b0b2;
+}
+
+.footer-button {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; */
+  /* ? konobku mojem sdelat i paddingom ili je shirinoy visotoy */
+  /* padding: 20px 86px; */
+  /* *** */
+  padding: 20px;
+  min-width: 260px;
+  /* min-height: 60px; */
+  /* box-sizing: border-box; */
+  text-align: center;
+  text-decoration: none;
+  color: #ffffff;
+
+  /* border: 1px solid green; */
+}
