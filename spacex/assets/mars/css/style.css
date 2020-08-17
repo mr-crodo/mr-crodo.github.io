@@ -355,3 +355,12 @@ align-self: center; */
 
   /* border: 1px solid green; */
 }
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
+}
+
+.footer-slider {
+  width: 600px;
+}
