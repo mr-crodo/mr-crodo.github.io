@@ -47,7 +47,7 @@ var mySwiper = new Swiper('.swiper-container', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerView: 2,
+  slidesPerView: 1,
   spaceBetween: 25,
   speed: 1000,
   preloadImages: true,
@@ -58,6 +58,12 @@ var mySwiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
+  },
+
+  cubeEffect: {
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94,
   },
 
   breakpoints: {

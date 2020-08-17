@@ -357,10 +357,13 @@ align-self: center; */
 }
 
 .swiper-container {
-  width: 600px;
-  height: 300px;
+  max-width: 600px;
+  max-height: 300px;
+  /* border: 1px solid red; */
+  
 }
 
 .footer-slider {
-  width: 600px;
+  max-width: 600px;
+  
 }
