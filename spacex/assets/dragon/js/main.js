@@ -24,9 +24,9 @@
 //  ! dla video fona 
 // ! sdes v new vidbg('nazvanie blaka')
 var instance = new vidbg('.video', {
-  mp4: '/assets/dragon/dragon-v/dragon.mp4', // URL or relative path to MP4 video
-  webm: '/assets/dragon/dragon-v/dragon.webm', // URL or relative path to webm video
-  poster: '/assets/dragon/dragon-v/dragon.jpg', // URL or relative path to fallback image
+  mp4: '/spacex/assets/dragon/dragon-v/dragon.mp4', // URL or relative path to MP4 video
+  webm: '/spacex/assets/dragon/dragon-v/dragon.webm', // URL or relative path to webm video
+  poster: '/spacex/assets/dragon/dragon-v/dragon.jpg', // URL or relative path to fallback image
   overlay: false, // Boolean to display the overlay or not
   // overlayColor: '#000', // The overlay color as a HEX
   // overlayAlpha: 0.3 // The overlay alpha. Think of this as the last integer in RGBA()
@@ -49,5 +49,5 @@ AOS.init();
 //   // $("a[rel='m_PageScroll2id']").mPageScroll2id();
 
 //   // Video bacground vide.js
-//   $('#video-mars').vide('/spacex/assets/video/mars/mars');
+//   $('#video-mars').vide('/spacex/spacex/assets/video/mars/mars');
 // });

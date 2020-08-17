@@ -49,5 +49,5 @@ AOS.init();
 //   // $("a[rel='m_PageScroll2id']").mPageScroll2id();
 
 //   // Video bacground vide.js
-//   $('#video-mars').vide('/spacex/assets/video/mars/mars');
+//   $('#video-mars').vide('/spacex/spacex/assets/video/mars/mars');
 // });
