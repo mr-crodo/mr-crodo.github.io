@@ -24,9 +24,9 @@
 //  ! dla video fona 
 // ! sdes v new vidbg('nazvanie blaka')
 var instance = new vidbg('.video', {
-  mp4: '/assets/mars/mars-v/mars.mp4', // URL or relative path to MP4 video
-  webm: '/assets/mars/mars-v/mars.webm', // URL or relative path to webm video
-  poster: '/assets/mars/mars-v/mars.jpg', // URL or relative path to fallback image
+  mp4: '/assets/mercury/mercury-v/mercury.mp4', // URL or relative path to MP4 video
+  webm: '/assets/mercury/mercury-v/mercury.webm', // URL or relative path to webm video
+  poster: '/assets/mercury/mercury-v/mercury.jpg', // URL or relative path to fallback image
   overlay: false, // Boolean to display the overlay or not
   // overlayColor: '#000', // The overlay color as a HEX
   // overlayAlpha: 0.3 // The overlay alpha. Think of this as the last integer in RGBA()
