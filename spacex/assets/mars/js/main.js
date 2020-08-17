@@ -43,11 +43,53 @@ if (document.body.clientWidth < 576) {
 AOS.init();
 
 // ! video dla mars
-// $(window).on("load", function () {
+var mySwiper = new Swiper('.swiper-container', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 25,
+  speed: 1000,
+  preloadImages: true,
+  updateOnImagesReady: true,
+  slideShadows: true,
+  rotate: 50,
+  modifier: 1,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
 
-//   // Pagescroll to ID
-//   // $("a[rel='m_PageScroll2id']").mPageScroll2id();
+  breakpoints: {
+    992: {
+      slidesPerView: 1,
+    },
 
-//   // Video bacground vide.js
-//   $('#video-mars').vide('/spacex/assets/video/mars/mars');
-// });
+    768: {
+      slidesPerView: 1,
+    },
+
+    320: {
+      slidesPerView: 1,
+      slideOffsetAfter: 50,
+    }
+
+  },
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    // draggable: true,
+    el: '.swiper-scrollbar',
+  },
+});
