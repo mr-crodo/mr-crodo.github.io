@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #20202d;
+  margin: 0;
+}
+
+.hero {
+  padding-top: 50px;
+}
+.container {
+  border: 1px solid red;
+  max-width: 945px;
+  margin: auto;
+}
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.logo {
+}
+.social-links {
+  display: flex;
+  /* align-items: center; */
+}
+.social-link {
+  text-decoration: none;
+  margin-left: 20px;
+}
