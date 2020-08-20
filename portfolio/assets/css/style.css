@@ -311,6 +311,7 @@ line-height: 19px;
 
 .contacts-phone,
 .contacts-mail {
+  /*? fxbs */
   flex-basis: 40%;
   margin-bottom: 53px;
 }
@@ -344,4 +345,29 @@ line-height: 19px;
   margin-top: 72px;
   text-decoration-line: underline;
   color: #a5a5a5;
+}
+
+/*! Design pagination */
+
+.projects-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 44px;
+}
+
+.projects-bullet {
+  width: 10px;
+  height: 10px;
+  border: 2px solid #FFBB01;
+/* box-sizing: border-box; */
+/*? brs */
+border-radius: 50%;
+display: inline-block;
+margin-left: 5px;
+margin-left: 5px;
+}
+
+.projects-bullet-active {
+  background-color: #FFBB01;
 }

@@ -41,11 +41,25 @@ wow.init();
 // })
 
 var mySwiper = new Swiper('.swiper-container', {
-  speed: 400,
+  speed: 1000,
   spaceBetween: 100,
 
   pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
+    el: '.projects-pagination',
+    // type: 'bullets',
+    bulletClass: 'projects-bullet',
+    bulletActiveClass: 'projects-bullet-active',
+    clickable: true,
+  },
+
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+
+
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
   },
 });
