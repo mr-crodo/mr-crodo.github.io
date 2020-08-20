@@ -163,6 +163,81 @@ body {
   margin: 0;
 }
 
+/* ! Projects-portfolio and Slider */
+
+/* background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 95.44%);
+transform: matrix(1, 0, 0, -1, 0, 0); */
+
+.section {
+}
+.projects {
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0) 95.44%);
+  /* transform: matrix(1, 0, 0, -1, 0, 0); */
+}
+.container {
+}
+.section-title {
+}
+.projects-slider {
+}
+.projects-slide {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.project-image {
+}
+.project-text {
+  flex-basis: 60%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-title {
+  flex-basis: 100%;
+  margin: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 41px;
+}
+.project-time,
+.project-cost {
+  flex-basis: 50%;
+  margin-bottom: 44px;
+}
+
+.project-time,
+.project-cost,
+.project-feedback {
+  display: flex;
+  align-items: flex-start;
+}
+
+.project-icon {
+  margin-right: 16px;
+}
+.project-description {
+}
+.project-subtitle {
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  margin-bottom: 7px;
+}
+.project-paragraph {
+  margin: 0;
+  font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+}
+.project-cost {
+}
+.project-feedback {
+}
+
+/* ******* */
+
 /* !Contacts */
 
 .contacts-block {
