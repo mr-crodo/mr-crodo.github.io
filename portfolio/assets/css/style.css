@@ -194,8 +194,6 @@ transform: matrix(1, 0, 0, -1, 0, 0); */
   justify-content: space-between;
 }
 
-.project-image {}
-
 .project-text {
   flex-basis: 60%;
   display: flex;
@@ -226,6 +224,7 @@ transform: matrix(1, 0, 0, -1, 0, 0); */
 
 .project-image {
   max-width: 338px;
+  
 }
 
 .project-icon {
