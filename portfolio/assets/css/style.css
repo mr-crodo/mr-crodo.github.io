@@ -225,7 +225,10 @@ transform: matrix(1, 0, 0, -1, 0, 0); */
 .project-image {
   max-width: 338px;
   max-width: 268px;
+}
 
+.project-image:hover {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px ;
 }
 
 .project-icon {
