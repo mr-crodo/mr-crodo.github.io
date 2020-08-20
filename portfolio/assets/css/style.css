@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("/portfolio/portfolio/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  src: url("/portfolio/assets/fonts/Roboto/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Roboto", sans-serif;
-  src: url("/portfolio/portfolio/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url("/portfolio/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
@@ -120,12 +120,12 @@ body {
 .hero-avatar {
   width: 389px;
   height: 389px;
-  background: #c4c4c4;
+  /* background: #c4c4c4; */
   /* box-shadow: 0px 20px 244px rgba(9, 189, 114, 0.25); */
   /* background-color: #fff; */
 
   border-radius: 50%;
-  background-image: url("/portfolio/portfolio/assets/img/avatar/photo_2020-07-24_01-35-59.png");
+  background-image: url("/portfolio/assets/img/avatar/photo_2020-07-24_01-35-59.png");
   background-repeat: no-repeat;
   background-position: center top;
   /*top right*/
@@ -227,9 +227,6 @@ transform: matrix(1, 0, 0, -1, 0, 0); */
   max-width: 268px;
 }
 
-.project-image:hover {
-  box-shadow: 0 0 0 2px white, 0 0 0 4px ;
-}
 
 .project-icon {
   margin-right: 16px;
@@ -301,14 +298,14 @@ transform: matrix(1, 0, 0, -1, 0, 0); */
 
 .input-name {
   margin-bottom: 17px;
-  background-image: url("/portfolio/portfolio/assets/img/input-icon/user-icon.svg");
+  background-image: url("/portfolio/assets/img/input-icon/user-icon.svg");
   background-repeat: no-repeat;
   background-position: center left 20px;
 }
 
 .input-phone {
   margin-bottom: 17px;
-  background-image: url("/portfolio/portfolio/assets/img/input-icon/phone-icon.svg");
+  background-image: url("/portfolio/assets/img/input-icon/phone-icon.svg");
   background-repeat: no-repeat;
   background-position: center left 20px;
 }
