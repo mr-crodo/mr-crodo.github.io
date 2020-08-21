@@ -55,8 +55,16 @@
 
 @media(max-width: 564px) {
 
+  .hero {
+    padding-bottom: 75px;
+  }
+
   .hero-header {
     margin-bottom: 38px;
+  }
+
+  .social-link {
+    margin-left: 5px;
   }
 
   .hero-avatar {
@@ -70,11 +78,9 @@
   .hero-subtitle {
     font-size: 16px;
     line-height: 27px;
-    /* identical to box height, or 169% */
-
     text-align: center;
-
     color: #FFBB01;
+    margin-bottom: 4px;
   }
 
   .hero-title {
@@ -93,11 +99,109 @@
     font-weight: bold;
     font-size: 10px;
     line-height: 12px;
-    display: flex;
-    align-items: center;
-    text-align: center;
     text-transform: uppercase;
-
     color: #2E2E30;
+    padding: 14px 25px;
   }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 22px;
+    margin-bottom: 49px;
+  }
+
+  .fuatures-item {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+  .features-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .features-text {
+    font-size: 14px;
+    line-height: 28px;
+  }
+
+  .project-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .project-paragraph {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .projects-pagination {
+    margin-top: 27px;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  .section-title {
+    margin-bottom: 47px;
+  }
+
+  .project-time,
+  .project-cost {
+    flex-basis: 100%;
+    margin-bottom: 33px;
+  }
+
+  .contacts-form {
+    padding: 40px 19px;
+  }
+
+  .form-title {
+    font-size: 15px;
+    line-height: 1.4;
+    text-align: center;
+    color: #000000;
+  }
+
+  .form-button {
+    font-size: 10px;
+    line-height: 28px;
+  }
+
+  .contacts-data {
+    margin-bottom: 39px;
+  }
+
+  .contacts-phone,
+  .contacts-mail {
+    flex-basis: 100%;
+    margin-bottom: 35px;
+  }
+
+  .contacts-title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  .contacts-link {
+    display: block;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 13px;
+    flex-basis: 100%;
+  }
+
+  .contacts-policy {
+    margin-top: 26px;
+  }
+
 }
+
+/* .project-feedback */
