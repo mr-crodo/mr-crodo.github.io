@@ -18,31 +18,12 @@ var wow = new WOW(
 wow.init();
 
 
-// var mySwiper = new Swiper('.swiper-container', {
-//   // Optional parameters
-//   direction: 'vertical',
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   // And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// })
-
 var mySwiper = new Swiper('.swiper-container', {
+  direction: 'horizontal',
+  loop: true,
   speed: 1000,
   spaceBetween: 100,
+  slidesPerView: 1,
 
   pagination: {
     el: '.projects-pagination',
@@ -61,5 +42,21 @@ var mySwiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 5000,
     disableOnInteraction: false,
+  },
+
+  breakpoints: {
+    992: {
+      slidesPerView: 1,
+    },
+
+    768: {
+      slidesPerView: 1,
+    },
+
+    320: {
+      slidesPerView: 1,
+      slideOffsetAfter: 50,
+    }
+
   },
 });
