@@ -415,7 +415,7 @@ hr {
 /* right side bar */
 
 .sidebar-container-right {
-  border: 1px solid rgb(0, 255, 98);
+  /* border: 1px solid rgb(0, 255, 98); */
   float: right;
   width: 224px;
   margin-left: 30px;
@@ -1216,6 +1216,11 @@ footer nav a:hover {
 
 /* ************************************************************ */
 
+.b-post__infotable_right_inner {
+  margin-bottom: 20px;
+}
+
+
 /* ! Professiona.hrml */
 
 .b-post__infotable {
@@ -1366,6 +1371,8 @@ footer nav a:hover {
 
 /* ! это видео */
 .thumb-wrap {
+  margin-top: 60px;
+  margin-bottom: 30px;
   position: relative;
   padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
   max-height: 100%;
