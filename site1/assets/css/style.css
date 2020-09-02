@@ -65,11 +65,11 @@ a {
 
 .header {
   background: #343c4e;
-  background-image: url(/assets/img/bg/bg-header.jpg);
-  background-repeat: no-repeat;
+  /* background-image: url(/site1/assets/img/bg/bg-header.jpg); */
+  /* background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
-  height: 100vh;
+  background-size: cover; */
+  /* height: 100vh; */
   /* min-height: 400px; */
   color: #fff;
   text-align: center;
@@ -88,6 +88,7 @@ a {
 } */
 
 .header-title {
+  position: absolute;
   font-size: 56px;
   line-height: 62px;
   margin-bottom: 30px;
@@ -97,6 +98,8 @@ a {
 }
 
 .header-slogan {
+  margin-top: 30px;
+  position: absolute;
   font-size: 28px;
   line-height: 42px;
 }
