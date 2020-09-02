@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "San Francisco", sans-serif;
+  src: url("/assets/fonts/SanFrancisco/San-Francisco-Medium.otf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "San Francisco", sans-serif;
+  src: url("/assets/fonts/SanFrancisco/San-Francisco-Regular.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 900', sans-serif;
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-900.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-900.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-900.woff") format("woff"),
+    /* Новые браузеры и IE9+ */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-900.ttf") format("truetype");
+  /* Старые Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');          Древние Safari, iOS, Android  */
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 700', sans-serif;
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-700.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"),
+    /* Новые браузеры и IE9+ */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
+  /* Старые Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');          Древние Safari, iOS, Android  */;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-500.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-500.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-500.woff") format("woff"),
+    /* Новые браузеры и IE9+ */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-500.ttf") format("truetype");
+  /* Старые Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');          Древние Safari, iOS, Android  */;
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 300', sans-serif;
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-300.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-300.woff") format("woff"),
+    /* Новые браузеры и IE9+ */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-300.ttf") format("truetype");
+  /* Старые Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');          Древние Safari, iOS, Android  */;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 100', sans-serif;
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-100.eot");
+  /* IE9 Compat Modes */
+  src: url("/assets/fonts/MuseoSans/MuseoSansCyrl-100.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-100.woff") format("woff"),
+    /* Новые браузеры и IE9+ */
+    url("/assets/fonts/MuseoSans/MuseoSansCyrl-100.ttf") format("truetype");
+  /* Старые Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');          Древние Safari, iOS, Android  */;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+h1 {
+  font: normal 170% 'Museo Sans Cyrl 900', sans-serif;
+}
+
+.col-2 {
+  width: 200px;
+  background-color: blue;
+  color: #fff;
+}
