@@ -1,0 +1,117 @@
+/* 
+font-family: 'Fira Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Source Sans Pro', sans-serif; */
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Serif', serif;
+  background-image: url('https://s8.hostingkartinok.com/uploads/images/2020/09/3a2b0ea6f66d8ac1761c98987ffa83eb.jpg');
+  
+  background-size: cover;
+  color: #fff;
+  
+
+}
+
+.card {
+  display: flex;
+  padding: 25px;
+  margin-top: 290px;
+  margin-right: 380px;
+  background-color: #111;
+  width: 600px;
+  text-align: center;
+  border: 2px solid gold;
+  border-radius: 5px;
+}
+
+.card-foto {
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.my-img {
+  border-radius: 30%;
+  border: 1px solid #111;
+}
+
+.card-text {
+/*   background-color: gray; */
+}
+
+.badge {
+  background-color: #263238;
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 10px;
+}
+
+.title {
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+ font-weight: 700;
+  font-size: 42px;
+}
+
+.title-h4 {
+  
+  margin: 0;
+  font-weight: 500;
+  color: #757575;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.card-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: gold;
+}
+
+.btn-group {
+   margin-top: 20px;
+}
+
+.btn {
+  background-color: gray;
+  padding: 13px 30px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.inst {
+  background-color: #e1306c;
+}
+
+.inst:hover {
+  background-color: #FF1744;
+}
+
+.vk {
+  background-color: #45668e;
+}
+
+.vk:hover {
+  background-color: #3D5AFE;
+}
