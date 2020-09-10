@@ -4,7 +4,7 @@ var score = document.querySelector('.score'),
     start = document.querySelector('.start'),
     gameArea = document.querySelector('.gameArea'),
     car = document.createElement('div');
-car.classList.add('car'); // ? sdes mi klassu dobavili esho odin klass kotoriy mi opisali v css
+car.classList.add('.car'); // ? sdes mi klassu dobavili esho odin klass kotoriy mi opisali v css
 // ? kotorimu mi zadali display none
 //? eta ustarevshaya versiya tak kak dla toqo ctobi sdelat esho odin
 // ? obrabotcik sobitiy nam nado budet eqo esho raz napisat
@@ -36,7 +36,7 @@ function startGame() {
     var line = document.createElement('div');
     line.classList.add('line');
     line.style.top = i * 100 + 'px';
-    line.y = i * 100;
+    line.y = i * 75;
     gameArea.appendChild(line);
   }
 

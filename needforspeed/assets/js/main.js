@@ -3,7 +3,7 @@ const score = document.querySelector('.score'),
   gameArea = document.querySelector('.gameArea'),
   car = document.createElement('div');
 
-car.classList.add('car');
+car.classList.add('.car');
 
 // ? sdes mi klassu dobavili esho odin klass kotoriy mi opisali v css
 // ? kotorimu mi zadali display none
@@ -39,7 +39,7 @@ function startGame() {
     const line = document.createElement('div');
     line.classList.add('line');
     line.style.top = (i * 100) + 'px';
-    line.y = i * 100;
+    line.y = i * 75;
     gameArea.appendChild(line);
   }
 
