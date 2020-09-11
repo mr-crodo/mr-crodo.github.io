@@ -4,7 +4,7 @@ var score = document.querySelector('.score'),
     start = document.querySelector('.start'),
     gameArea = document.querySelector('.gameArea'),
     car = document.createElement('div');
-car.classList.add('.car'); // ? sdes mi klassu dobavili esho odin klass kotoriy mi opisali v css
+car.classList.add('car'); // ? sdes mi klassu dobavili esho odin klass kotoriy mi opisali v css
 // ? kotorimu mi zadali display none
 //? eta ustarevshaya versiya tak kak dla toqo ctobi sdelat esho odin
 // ? obrabotcik sobitiy nam nado budet eqo esho raz napisat
@@ -26,18 +26,36 @@ var keys = {
 var setting = {
   start: false,
   score: 0,
-  speed: 3
+  speed: 3,
+  traffic: 3
 };
 
-function startGame() {
-  start.classList.add('hide');
+function getQualityElements(heightElement) {
+  return document.documentElement.clientHeight / heightElement + 1;
+} // console.log(getQualityElements(100));
 
-  for (var i = 0; i < 20; i++) {
+
+function startGame() {
+  start.classList.add('hide'); // 60 mojno izmenit
+
+  for (var i = 0; i < getQualityElements(60); i++) {
     var line = document.createElement('div');
     line.classList.add('line');
     line.style.top = i * 100 + 'px';
-    line.y = i * 75;
+    line.y = i * 100;
     gameArea.appendChild(line);
+  }
+
+  for (var _i = 0; _i < getQualityElements(100 * setting.traffic); _i++) {
+    var enemy = document.createElement('div');
+    enemy.classList.add('enemy');
+    enemy.y = -100 * setting.traffic * (_i + 1); // sdes zadayem poyavleniye mashini enemy randomno
+
+    enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
+    enemy.style.top = enemy.y + 'px'; // dobavlaem kartinku avtomobila
+
+    enemy.style.background = 'transparent url(/image/enemy2.png) center / cover no-repeat';
+    gameArea.appendChild(enemy);
   }
 
   setting.start = true;
@@ -50,6 +68,7 @@ function startGame() {
 function playGame() {
   if (setting.start) {
     moveRoad();
+    moveEnemy();
 
     if (keys.ArrowLeft && setting.x > 0) {
       setting.x -= setting.speed;
@@ -86,12 +105,25 @@ function stopRun(event) {
 
 function moveRoad() {
   var lines = document.querySelectorAll('.line');
-  lines.forEach(function (line, i) {
+  lines.forEach(function (line) {
     line.y += setting.speed;
     line.style.top = line.y + 'px';
 
     if (line.y >= document.documentElement.clientHeight) {
-      line.y = 0;
+      line.y = -100;
+    }
+  });
+}
+
+function moveEnemy() {
+  var enemy = document.querySelectorAll('.enemy');
+  enemy.forEach(function (item) {
+    item.y += setting.speed / 2;
+    item.style.top = item.y + 'px';
+
+    if (item.y >= document.documentElement.clientHeight) {
+      item.y = -100 * setting.traffic;
+      item.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
     }
   });
 }
