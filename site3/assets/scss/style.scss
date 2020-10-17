@@ -1,0 +1,44 @@
+// @import "_fonts.scss";
+// @import "_vars.scss";
+@import "_null.scss";
+// Basic settings
+
+// Font mixins
+@mixin  merrireg {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin openreg {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin opensemi {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin roboto {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+// Custom styles
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+  background-image: url('../img/overlay.png');
+  background-position: center;
+  width: 100%;
+  height: 6175px;
+  opacity: 4;
+  z-index: 10;
+  display: none;
+}
