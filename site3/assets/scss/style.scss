@@ -4,7 +4,7 @@
 // Basic settings
 
 // Font mixins
-@mixin  merrireg {
+@mixin merrireg {
   font-family: 'Merriweather', serif;
   font-weight: 400;
   font-style: normal;
@@ -37,27 +37,33 @@
 @mixin black2020 {
   background-color: #202020;
 }
+
 // Custom styles
 .button {
   display: flex;
   align-items: center;
+
   span {
     color: #fff;
     @include roboto();
     font-size: 1.4rem;
     text-transform: uppercase;
+
     &:hover {
       @include ellow();
     }
   }
+
   .icon {
     margin-left: 11px;
+
     .arrow-right {
       @include ellow();
-      
+
     }
   }
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -69,7 +75,7 @@
   height: 6175px;
   opacity: 0.4;
   z-index: 10;
-  // display: none;
+  display: none;
 }
 
 .container {
@@ -86,11 +92,13 @@
   background-size: cover;
   background-position: center;
   padding-bottom: 3.9rem;
+
   &__content {
     width: 100%;
     text-align: center;
     padding-top: 27.5rem;
   }
+
   h1 {
     color: #fff;
     @include merrireg;
@@ -102,7 +110,7 @@
     padding-bottom: 5.5rem;
     padding-left: 5rem;
     padding-right: 5rem;
-    
+
     span {
       @include ellow();
     }
@@ -112,10 +120,12 @@
     list-style-type: none;
     font-size: 0;
     margin-top: 2.8rem;
+
     li {
       display: inline-block;
       margin: 0 1.4rem;
       position: relative;
+
       &::after {
         content: '';
         position: absolute;
@@ -125,30 +135,36 @@
         width: 2px;
         background-color: #f7ac53;
       }
+
       &:last-child {
         &::after {
           display: none;
         }
       }
+
       a {
         color: #fff;
         @include openreg;
         font-size: 1.3rem;
         text-transform: uppercase;
         cursor: pointer;
+
         &:hover {
           @include ellow();
         }
       }
     }
-   
+
   }
+
   .btn-area {
     padding-top: 21rem;
+
     .arrow {
       @include ellow();
     }
   }
+
   .bottom-line {
     width: 100%;
     display: flex;
@@ -156,13 +172,14 @@
     margin-top: 8rem;
     padding-left: 1.5rem;
     padding-right: 1.7rem;
-    
+
   }
 }
 
 .services {
   @include black2020();
   padding-bottom: 14.8rem;
+
   .mini-caption {
     padding-top: 13.5rem;
     width: 100%;
@@ -173,6 +190,7 @@
     line-height: 4rem;
     text-transform: uppercase;
     position: relative;
+
     &::before {
       content: '';
       position: absolute;
@@ -184,6 +202,7 @@
       background-color: #feb960;
     }
   }
+
   h2 {
     width: 100%;
     padding-top: 1rem;
@@ -193,6 +212,7 @@
     font-size: 4rem;
     line-height: 6.5rem;
   }
+
   &__items {
     display: flex;
     justify-content: space-between;
@@ -201,6 +221,7 @@
     padding-left: 7.5rem;
     padding-right: 8.5rem;
   }
+
   &__item {
 
     .caption {
@@ -210,6 +231,7 @@
       line-height: 6.5rem;
       margin-top: 1.5rem;
     }
+
     .descr {
       color: #bbbbbb;
       @include openreg();
@@ -219,5 +241,60 @@
       margin-top: .4rem;
       margin-bottom: 2.5rem;
     }
+  }
+}
+
+.portfolio {
+  background-color: #181818;
+  color: #fff;
+  height: 951px;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+    // !!!!!!!!!!!!!!!!!!
+
+    .projects-slider {
+      padding: 0 185px;
+      padding-top: 15rem;
+
+      .project-icon {
+        width: 800px;
+        height: 600px;
+      }
+    }
+    /*! Design pagination */
+
+    .projects-pagination {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 44px;
+      cursor: pointer;
+    }
+
+    .projects-bullet {
+      width: 29px;
+      height: 3px;
+      background-color: #5c5c5c;
+      border-radius: 0;
+      display: inline-block;
+      margin: 0 24px;
+      opacity: 1;
+    }
+
+    .projects-bullet-active {
+      background-color: #feb960;
+    }
+
+    .mini-caption {
+      color: #feb960;
+      @include opensemi();
+      font-size: 14px;
+      line-height: 40px;
+    }
+
   }
 }

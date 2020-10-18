@@ -67,6 +67,7 @@ html {
   height: 6175px;
   opacity: 0.4;
   z-index: 10;
+  display: none;
 }
 
 .container {
@@ -223,4 +224,52 @@ html {
   max-width: 230px;
   margin-top: 0.4rem;
   margin-bottom: 2.5rem;
+}
+
+.portfolio {
+  background-color: #181818;
+  color: #fff;
+  height: 951px;
+}
+.portfolio .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  /*! Design pagination */
+}
+.portfolio .container .projects-slider {
+  padding: 0 185px;
+  padding-top: 15rem;
+}
+.portfolio .container .projects-slider .project-icon {
+  width: 800px;
+  height: 600px;
+}
+.portfolio .container .projects-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 44px;
+  cursor: pointer;
+}
+.portfolio .container .projects-bullet {
+  width: 29px;
+  height: 3px;
+  background-color: #5c5c5c;
+  border-radius: 0;
+  display: inline-block;
+  margin: 0 24px;
+  opacity: 1;
+}
+.portfolio .container .projects-bullet-active {
+  background-color: #feb960;
+}
+.portfolio .container .mini-caption {
+  color: #feb960;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 40px;
 }
