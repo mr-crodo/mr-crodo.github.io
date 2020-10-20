@@ -1,3 +1,21 @@
+@font-face {
+  font-family: "SF Pro Display", sans-serif;
+  src: url("/assets/fonts/SF-Pro-Display-Semibold.eot");
+  src: url("/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
+@font-face {
+  font-family: "SF Pro Display", sans-serif;
+  src: url("/assets/fonts/SF-Pro-Display-Regular.eot");
+  src: url("/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  unicode-range: U+0020-00FE;
+}
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
@@ -178,6 +196,6 @@ template {
   display: none;
 }
 
-body {
-  background-color: aqua;
+.header {
+  background-color: #FA8C16;
 }
