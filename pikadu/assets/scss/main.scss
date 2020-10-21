@@ -22,10 +22,105 @@
   background-color: #FA8C16;
 }
 
-@mixin name {
-  
+@mixin white {
+  background-color: #ffffff;
 }
 // Style
+* {
+  box-sizing: border-box;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url('/assets/img/overlay/home.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 1412px;
+  opacity: 0.4;
+  z-index: 10;
+  display: none;
+}
+
+// body {
+//   @include 
+// }
+
+
 .header {
   @include headorange();
+  padding-top: 16px;
+  padding-bottom: 16px;
+  &-wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-nav {
+      margin-left: 64px;
+      margin-right: auto;
+      .header-menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        &-link {
+          @include sfsemreg();
+          font-size: 14px;
+          line-height: 22px;
+          text-decoration: none;
+          color: #FAFAFA;
+          margin-right: 15px;
+        }
+      }
+    }
+    .input-group {
+      border: 1px solid red;
+      width: 237px;
+      height: 32px;
+      position: relative;
+      @include white();
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid #D9D9D9;
+      .search-input {
+        width: 80%;
+        height: 100%;
+        border: none;
+        @include sfsemreg();
+        font-size: 14px;
+        line-height: 22px;
+        padding-left: 12px;
+      }
+      .search-input::-moz-placeholder {
+        color: #BFBFBF; /* Цвет подсказывающего текста */
+       }
+       .search-input::-webkit-input-placeholder { color: #BFBFBF; }
+       .search-input:-ms-input-placeholder { color: #BFBFBF; }
+       .search-input::-ms-input-placeholder { color: #BFBFBF; }
+       .search-input::placeholder { color: #BFBFBF; } 
+      
+      .search-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 20%;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border: none;
+       @include white();
+       cursor: pointer;
+      }
+    }
+  }
+  
+  
 }
