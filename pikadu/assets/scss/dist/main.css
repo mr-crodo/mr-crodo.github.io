@@ -216,10 +216,16 @@ template {
   display: none;
 }
 
+body {
+  background-color: #e5e5e5;
+}
+
 .header {
   background-color: #FA8C16;
   padding-top: 16px;
   padding-bottom: 16px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
 }
 .header-wrapper {
   max-width: 1200px;
@@ -301,4 +307,138 @@ template {
   border: none;
   background-color: #ffffff;
   cursor: pointer;
+}
+
+.content {
+  max-width: 1200px;
+  width: 90%;
+  margin: auto;
+}
+.content .posts {
+  max-width: 800px;
+}
+.content .posts .post {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 30px;
+}
+.content .posts .post-body {
+  padding-top: 35px;
+  padding-right: 35px;
+  padding-left: 35px;
+  padding-bottom: 0;
+}
+.content .posts .post-body .post-name {
+  text-decoration: none;
+}
+.content .posts .post-body .post-name .post-title {
+  margin-top: 0;
+  margin-bottom: 19px;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262626;
+}
+.content .posts .post-body .post-text {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+}
+.content .posts .post-body .tags {
+  margin-bottom: 22px;
+}
+.content .posts .post-body .tags-link {
+  text-decoration: none;
+}
+.content .posts .post-body .tags-link .tag {
+  color: #BFBFBF;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 10px;
+}
+.content .posts .post-body .tags-link .tag:hover {
+  color: #fa8c16ab;
+}
+.content .posts .post-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #e8e8e8;
+  background-color: #FAFAFA;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+.content .posts .post-footer-buttons {
+  display: flex;
+  align-items: center;
+}
+.content .posts .post-footer-buttons .post-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  fill: #8C8C8C;
+  color: #8C8C8C;
+  font-size: 14px;
+  line-height: 22px;
+  margin-right: 19px;
+}
+.content .posts .post-footer-buttons .post-button .icon {
+  fill: #8C8C8C;
+  color: #8C8C8C;
+}
+.content .posts .post-footer-buttons .post-button .icon-like {
+  margin-right: 6px;
+}
+.content .posts .post-footer-buttons .post-button .icon-like:hover {
+  fill: #2078f4;
+}
+.content .posts .post-footer-buttons .post-button .icon-comment {
+  margin-right: 6px;
+}
+.content .posts .post-footer-buttons .post-button .icon-comment:hover {
+  fill: #8AC858;
+}
+.content .posts .post-footer-buttons .post-button .icon-save:hover {
+  fill: #FFC800;
+}
+.content .posts .post-footer-buttons .post-button .icon-share:hover {
+  fill: #c7202c;
+}
+.content .posts .post-footer-author {
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+.content .posts .post-footer-author .author-username {
+  display: block;
+  fill: #8C8C8C;
+  color: #8C8C8C;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration: none;
+}
+.content .posts .post-footer-author .author .post-time {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 12px;
+  line-height: 20px;
+  color: #BFBFBF;
+}
+.content .posts .post-footer-author .author-avatar {
+  width: 34px;
+  height: 34px;
+  margin-left: 9px;
+  border-radius: 4px;
 }
