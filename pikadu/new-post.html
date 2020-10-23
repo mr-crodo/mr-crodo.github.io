@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ru, en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pikadu - новый пост</title>
+  <link href="/pikadu/assets/fonts/SF-Pro-Display-Semibold.html" rel="stylesheet">
+  <link rel="stylesheet" href="/pikadu/assets/fonts/SF-Pro-Display-Regular.html">
+  <link rel="stylesheet" href="/pikadu/assets/scss/dist/main.css">
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+  <header class="header">
+    <div class="header-wrapper">
+      <a class="header-logo" href="/">
+        <img class="header-logo-image" src="/pikadu/assets/img/Pikadu.svg" alt="Pikadu">
+      </a>
+      <nav class="header-nav">
+        <ul class="header-menu">
+          <li class="header-menu-item">
+            <a href="#" class="header-menu-link">Свежее</a>
+            <!-- /.header-menu-link -->
+          </li>
+          <!-- /.header-menu-item -->
+          <li class="header-menu-item">
+            <a href="#" class="header-menu-link">Лучшее</a>
+            <!-- /.header-menu-link -->
+          </li>
+          <!-- /.header-menu-item -->
+          <li class="header-menu-item">
+            <a href="#" class="header-menu-link">Горячее</a>
+            <!-- /.header-menu-link -->
+          </li>
+          <!-- /.header-menu-item -->
+          <li class="header-menu-item">
+            <a href="#" class="header-menu-link">Подписки</a>
+            <!-- /.header-menu-link -->
+          </li>
+          <!-- /.header-menu-item -->
+        </ul>
+        <!-- /.header-menu -->
+      </nav>
+      <!-- /.header-nav -->
+
+      <div class="input-group search">
+        <input type="search" class="search-input" placeholder="Поиск по сайту">
+        <button class="search-button">
+          <img src="/pikadu/assets/img/search.svg" alt="icon: search" class="search-icon">
+        </button>
+        <!-- /.search-button -->
+      </div>
+      <!-- /.header-input-group -->
+      <a href="#" class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+      <!-- /.menu-toggle -->
+    </div>
+    <!-- /.header-wrapper -->
+  </header>
+  <!-- /.header -->
+
+  <div class="content">
+    <main class="posts">
+      <form action="#" class="add-post">
+        <input type="text" name="post-title" class="add-title" placeholder="Заголовок поста">
+        <textarea name="post-text" id="text" class="add-text" placeholder="Текст вашего поста"></textarea>
+        <!-- /# -->
+        <div class="add-buttons">
+
+          <button type="submit" class="button add-button">
+            <svg class="icon icon-fire">
+              <use xlink:href="/pikadu/assets/img/icons.svg#fire"></use>
+            </svg>
+            Опубликовать пост
+          </button>
+          <!-- /.button add-button -->
+
+          <button class="button button-outline">
+            <svg class="icon icon-video">
+              <use xlink:href="/pikadu/assets/img/icons.svg#video"></use>
+            </svg>
+            Видео
+          </button>
+          <!-- /.button button-outline -->
+          <button class="button button-outline">
+            <svg class="icon icon-photo">
+              <use xlink:href="/pikadu/assets/img/icons.svg#photo"></use>
+            </svg>
+            Фото
+          </button>
+          <!-- /.button button-outline -->
+
+        </div>
+        <!-- /.add-buttons -->
+      </form>
+
+    </main>
+    <!-- /.posts -->
+
+
+    <aside class="sidebar">
+      <div class="user">
+        <div class="user-info">
+          <a href="#">
+            <img width="40" height="40" src="/pikadu/assets/img/avatar/avatar2.jpg" alt="photo: user" class="user-avatar">
+          </a>
+          <a href="#">
+            <span class="user-name">MasterDenn</span>
+          </a>
+          <!-- /.user-name -->
+        </div>
+        <!-- /.user-info -->
+        <a href="#" class="exit">
+          <svg class="icon icon-exit">
+            <use xlink:href="/pikadu/assets/img/icons.svg#exit"></use>
+          </svg>
+        </a>
+        <!-- /.exit -->
+      </div>
+      <!-- /.user -->
+      <nav class="sidebar-nav">
+        <ul class="sidebar-menu">
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Ответы</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Комментарии</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link active">Оценки</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Сохраненное</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Подписки</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Заметки</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+          <li class="sidebar-menu-item">
+            <a href="#" class="sidebar-menu-link">Игнор-лист</a>
+            <!-- /.sidebar-menu-item-link -->
+          </li>
+          <!-- /.sidebar-menu-item -->
+        </ul>
+        <!-- /.sidebar-menu -->
+      </nav>
+      <!-- /.sidebar-nav -->
+
+      <a href="#" class="ad"></a>
+      <!-- /.promo -->
+    </aside>
+    <!-- /.sidebar -->
+  </div>
+  <!-- /.content -->
+
+  <script src="/pikadu/assets/js/main.js"></script>
+</body>
+
+</html>

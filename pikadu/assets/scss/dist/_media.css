@@ -1,0 +1,91 @@
+@media (max-width: 990px) {
+  .header {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+  }
+  .header .header-nav {
+    display: none;
+  }
+  .header .header-nav .header-menu {
+    width: 90%;
+    margin: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    margin-left: 12px;
+  }
+
+  .menu-toggle span {
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .content .sidebar {
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100% - 64px);
+    max-width: 320px;
+    width: 100%;
+    background-color: #fff;
+    padding: 30px;
+    margin-top: 64px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+    transform: translateX(100%);
+    transition: transform 0.2s;
+    overflow-y: auto;
+  }
+  .content .sidebar.visible {
+    transform: translateX(0);
+  }
+  .content .posts {
+    width: 100%;
+  }
+}
+@media (max-width: 676px) {
+  .add-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content .posts .add-post .button-outline {
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .content .posts .post-footer {
+    flex-direction: column;
+  }
+  .content .posts .post-footer-author {
+    margin-top: 15px;
+  }
+  .content .posts .post-footer-author .author {
+    order: 2;
+    text-align: left;
+  }
+  .content .posts .post-footer-author .author-avatar {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .content .posts .post-footer-buttons .post-button {
+    margin-right: 10px;
+  }
+}

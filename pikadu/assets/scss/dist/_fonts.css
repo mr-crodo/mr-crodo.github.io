@@ -1,7 +1,7 @@
 @font-face {
   font-family: "SF Pro Display", sans-serif;
-  src: url("/assets/fonts/SF-Pro-Display-Semibold.eot");
-  src: local("SF-Pro-Display-Semibold"), url("/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
+  src: url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.eot");
+  src: local("SF-Pro-Display-Semibold"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -9,8 +9,8 @@
 }
 @font-face {
   font-family: "SF Pro Display", sans-serif;
-  src: url("/assets/fonts/SF-Pro-Display-Regular.eot");
-  src: local("SF-Pro-Display-Regular"), url("/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
+  src: url("/pikadu/assets/fonts/SF-Pro-Display-Regular.eot");
+  src: local("SF-Pro-Display-Regular"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;

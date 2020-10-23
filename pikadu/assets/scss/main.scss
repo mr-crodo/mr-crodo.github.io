@@ -92,7 +92,7 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url('/assets/img/overlay/home.png');
+  background-image: url('/pikadu/assets/img/overlay/home.png');
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -143,8 +143,8 @@ body {
     }
 
     .input-group {
-      border: 1px solid red;
-      width: 237px;
+      max-width: 237px;
+      width: 60%;
       height: 32px;
       position: relative;
       @include white();
@@ -202,6 +202,54 @@ body {
 
 }
 
+.menu-toggle {
+  display: none;
+}
+
+// !button
+.button {
+  background-color: $color_b1;
+  border-radius: 4px;
+  text-decoration: none;
+  @include color-white();
+  @include sfsemreg();
+  @include text-bold-line();
+  padding: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-fire {
+  width: 11px;
+  height: 14px;
+  @include color-white();
+  margin-right: 10px;
+}
+
+.add-button {
+  width: 100%;
+  max-width: 370px;
+  margin-right: 2%;
+}
+
+.button-outline {
+  @include sfsemreg();
+  @include text-bold-line();
+  background-color: $white;
+  color: $color_b2;
+  border-radius: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  .icon {
+    width: 14px;
+    height: 11px;
+    fill: $color_b2;
+  }
+}
+
+// !!!!
+
 .content {
   max-width: 1200px;
   width: 90%;
@@ -209,8 +257,11 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-top: 94px;
+  margin-bottom: 60px;
 
   .posts {
+
     width: 67%;
 
     .post {
@@ -349,6 +400,29 @@ body {
 
       }
     }
+
+
+    .add-post {
+      display: flex;
+      flex-direction: column;
+
+      .add-title {
+        background-color: $white;
+        border: 1px solid $color_e8;
+        padding: 23px 30px;
+        margin-bottom: 16px;
+      }
+
+      .add-text {
+        @extend .add-title;
+        min-height: 362px;
+      }
+
+      .button-outline {
+        margin-right: 1%;
+      }
+
+    }
   }
 
 
@@ -429,15 +503,7 @@ body {
       border-right: 3px solid #FAAD14;
     }
 
-    .button {
-      background-color: #FAAD14;
-      border-radius: 4px;
-      text-decoration: none;
-      @include color-white();
-      @include sfsemreg();
-      @include text-bold-line();
-      padding: 13px;
-    }
+
 
     .button-new-post {
       display: flex;
@@ -445,15 +511,6 @@ body {
       justify-content: center;
       width: 100%;
       margin-top: 20px;
-
-
-
-      .icon-fire {
-        width: 11px;
-        height: 14px;
-        @include color-white();
-        margin-right: 10px;
-      }
     }
 
     .card {
@@ -497,7 +554,7 @@ body {
     .ad {
       @include bgwhite();
       display: block;
-      background-image: url('/assets/img/ad/promo.jpg');
+      background-image: url('/pikadu/assets/img/ad/promo.jpg');
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
@@ -522,3 +579,15 @@ body {
     }
   }
 }
+
+@import "_media.scss";
+
+// @media (max-width: 990px) {
+//   .sidebar {
+//     display: none;
+//   }
+
+//   .posts {
+//     width: 100%;
+//   }
+// }
