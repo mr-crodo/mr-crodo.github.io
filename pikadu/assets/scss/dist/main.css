@@ -2,7 +2,7 @@
 @font-face {
   font-family: "SF Pro Display", sans-serif;
   src: url("/assets/fonts/SF-Pro-Display-Semibold.eot");
-  src: url("/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
+  src: local("SF-Pro-Display-Semibold"), url("/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -11,7 +11,7 @@
 @font-face {
   font-family: "SF Pro Display", sans-serif;
   src: url("/assets/fonts/SF-Pro-Display-Regular.eot");
-  src: url("/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
+  src: local("SF-Pro-Display-Regular"), url("/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -313,9 +313,12 @@ body {
   max-width: 1200px;
   width: 90%;
   margin: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 .content .posts {
-  max-width: 800px;
+  width: 67%;
 }
 .content .posts .post {
   background-color: #ffffff;
@@ -396,17 +399,15 @@ body {
   fill: #8C8C8C;
   color: #8C8C8C;
 }
-.content .posts .post-footer-buttons .post-button .icon-like {
-  margin-right: 6px;
-}
-.content .posts .post-footer-buttons .post-button .icon-like:hover {
-  fill: #2078f4;
-}
+.content .posts .post-footer-buttons .post-button .icon-like,
 .content .posts .post-footer-buttons .post-button .icon-comment {
   margin-right: 6px;
 }
 .content .posts .post-footer-buttons .post-button .icon-comment:hover {
   fill: #8AC858;
+}
+.content .posts .post-footer-buttons .post-button .icon-like:hover {
+  fill: #2078f4;
 }
 .content .posts .post-footer-buttons .post-button .icon-save:hover {
   fill: #FFC800;
@@ -441,4 +442,173 @@ body {
   height: 34px;
   margin-left: 9px;
   border-radius: 4px;
+}
+.content .sidebar {
+  width: 31%;
+}
+.content .sidebar .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFAFA;
+  border: 1px solid #e8e8e8;
+  padding: 15px 25px;
+}
+.content .sidebar .user-info {
+  display: flex;
+  align-items: center;
+}
+.content .sidebar .user-info a {
+  text-decoration: none;
+}
+.content .sidebar .user-avatar {
+  border-radius: 50%;
+  margin-right: 17px;
+}
+.content .sidebar .user-name {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+.content .sidebar .user .exit .icon-exit {
+  width: 20px;
+  height: 20px;
+  color: #000000;
+  fill: #000000;
+}
+.content .sidebar .user .exit .icon-exit:hover {
+  fill: #ff0c1c;
+}
+.content .sidebar-nav {
+  background-color: #ffffff;
+}
+.content .sidebar-nav .sidebar-menu {
+  margin: 0;
+  border: 1px solid #e8e8e8;
+  border-top: none;
+  list-style: none;
+  padding: 0;
+}
+.content .sidebar-nav .sidebar-menu-link {
+  text-decoration: none;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #595959;
+  padding: 16px 48px;
+  display: inline-block;
+  width: 100%;
+}
+.content .sidebar-nav .sidebar-menu-link:hover {
+  background-color: #FFFBE6;
+}
+.content .sidebar .active {
+  background-color: #FFFBE6;
+  border-right: 3px solid #FAAD14;
+}
+.content .sidebar .button {
+  background-color: #FAAD14;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #FFFFFF;
+  fill: #ffffff;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 13px;
+}
+.content .sidebar .button-new-post {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.content .sidebar .button-new-post .icon-fire {
+  width: 11px;
+  height: 14px;
+  color: #FFFFFF;
+  fill: #ffffff;
+  margin-right: 10px;
+}
+.content .sidebar .card {
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  margin-top: 20px;
+}
+.content .sidebar .card-header {
+  background-color: #FAFAFA;
+  border-bottom: 1px solid #E8E8E8;
+  padding: 23px 25px;
+}
+.content .sidebar .card-header-title {
+  margin: 0;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+}
+.content .sidebar .card-body {
+  padding: 22px 40px 20px 25px;
+}
+.content .sidebar .card-body-title {
+  margin: 0 0 10px;
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #D48806;
+  text-decoration: none;
+}
+.content .sidebar .card-body-text {
+  font-family: "SF Pro Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #262626;
+  margin: 10px 0;
+}
+.content .sidebar .ad {
+  background-color: #ffffff;
+  display: block;
+  background-image: url("/assets/img/ad/promo.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 260px;
+  border: 1px solid #E8E8E8;
+  margin-top: 20px;
+  position: relative;
+}
+.content .sidebar .ad::before {
+  content: "Реклама";
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #c4c4c4;
+  padding-left: 26px;
+  padding-right: 26px;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  fill: #ffffff;
 }
