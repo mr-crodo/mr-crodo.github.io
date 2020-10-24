@@ -1,13 +1,12 @@
-@mixin headorange {
-  background-color: #FA8C16;
+
+@mixin color-white {
+  color: #FFFFFF;
+  fill: #ffffff;
 }
 
-@mixin white {
-  background-color: #ffffff;
-}
-
-@mixin fon {
-  background-color: #e5e5e5;
+@mixin color-black {
+  color: #000000;
+  fill: #000000;
 }
 
 @mixin text-color {
@@ -18,13 +17,42 @@
   color: #BFBFBF;
 }
 
+@mixin tags-hover {
+  color: #fa8c16ab;
+}
+
+@mixin bgfafa {
+  background-color: #FAFAFA;
+}
+
+@mixin fill-tags {
+  fill: #8C8C8C;
+  color: #8C8C8C;
+}
+
+
+
+
 $white: #ffffff;
 $color_e5: #e5e5e5;
+$color_fafa: #FAFAFA;
 $orange: #FA8C16;
 $text_color: #262626;
 $tegs_color: #BFBFBF;
 $color_e8: #e8e8e8;
 $color_b1: #FAAD14;
 $color_b2: #FFC53D;
+$color_d4: #D48806;
+$color_59: #595959;
+$color_c4: #c4c4c4;
+$color_filtags: #8C8C8C; //fill-tags();
+$color_be6: #FFFBE6;
+$color_d9: #d9d9d9;
+$color_hover_icon: #ff0c1c;
+$color_hover_like: #2078f4;
+$color_hover_comment: #8AC858;
+$color_hover_save: #FFC800;
+$color_hover_share: #c7202c;
+
 
 $black_rgba: rgba(0, 0, 0, 0.15);

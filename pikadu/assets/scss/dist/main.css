@@ -264,7 +264,7 @@ body {
   background-color: #ffffff;
   border-radius: 4px;
   overflow: hidden;
-  border: 1px solid #D9D9D9;
+  border: 1px solid #d9d9d9;
 }
 .header-wrapper .input-group .search-input {
   width: 80%;
@@ -317,8 +317,7 @@ body {
   background-color: #FAAD14;
   border-radius: 4px;
   text-decoration: none;
-  color: #FFFFFF;
-  fill: #ffffff;
+  color: #ffffff;
   font-family: "SF Pro Display", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -333,7 +332,6 @@ body {
 .icon-fire {
   width: 11px;
   height: 14px;
-  color: #FFFFFF;
   fill: #ffffff;
   margin-right: 10px;
 }
@@ -445,7 +443,6 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  fill: #8C8C8C;
   color: #8C8C8C;
   font-size: 14px;
   line-height: 22px;
@@ -453,7 +450,6 @@ body {
 }
 .content .posts .post-footer-buttons .post-button .icon {
   fill: #8C8C8C;
-  color: #8C8C8C;
 }
 .content .posts .post-footer-buttons .post-button .icon-like,
 .content .posts .post-footer-buttons .post-button .icon-comment {
@@ -478,7 +474,6 @@ body {
 }
 .content .posts .post-footer-author .author-username {
   display: block;
-  fill: #8C8C8C;
   color: #8C8C8C;
   font-size: 12px;
   line-height: 20px;
@@ -599,7 +594,7 @@ body {
 }
 .content .sidebar .card-header {
   background-color: #FAFAFA;
-  border-bottom: 1px solid #E8E8E8;
+  border-bottom: 1px solid #e8e8e8;
   padding: 23px 25px;
 }
 .content .sidebar .card-header-title {
@@ -645,7 +640,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 260px;
-  border: 1px solid #E8E8E8;
+  border: 1px solid #e8e8e8;
   margin-top: 20px;
   position: relative;
 }
@@ -660,8 +655,7 @@ body {
   font-size: 12px;
   line-height: 20px;
   text-align: center;
-  color: #FFFFFF;
-  fill: #ffffff;
+  color: #ffffff;
 }
 
 @media (max-width: 990px) {

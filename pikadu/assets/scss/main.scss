@@ -78,7 +78,7 @@
 }
 
 @mixin greytext {
-  color: #595959;
+  color: $color_59;
 }
 
 
@@ -103,15 +103,15 @@
 }
 
 body {
-  @include fon();
+  background-color: $color_e5;
 }
 
 
 .header {
-  @include headorange();
+  background-color: $orange;
   padding-top: 16px;
   padding-bottom: 16px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 8px $black_rgba;
   margin-bottom: 30px;
 
   &-wrapper {
@@ -136,7 +136,7 @@ body {
           @include sfsemreg();
           @include textline();
           text-decoration: none;
-          color: #FAFAFA;
+          color: $color_fafa;
           margin-right: 15px;
         }
       }
@@ -147,10 +147,10 @@ body {
       width: 60%;
       height: 32px;
       position: relative;
-      @include white();
+      background-color: $white;
       border-radius: 4px;
       overflow: hidden;
-      border: 1px solid #D9D9D9;
+      border: 1px solid $color_d9;
 
       .search-input {
         width: 80%;
@@ -162,24 +162,24 @@ body {
       }
 
       .search-input::-moz-placeholder {
-        @include tags();
+        color: $tegs_color;
         /* Цвет подсказывающего текста */
       }
 
       .search-input::-webkit-input-placeholder {
-        @include tags();
+        color: $tegs_color;
       }
 
       .search-input:-ms-input-placeholder {
-        @include tags();
+        color: $tegs_color;
       }
 
       .search-input::-ms-input-placeholder {
-        @include tags();
+        color: $tegs_color;
       }
 
       .search-input::placeholder {
-        @include tags();
+        color: $tegs_color;
       }
 
       .search-button {
@@ -193,7 +193,7 @@ body {
         right: 0;
         top: 0;
         border: none;
-        @include white();
+        background-color: $white;
         cursor: pointer;
       }
     }
@@ -211,7 +211,7 @@ body {
   background-color: $color_b1;
   border-radius: 4px;
   text-decoration: none;
-  @include color-white();
+  color: $white;
   @include sfsemreg();
   @include text-bold-line();
   padding: 13px;
@@ -222,7 +222,7 @@ body {
 .icon-fire {
   width: 11px;
   height: 14px;
-  @include color-white();
+  fill: $white;
   margin-right: 10px;
 }
 
@@ -265,8 +265,8 @@ body {
     width: 67%;
 
     .post {
-      @include white();
-      border: 1px solid #e8e8e8;
+      background-color: $white;
+      border: 1px solid $color_e8;
       margin-bottom: 30px;
 
       &-body {
@@ -283,7 +283,7 @@ body {
             margin-bottom: 19px;
             @include sfsembold();
             @include text-bold-line();
-            @include text-color();
+            color: $text_color;
           }
         }
 
@@ -291,7 +291,7 @@ body {
         .post-text {
           @include sfsemreg();
           @include textline();
-          @include text-color();
+          color: $text_color;
         }
 
         .tags {
@@ -301,7 +301,7 @@ body {
             text-decoration: none;
 
             .tag {
-              @include tags();
+              color: $tegs_color;
               @include textline();
               margin-right: 10px;
 
@@ -319,8 +319,8 @@ body {
       &-footer {
         display: flex;
         justify-content: space-between;
-        border-top: 1px solid #e8e8e8;
-        @include bgfafa();
+        border-top: 1px solid $color_e8;
+        background-color: $color_fafa;
         padding-left: 35px;
         padding-right: 35px;
         padding-top: 13px;
@@ -336,12 +336,12 @@ body {
             background-color: transparent;
             border: none;
             cursor: pointer;
-            @include fill-tags();
+            color: $color_filtags;
             @include textline();
             margin-right: 19px;
 
             .icon {
-              @include fill-tags();
+              fill: $color_filtags;
             }
 
             .icon-like,
@@ -350,19 +350,19 @@ body {
             }
 
             .icon-comment:hover {
-              fill: #8AC858;
+              fill: $color_hover_comment;
             }
 
             .icon-like:hover {
-              fill: #2078f4;
+              fill: $color_hover_like;
             }
 
             .icon-save:hover {
-              fill: #FFC800;
+              fill: $color_hover_save;
             }
 
             .icon-share:hover {
-              fill: #c7202c;
+              fill: $color_hover_share;
             }
 
           }
@@ -377,7 +377,7 @@ body {
 
             &-username {
               display: block;
-              @include fill-tags();
+              color: $color_filtags;
               @include authore-lineh();
               text-decoration: none;
             }
@@ -385,7 +385,7 @@ body {
             .post-time {
               @include sfsemreg();
               @include authore-lineh();
-              @include tags();
+              color: $tegs_color;
             }
           }
 
@@ -433,8 +433,8 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      @include bgfafa();
-      border: 1px solid #e8e8e8;
+      background-color: $color_fafa;
+      border: 1px solid $color_e8;
       padding: 15px 25px;
 
       &-info {
@@ -454,7 +454,7 @@ body {
       &-name {
         @include sfsembold();
         @include text-bold-line();
-        @include greytext();
+        color: $color_59;
       }
 
       .exit {
@@ -465,18 +465,18 @@ body {
           @include color-black();
 
           &:hover {
-            fill: #ff0c1c;
+            fill: $color_hover_icon;
           }
         }
       }
     }
 
     &-nav {
-      @include bgwhite();
+      background-color: $white;
 
       .sidebar-menu {
         margin: 0;
-        border: 1px solid #e8e8e8;
+        border: 1px solid $color_e8;
         border-top: none;
         list-style: none;
         padding: 0;
@@ -485,13 +485,13 @@ body {
           text-decoration: none;
           @include sfsemreg();
           @include textline();
-          @include greytext();
+          color: $color_59;
           padding: 16px 48px;
           display: inline-block;
           width: 100%;
 
           &:hover {
-            background-color: #FFFBE6;
+            background-color: $color_be6;
           }
 
         }
@@ -499,8 +499,8 @@ body {
     }
 
     .active {
-      background-color: #FFFBE6;
-      border-right: 3px solid #FAAD14;
+      background-color: $color_be6;
+      border-right: 3px solid $color_b1;
     }
 
 
@@ -514,20 +514,20 @@ body {
     }
 
     .card {
-      @include bgwhite();
-      border: 1px solid #e8e8e8;
+      background-color: $white;
+      border: 1px solid $color_e8;
       margin-top: 20px;
 
       &-header {
-        @include bgfafa();
-        border-bottom: 1px solid #E8E8E8;
+        background-color: $color_fafa;
+        border-bottom: 1px solid $color_e8;
         padding: 23px 25px;
 
         &-title {
           margin: 0;
           @include sfsembold();
           @include text-bold-line();
-          @include greytext();
+          color: $color_59;
         }
       }
 
@@ -538,21 +538,21 @@ body {
           margin: 0 0 10px;
           @include sfsembold();
           @include text-bold-line();
-          color: #D48806;
+          color: $color_d4;
           text-decoration: none;
         }
 
         &-text {
           @include sfsemreg();
           @include textline();
-          @include text-color();
+          color: $text_color;
           margin: 10px 0;
         }
       }
     }
 
     .ad {
-      @include bgwhite();
+      background-color: $white;
       display: block;
       background-image: url('/pikadu/assets/img/ad/promo.jpg');
       background-size: cover;
@@ -560,7 +560,7 @@ body {
       background-repeat: no-repeat;
       width: 100%;
       height: 260px;
-      border: 1px solid #E8E8E8;
+      border: 1px solid $color_e8;
       margin-top: 20px;
       position: relative;
 
@@ -569,25 +569,15 @@ body {
         position: absolute;
         right: 0;
         top: 0;
-        background: #c4c4c4;
+        background: $color_c4;
         padding-left: 26px;
         padding-right: 26px;
         @include authore-lineh();
         text-align: center;
-        @include color-white();
+        color: $white;
       }
     }
   }
 }
 
 @import "_media.scss";
-
-// @media (max-width: 990px) {
-//   .sidebar {
-//     display: none;
-//   }
-
-//   .posts {
-//     width: 100%;
-//   }
-// }
