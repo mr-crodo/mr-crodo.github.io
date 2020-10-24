@@ -667,7 +667,20 @@ body {
     width: 100%;
   }
   .header .header-nav {
-    display: none;
+    margin-left: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fa8c16;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 35px;
+    padding-right: 35px;
   }
   .header .header-nav .header-menu {
     width: 90%;
@@ -686,7 +699,7 @@ body {
   .menu-toggle span {
     height: 2px;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
   }
 
   .content .sidebar {
@@ -698,7 +711,7 @@ body {
     height: calc(100% - 64px);
     max-width: 320px;
     width: 100%;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
     margin-top: 64px;
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);

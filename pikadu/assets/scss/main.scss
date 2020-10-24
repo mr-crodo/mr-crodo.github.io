@@ -33,54 +33,6 @@
   line-height: 20px;
 }
 
-// Color
-@mixin headorange {
-  background-color: #FA8C16;
-}
-
-@mixin bgwhite {
-  background-color: #ffffff;
-}
-
-@mixin fon {
-  background-color: #e5e5e5;
-}
-
-@mixin color-white {
-  color: #FFFFFF;
-  fill: #ffffff;
-}
-
-@mixin color-black {
-  color: #000000;
-  fill: #000000;
-}
-
-@mixin text-color {
-  color: #262626;
-}
-
-@mixin tags {
-  color: #BFBFBF;
-}
-
-@mixin tags-hover {
-  color: #fa8c16ab;
-}
-
-@mixin bgfafa {
-  background-color: #FAFAFA;
-}
-
-@mixin fill-tags {
-  fill: #8C8C8C;
-  color: #8C8C8C;
-}
-
-@mixin greytext {
-  color: $color_59;
-}
-
 
 // Style
 * {
