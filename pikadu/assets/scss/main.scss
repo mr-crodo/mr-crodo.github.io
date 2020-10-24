@@ -1,38 +1,7 @@
 @import "_fonts.scss";
 @import "_nulls.scss";
+@import "_vars.scss";
 @import "_color.scss";
-
-
-// Font mixins
-@mixin sfsembold {
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@mixin sfsemreg {
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-}
-
-@mixin textline {
-  font-size: 14px;
-  line-height: 22px;
-}
-
-@mixin text-bold-line {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-@mixin authore-lineh {
-  font-size: 12px;
-  line-height: 20px;
-}
-
 
 // Style
 * {

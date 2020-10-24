@@ -725,6 +725,13 @@ body {
   .content .posts {
     width: 100%;
   }
+
+  .header-wrapper .header-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 @media (max-width: 676px) {
   .add-buttons {
