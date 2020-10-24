@@ -306,7 +306,7 @@ body {
               margin-right: 10px;
 
               &:hover {
-                @include tags-hover();
+                color: $tags_hover;
               }
             }
           }
@@ -462,7 +462,7 @@ body {
         .icon-exit {
           width: 20px;
           height: 20px;
-          @include color-black();
+          fill: $black;
 
           &:hover {
             fill: $color_hover_icon;

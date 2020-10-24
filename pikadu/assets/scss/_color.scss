@@ -1,8 +1,4 @@
 
-@mixin color-white {
-  color: #FFFFFF;
-  fill: #ffffff;
-}
 
 @mixin color-black {
   color: #000000;
@@ -34,9 +30,11 @@
 
 
 $white: #ffffff;
+$black: #000000;
 $color_e5: #e5e5e5;
 $color_fafa: #FAFAFA;
 $orange: #FA8C16;
+$tags_hover: #fa8c16ab;
 $text_color: #262626;
 $tegs_color: #BFBFBF;
 $color_e8: #e8e8e8;
