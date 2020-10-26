@@ -1,0 +1,160 @@
+@import "_fonts.scss";
+@import "_nulls.scss";
+
+
+
+$white: #Ffffff;
+$black: #000000;
+$text-main: #302C34;
+$bg-26: #262626;
+$but-blue: #1890FF;
+$c-f5: #F5F5F5;
+$c-bf: #BFBFBF;
+$bg-main: #E8E8E8;
+$c-star: #FFC107;
+$c-59: #595959;
+$c-8c: #8C8C8C;
+$bg-f5: #f5f5f5;
+$bor-d9: #D9D9D9;
+
+
+@mixin robotoBold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@mixin robotoReg {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@mixin sfReg {
+  font-family: 'SF Pro Display', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+// ! placeholder
+.search-input::-moz-placeholder {
+  color: $c-bf;
+  /* Цвет подсказывающего текста */
+}
+
+.search-input::-webkit-input-placeholder {
+  color: $c-bf;
+}
+
+.search-input:-ms-input-placeholder {
+  color: $c-bf;
+}
+
+.search-input::-ms-input-placeholder {
+  color: $c-bf;
+}
+
+.search-input::placeholder {
+  color: $c-bf;
+}
+
+// ! ***********
+// **************
+
+@mixin fz-1624 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin fz-1832 {
+  font-size: 18px;
+  line-height: 32px;
+}
+
+@mixin fz-3642 {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+@mixin fz-2431 {
+  font-size: 24px;
+  line-height: 32px;
+}
+
+@mixin fz-1821 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@mixin fz-1220 {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+@mixin fz-2032 {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+@mixin fz-2023 {
+  font-size: 20px;
+  line-height: 23px;
+}
+
+
+// ***********
+
+* {
+  box-sizing: border-box;
+}
+
+.btn-blue {
+  padding: 8px 16px;
+  background: $but-blue;
+  border-radius: 2px;
+  @include fz-1624();
+}
+
+.btn-white {
+  background: $white;
+  border: 1px solid $bor-d9;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  border-radius: 2px;
+  color: $c-59;
+  @include fz-1624();
+
+}
+
+body {
+  background-color: $bg-f5;
+
+  .container {
+    border: 1px solid red;
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+
+    .header__content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .search-input {
+        background: $white;
+        border: 1px solid $bor-d9;
+        border-radius: 2px;
+        height: 40px;
+        width: 690px;
+        @include fz-1624();
+        background-image: url('/assets/svg/home.svg');
+        background-repeat: no-repeat;
+        background-position: left 11px center;
+        padding-left: 35px;
+      }
+    }
+  }
+}
