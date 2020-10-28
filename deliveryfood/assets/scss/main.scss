@@ -1,6 +1,6 @@
-@import "_fonts.scss";
-@import "_nulls.scss";
-
+@import "fonts";
+@import "reset";
+@import "colors";
 
 
 $white: #Ffffff;
@@ -16,27 +16,34 @@ $c-59: #595959;
 $c-8c: #8C8C8C;
 $bg-f5: #f5f5f5;
 $bor-d9: #D9D9D9;
+$bg-c: #fff1b8;
 
 
 @mixin robotoBold {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-stretch: normal;
+  font: {
+    family: 'Roboto', sans-serif;
+    weight: 700;
+    style: normal;
+    stretch: normal;
+  }
 }
 
 @mixin robotoReg {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
+  font: {
+    family: 'Roboto', sans-serif;
+    weight: 400;
+    style: normal;
+    stretch: normal;
+  }
 }
 
 @mixin sfReg {
-  font-family: 'SF Pro Display', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
+  font: {
+    family: 'SF Pro Display', sans-serif;
+    weight: 400;
+    style: normal;
+    stretch: normal;
+  }
 }
 
 // ! placeholder
@@ -79,9 +86,15 @@ $bor-d9: #D9D9D9;
   line-height: 42px;
 }
 
-@mixin fz-2431 {
+@mixin fz-2432 {
   font-size: 24px;
   line-height: 32px;
+}
+
+@mixin fz-2428 {
+  font-size: 24px;
+  line-height: 28px;
+
 }
 
 @mixin fz-1821 {
@@ -104,6 +117,17 @@ $bor-d9: #D9D9D9;
   line-height: 23px;
 }
 
+@mixin fz-3946 {
+  font-size: 39px;
+  line-height: 46px;
+}
+
+@mixin main-text {
+  @include robotoBold();
+  @include fz-3946();
+  color: $text-main;
+}
+
 
 // ***********
 
@@ -111,29 +135,60 @@ $bor-d9: #D9D9D9;
   box-sizing: border-box;
 }
 
-.btn-blue {
+.btn {
   padding: 8px 16px;
-  background: $but-blue;
-  border-radius: 2px;
   @include fz-1624();
+  border-radius: 2px;
+}
+
+.btn-blue {
+  @extend .btn;
+  background-color: $but-blue;
 }
 
 .btn-white {
-  background: $white;
+  @extend .btn;
+  background-color: $white;
   border: 1px solid $bor-d9;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
-  border-radius: 2px;
-  color: $c-59;
-  @include fz-1624();
 
+  box: {
+    sizing: border-box;
+    shadow: 0px 0px 2px rgba(0, 0, 0, 0.0015);
+  }
+
+  color: $c-59;
+
+}
+
+.input {
+  background-color: $white;
+  border: 1px solid $bor-d9;
+  border-radius: 2px;
+  @include fz-1624();
+  padding: 8px 12px;
+  padding-left: 35px;
+
+  background: {
+    color: $white;
+    repeat: no-repeat;
+    position: left 11px center;
+  }
+}
+
+.price-pizza {
+  @include robotoReg();
+  @include fz-1832();
+  color: $c-8c;
 }
 
 body {
   background-color: $bg-f5;
 
+  .header {
+    padding-top: 44px;
+  }
+
   .container {
-    border: 1px solid red;
     max-width: 1200px;
     width: 90%;
     margin: auto;
@@ -142,19 +197,188 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      margin-bottom: 40px;
 
-      .search-input {
-        background: $white;
-        border: 1px solid $bor-d9;
-        border-radius: 2px;
-        height: 40px;
+      .input-address {
+        @extend .input;
         width: 690px;
-        @include fz-1624();
         background-image: url('/assets/svg/home.svg');
-        background-repeat: no-repeat;
-        background-position: left 11px center;
-        padding-left: 35px;
+      }
+
+      .buttons {
+        display: flex;
+        align-items: center;
+
+        .btn-blue {
+          margin-right: 10px;
+          border: 1px solid $but-blue;
+          color: $white;
+
+        }
+
+        &__button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          vertical-align: middle;
+          cursor: pointer;
+
+          .icon-user {
+            width: 12px;
+            height: 14px;
+            fill: $white;
+
+            margin-right: 6px;
+
+          }
+
+          .icon-draft {
+            width: 15px;
+            height: 13px;
+            fill: $c-8c;
+            margin-right: 6px;
+          }
+        }
       }
     }
+
+
+
+    .promo {
+      background: $bg-c url('/assets/img/promo/pizza_PNG44090.png') no-repeat center right / 300px;
+      box-shadow: 0px 7px 12px rgba(158, 158, 163, 0.1);
+      border-radius: 10px;
+      padding: 68px 70px;
+      margin-bottom: 56px;
+
+      &-title {
+        margin: 0;
+        @include main-text();
+        margin-bottom: 15px;
+      }
+
+      &-text {
+        @include robotoReg();
+        @include fz-2428();
+        max-width: 538px;
+        margin: 0;
+      }
+    }
+
+    .section {
+
+      &-heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 44px;
+
+        .input-search {
+          @extend .input;
+          background-image: url('/assets/svg/search.svg');
+          width: 300px;
+        }
+      }
+
+      &-title {
+        @include robotoBold();
+        @include fz-3642;
+        margin: 0;
+        color: $black;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+
+      .card {
+        background-color: $white;
+        // box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        border-radius: 7px;
+        overflow: hidden;
+        margin-bottom: 30px;
+        
+        &-item {
+          display: inline-block;
+          text-decoration: none;
+          &:hover {
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 1);
+          }
+        }
+
+        &-image {
+          width: 384px;
+          height: 250px;
+          object-fit: cover;
+        }
+
+        &-text {
+          padding-top: 20px;
+          padding-bottom: 35px;
+          padding-left: 23px;
+          padding-right: 23px;
+        }
+
+        &-heading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        &-title {
+          margin: 0;
+          @include robotoBold();
+          @include fz-2432();
+          color: $black;
+        }
+
+        &-tag {
+          @include sfReg();
+          @include fz-1220();
+          color: $white;
+          background-color: $bg-26;
+          border-radius: 2px;
+          padding: 1px 8px;
+        }
+
+        &-info {
+          display: flex;
+          align-items: center;
+
+          .rating {
+            margin-right: 26px;
+            color: $c-star;
+            @include robotoBold();
+            @include fz-1832();
+          }
+
+          .price {
+            @extend .price-pizza;
+            margin-right: 10px;
+            &::after {
+              content: "";
+              width: 5px;
+              height: 5px;
+              background-color: $c-8c;
+              display: inline-block;
+              vertical-align: middle;
+              border-radius: 50%;
+              margin-left: 10px;
+            }
+          }
+
+          .category {
+            @extend .price-pizza;
+          }
+        }
+      }
+
+    }
+
   }
+
+
 }
