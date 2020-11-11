@@ -24,11 +24,33 @@ body {
   margin: 0px;
 }
 
-.site-header {
-  min-height: 290px;
-  background: url('../images/header.jpg');
+h1, h2, h3, p, a {
+  color: #f1f1f1;
+}
+
+.main {
+  background-image: url('/assets/images/marvel/klim-musalimov-6ol9usQj7uQ-unsplash.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 30%;
+  background-position: center;
+}
+
+.main-q {
+  text-align: center;
+}
+
+.site-header {
+  // min-height: 490px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // width: 80%;
+  // margin: 0 auto;
+  // background: url('/assets/images/marvel/pngwing.com\ \(5\).png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-attachment: fixed;
+  background-position: center;
 }
 
 .container{
@@ -45,16 +67,22 @@ main {
 .question {
   font-size: 20px;
   font-weight: bold;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .answer {
+  display: flex;
+  flex-wrap: wrap;
+//  width: 90%;
+//  align-items: center;
+ justify-content: center;
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
 }
 
 .answer li {
+  flex-basis: 41%;
   background: #f1f1f1;
   margin: 5px;
   padding: 10px;
