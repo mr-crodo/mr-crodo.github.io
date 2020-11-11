@@ -11,3 +11,5 @@ menuToggle.addEventListener('click', function (event) {
 
   menu.classList.toggle('visible');
 });
+var login = document;
+console.log(document);

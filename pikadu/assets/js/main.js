@@ -10,3 +10,6 @@ menuToggle.addEventListener('click', function(event) {
   //vewaem klass n menu koqda kliknuli po knobke
   menu.classList.toggle('visible');
 });
+
+const login = document;
+console.log(document);

@@ -1,8 +1,8 @@
 @charset "UTF-8";
 @font-face {
   font-family: "SF Pro Display", sans-serif;
-  src: url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.eot");
-  src: local("SF-Pro-Display-Semibold"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/pikadu/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
+  src: url("/assets/fonts/SF-Pro-Display-Semibold.eot");
+  src: local("SF-Pro-Display-Semibold"), url("/assets/fonts/SF-Pro-Display-Semibold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Semibold.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Semibold.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Semibold.svg#SF-Pro-Display-Semibold") format("svg");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal;
@@ -10,8 +10,8 @@
 }
 @font-face {
   font-family: "SF Pro Display", sans-serif;
-  src: url("/pikadu/assets/fonts/SF-Pro-Display-Regular.eot");
-  src: local("SF-Pro-Display-Regular"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/pikadu/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
+  src: url("/assets/fonts/SF-Pro-Display-Regular.eot");
+  src: local("SF-Pro-Display-Regular"), url("/assets/fonts/SF-Pro-Display-Regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/SF-Pro-Display-Regular.woff2") format("woff2"), url("/assets/fonts/SF-Pro-Display-Regular.woff") format("woff"), url("/assets/fonts/SF-Pro-Display-Regular.svg#SF-Pro-Display-Regular") format("svg");
   font-weight: 400;
   font-style: normal;
   font-stretch: normal;
@@ -206,7 +206,7 @@ template {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  background-image: url("/pikadu/assets/img/overlay/home.png");
+  background-image: url("/assets/img/overlay/home.png");
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
@@ -513,8 +513,69 @@ body {
 .content .sidebar {
   width: 31%;
 }
-.content .sidebar .user {
+.content .sidebar .login {
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FAFAFA;
+  border: 1px solid #e8e8e8;
+  padding: 15px 25px;
+}
+.content .sidebar .login-form {
   display: flex;
+  flex-direction: column;
+}
+.content .sidebar .login-title {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #595959;
+}
+.content .sidebar .login-input {
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  padding: 5px 15px;
+  margin-bottom: 15px;
+}
+.content .sidebar .login-forget {
+  text-align: center;
+  font-size: 12px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #757575;
+  font-style: italic;
+}
+.content .sidebar .login-forget:hover {
+  color: #8AC858;
+}
+.content .sidebar .login-signin {
+  background-color: #FA8C16;
+  border: none;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  line-height: 32px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+.content .sidebar .login-signin:hover {
+  filter: opacity(80%);
+}
+.content .sidebar .login-signin:active {
+  filter: brightness(85%);
+}
+.content .sidebar .login-signup {
+  color: #FA8C16;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-bottom: 10px;
+  line-height: 18px;
+}
+.content .sidebar .user {
+  display: none;
   align-items: center;
   justify-content: space-between;
   background-color: #FAFAFA;
@@ -550,6 +611,7 @@ body {
   fill: #ff0c1c;
 }
 .content .sidebar-nav {
+  display: none;
   background-color: #ffffff;
 }
 .content .sidebar-nav .sidebar-menu {
@@ -580,7 +642,7 @@ body {
   border-right: 3px solid #FAAD14;
 }
 .content .sidebar .button-new-post {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -633,7 +695,7 @@ body {
 .content .sidebar .ad {
   background-color: #ffffff;
   display: block;
-  background-image: url("/pikadu/assets/img/ad/promo.jpg");
+  background-image: url("/assets/img/ad/promo.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
