@@ -1,0 +1,312 @@
+/* Created by Anshika 🎶🎵 */ 
+ 
+body {
+  margin:0;
+  padding:0; 
+  /* background-image:url("https://www.davno.ru/assets/images/cards/big/birthday-1212.gif"); */
+  background-image:url("https://media.giphy.com/media/yoJC2GnSClbPOkV0eA/giphy.gif");
+  /* background-image:url("https://media.giphy.com/media/xT0BKqhdlKCxCNsVTq/giphy.gif"); */
+  background-size: 100% 110%; 
+ overflow: hidden;
+  background-repeat:no-repeat ;
+  height:100vh;
+  max-height:100vh;
+}
+.title {
+font-size:2.5rem;
+font-family:times new roman;
+
+}
+.title span {
+display:inline-block;
+margin:0 1px;
+color:#ff5252;
+animation:filter 5s linear infinite both;
+}
+.title span:nth-child(1) {
+transform:translateY(80px);
+} 
+.title span:nth-child(2) {
+transform:translateY(60px);
+animation-delay:0.2s;
+} 
+.title span:nth-child(3) {
+transform:translateY(40px);
+animation-delay:0.4s;
+} 
+.title span:nth-child(4) {
+transform:translateY(25px);
+animation-delay:0.6s;
+} 
+.title span:nth-child(5) {
+transform:translateY(10px);
+animation-delay:0.8s;
+} 
+.title span:nth-child(6) {
+transform:translateY(2px);
+animation-delay:1s;
+top:5px;
+} 
+.title span:nth-child(7) {
+margin:0 3px;
+animation-delay:1.2s;
+} 
+.title span:nth-child(8) {
+transform:translateY(2px);
+animation-delay:1.4s;
+} 
+.title span:nth-child(9) {
+transform:translateY(10px);
+animation-delay:1.6s;
+} 
+.title span:nth-child(10) {
+transform:translateY(25px);
+animation-delay:1.8s;
+;
+
+} 
+.title span:nth-child(11) {
+transform:translateY(40px);
+animation-delay:2s;
+}
+.title span:nth-child(12) {
+transform:translateY(40px);
+animation-delay:2.2s;
+}
+.title span:nth-child(13) {
+transform:translateY(40px);
+animation-delay:2.4s;
+}
+
+#T1{
+  position:fixed ;
+  top:16%;
+  left:2%;
+}
+#T2{
+ position:fixed ;
+ top:14.5%;
+ left:10%;
+}
+#T3{
+ position:fixed ;
+ top:15.5%;
+ left:18%;
+}
+#T4{
+ position:fixed ;
+ top:12.5%;
+ left:26%;
+}
+#T5{
+ position:fixed ;
+ top:12%;
+ left:32%;
+}
+#T6{
+ position:fixed ;
+ top:11.8%;
+ left:40%;
+}
+#T7{
+  position:fixed ;
+  top:11.8%;
+  left:48%;
+}
+#T8{
+  position:fixed ;
+  top:11.8%;
+  left:53%;
+}
+#T9{
+  position:fixed ;
+  top:11.5%;
+  left:61%;
+}
+#T10{
+  position:fixed ;
+  top:11.5%;
+  left:69%;
+}
+#T11{
+  position:fixed ;
+  top:11.5%;
+  left:78%;
+}
+#A{
+ position:fixed ;
+  top:13%;
+  left:84%;
+}
+#Y{
+ position:fixed ;
+ top:15%;
+ left:90%;
+}
+
+#T1, #T2, #T3, #T4, #T5, #T6, #T7, #T8, #T9, #T10, #T11, #A, #Y{
+  background-color:pink;
+  border-radius:50%;
+  clip-path: circle(50% at 50% 50%);
+  text-align:center;
+  padding:3px;
+  
+}
+
+.content{
+ position:relative; 
+ height:70vh;
+ width:80vw;
+ background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+ left:10%;
+ top:20%;
+ border: 6px dotted black ;
+ border-radius: 50vw 50vw 0vw 0vw;
+ border-bottom:10px double black;
+ overflow:scroll;
+ text-align:center;
+ animation:filter 3s linear 3s both;
+}
+pre{
+   font-family: cursive;
+   line-height:4vmin;
+   font-weight:700;
+}
+
+
+
+@keyframes filter {
+0% {
+  transform: translateY(-500px);
+  animation-timing-function: ease-in;
+  opacity: 0;
+  filter:hue-rotate(0deg);
+}
+38% {
+  transform: translateY(0);
+  animation-timing-function: ease-out;
+  opacity: 1;
+}
+55% {
+  transform: translateY(-65px);
+  animation-timing-function: ease-in;
+}
+72% {
+  transform: translateY(0);
+  animation-timing-function: ease-out;
+}
+81% {
+  transform: translateY(-28px);
+  animation-timing-function: ease-in;
+}
+90% {
+  transform: translateY(0);
+  animation-timing-function: ease-out;
+}
+95% {
+  transform: translateY(-8px);
+  animation-timing-function: ease-in;
+}
+100% {
+  transform: translateY(0);
+  animation-timing-function: ease-out;
+  filter:hue-rotate(360deg);
+}
+}
+
+
+@keyframes light{
+  0%{
+  opacity:0
+    }
+  10%{
+      opacity:0
+     }
+ 10.1%{
+     opacity:1
+     }
+ 10.2%{
+     opacity:0
+     }
+ 20%{
+     opacity:0
+     }
+ 20.1%{
+     opacity:1
+     }
+ 20.6%{
+     opacity:0
+     }
+ 30%{
+     opacity:0
+    }
+ 30.1%{
+     opacity:1
+     }
+ 30.5%{
+     opacity:1
+     }
+ 30.6%{
+  opacity:0
+  }
+45%{
+  opacity:0
+  }
+45.1%{
+  opacity:1
+  }
+50%{
+  opacity:1
+  }
+55%{
+  opacity:1
+  }
+55.1%{
+ opacity:0
+ }
+57%{
+ opacity:0
+ }
+57.1%{
+ opacity:1
+ }
+60%{
+ opacity:1
+ }
+60.1%{
+ opacity:0
+ }
+65%{
+ opacity:0
+ }
+65.1%{
+ opacity:1
+ }
+75%{
+ opacity:1
+ }
+75.1%{
+ opacity:0
+ }
+77%{
+ opacity:0
+}
+77.1%{
+ opacity:1
+}
+85%{
+ opacity:1
+ }
+85.1%{
+ opacity:0
+ }
+86%{
+ opacity:0
+ }
+86.1%{
+ opacity:1
+ }
+100%{
+ opacity:1
+ }
+}
