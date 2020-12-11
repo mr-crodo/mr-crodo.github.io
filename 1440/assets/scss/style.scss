@@ -3,8 +3,8 @@
   @font-face {
     font-family: $font_name;
     font-display: swap;
-    src: url("../fonts/#{$file_name}.woff") format("woff"),
-    url("../fonts/#{$file_name}.woff2") format("woff2");
+    src: url("/assets/fonts/#{$file_name}.woff") format("woff"),
+    url("/assets/fonts/#{$file_name}.woff2") format("woff2");
     font-weight: #{$weight};
     font-style: #{$style};
   }
@@ -35,13 +35,6 @@ body {
     height: 100vh;
   }
 
-  .user {
-
-    @media (max-width: 420px) {
-      flex-basis: 100%;
-    }
-  }
-
   .content-shadow {
     margin-top: 10px;
     background: #FFFFFF;
@@ -62,11 +55,22 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-image: url('/img/avatar/girls.png');
+    background-image: url('/assets/img/avatar/girls.png');
     background-repeat: no-repeat;
     background-position: center top;
     background-size: 60px;
     margin-left: 24px;
+
+    @media (max-width: 420px) {
+      margin-left: 10px;
+    }
+  }
+
+
+  hr {
+    @media (max-width: 420px) {
+      border: none;
+    }
   }
 
   .user-name {
@@ -78,6 +82,11 @@ body {
       @include fz-2014;
       text-decoration: none;
       color: $black;
+
+      @media (max-width: 420px) {
+        font-size: 16px;
+        line-height: 14px;
+      }
     }
   }
 
@@ -85,20 +94,28 @@ body {
     margin-right: 24px;
 
     @media (max-width: 420px) {
-      margin-right: 0;
-      margin-top: 20px;
-      flex-basis: 100%;
+      margin-right: 10px;
     }
   }
 
   .date-description {
     @extend .date-text;
     color: $text97;
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .full-date {
     @extend .date-text;
     color: $black;
+
+    @media (max-width: 420px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   .footer-post {
@@ -115,12 +132,18 @@ body {
       @include fz-1620;
       margin: 0;
       margin-bottom: 29px;
+
+      @media (max-width: 420px) {
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 18px;
+      }
     }
   }
 
   .picture-img {
     height: 600px;
-    background-image: url('/1440/img/content/main.png');
+    background-image: url('/assets/img/content/main.jpg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
@@ -150,6 +173,11 @@ body {
     img {
       width: 140px;
       height: 140px;
+
+      @media (max-width: 420px) {
+        width: 73px;
+        height: 73px;
+      }
     }
   }
 
@@ -224,6 +252,10 @@ body {
 
       @media (max-width: 1200px) {
         margin-left: 10px;
+      }
+
+      @media (max-width: 420px) {
+       padding: 12px 34px;
       }
 
       &:hover {

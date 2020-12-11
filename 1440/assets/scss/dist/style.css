@@ -1,21 +1,21 @@
 @font-face {
   font-family: "Avenir Next W1G";
   font-display: swap;
-  src: url("../fonts/Avenir-Next-W1G-400.woff") format("woff"), url("../fonts/Avenir-Next-W1G-400.woff2") format("woff2");
+  src: url("/assets/fonts/Avenir-Next-W1G-400.woff") format("woff"), url("/assets/fonts/Avenir-Next-W1G-400.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next W1G";
   font-display: swap;
-  src: url("../fonts/Avenir-Next-W1G-450.woff") format("woff"), url("../fonts/Avenir-Next-W1G-450.woff2") format("woff2");
+  src: url("/assets/fonts/Avenir-Next-W1G-450.woff") format("woff"), url("/assets/fonts/Avenir-Next-W1G-450.woff2") format("woff2");
   font-weight: 450;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Next W1G";
   font-display: swap;
-  src: url("../fonts/Avenir-Next-W1G-600.woff") format("woff"), url("../fonts/Avenir-Next-W1G-600.woff2") format("woff2");
+  src: url("/assets/fonts/Avenir-Next-W1G-600.woff") format("woff"), url("/assets/fonts/Avenir-Next-W1G-600.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
@@ -214,11 +214,6 @@ body .main-body {
   width: 100%;
   height: 100vh;
 }
-@media (max-width: 420px) {
-  body .user {
-    flex-basis: 100%;
-  }
-}
 body .content-shadow {
   margin-top: 10px;
   background: #FFFFFF;
@@ -237,11 +232,21 @@ body .user-image {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-image: url("/img/avatar/girls.png");
+  background-image: url("/assets/img/avatar/girls.png");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 60px;
   margin-left: 24px;
+}
+@media (max-width: 420px) {
+  body .user-image {
+    margin-left: 10px;
+  }
+}
+@media (max-width: 420px) {
+  body hr {
+    border: none;
+  }
 }
 body .user-name {
   margin-left: 24px;
@@ -258,21 +263,37 @@ body .user-name a {
   text-decoration: none;
   color: #000000;
 }
+@media (max-width: 420px) {
+  body .user-name a {
+    font-size: 16px;
+    line-height: 14px;
+  }
+}
 body .post-date {
   margin-right: 24px;
 }
 @media (max-width: 420px) {
   body .post-date {
-    margin-right: 0;
-    margin-top: 20px;
-    flex-basis: 100%;
+    margin-right: 10px;
   }
 }
 body .date-description {
   color: #979797;
 }
+@media (max-width: 420px) {
+  body .date-description {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
 body .full-date {
   color: #000000;
+}
+@media (max-width: 420px) {
+  body .full-date {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 body .footer-post {
   margin-left: 24px;
@@ -295,9 +316,16 @@ body .footer-post-title {
   margin: 0;
   margin-bottom: 29px;
 }
+@media (max-width: 420px) {
+  body .footer-post-title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+}
 body .picture-img {
   height: 600px;
-  background-image: url("/1440/img/content/main.png");
+  background-image: url("/assets/img/content/main.jpg");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
@@ -324,6 +352,12 @@ body .picture-button {
 body .product-image img {
   width: 140px;
   height: 140px;
+}
+@media (max-width: 420px) {
+  body .product-image img {
+    width: 73px;
+    height: 73px;
+  }
 }
 body .button-next {
   border: none;
@@ -417,6 +451,11 @@ body .buy-section .buy-btn {
 @media (max-width: 1200px) {
   body .buy-section .buy-btn {
     margin-left: 10px;
+  }
+}
+@media (max-width: 420px) {
+  body .buy-section .buy-btn {
+    padding: 12px 34px;
   }
 }
 body .buy-section .buy-btn:hover {
