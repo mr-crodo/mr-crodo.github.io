@@ -182,10 +182,18 @@ $bg-c: #fff1b8;
 }
 
 body {
-  background-color: $bg-f5;
+  // background-color: $white;
 
   .header {
     padding-top: 44px;
+  }
+
+  .main {
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%);
+  }
+
+  .footer {
+    padding: 60px 0;
   }
 
   .container {
@@ -201,7 +209,8 @@ body {
 
       .input-address {
         @extend .input;
-        width: 690px;
+        // это ширина алресной строки для ввода во флех эоементе
+        flex: 0.8;
         background-image: url('/assets/svg/home.svg');
       }
 
@@ -295,24 +304,29 @@ body {
       }
 
       .card {
+        display: flex;
+        flex-direction: column;
         background-color: $white;
-        // box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05);
         border-radius: 7px;
         overflow: hidden;
         margin-bottom: 30px;
-        
+        flex-basis: 31%;
+
         &-item {
-          display: inline-block;
+          display: flex;
+          flex-direction: column;
           text-decoration: none;
+
           &:hover {
-            box-shadow: 0px 4px 12px rgba(0, 0, 0, 1);
+            box-shadow: inset 0px 0px 50px 12px rgba(231, 220, 119, 0.5);
           }
         }
 
         &-image {
-          width: 384px;
-          height: 250px;
-          object-fit: cover;
+          max-width: 384px;
+          max-height: 250px;
+          // object-fit: cover;
         }
 
         &-text {
@@ -347,6 +361,7 @@ body {
         &-info {
           display: flex;
           align-items: center;
+          flex-wrap: wrap;
 
           .rating {
             margin-right: 26px;
@@ -358,6 +373,7 @@ body {
           .price {
             @extend .price-pizza;
             margin-right: 10px;
+
             &::after {
               content: "";
               width: 5px;
@@ -372,10 +388,74 @@ body {
 
           .category {
             @extend .price-pizza;
+            // это надо чтоб скрыть часть текста который не помешается на экран
+            // и работает он в паре с  overflow: hidden;
+            text-overflow: ellipsis;
+
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 150px;
           }
         }
       }
 
+    }
+
+    .footer-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .footer-nav {
+        margin-left: 36px;
+        margin-right: auto;
+
+        .footer-link {
+          display: inline-block;
+          color: $c-59;
+          text-decoration: none;
+          @include robotoReg();
+          @include fz-1821();
+
+          // для всех но не для последнего
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+
+        }
+      }
+
+      .social-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .social-link {
+          &:not(:last-child) {
+            margin-right: 21px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+
+}
+
+// @import "media";
+
+@media (max-width: 1366px) {
+  body {
+    .container {
+      // max-width: 960px;
+
+      .section {
+        .card-info {
+          .price {}
+        }
+      }
     }
 
   }
