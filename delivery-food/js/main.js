@@ -7,7 +7,7 @@ import Swiper from 'https://unpkg.com/swiper/swiper-bundle.esm.browser.min.js';
 const RED_COLOR = '#ff0000';
 // ! Day one
 const
-cartButton = document.querySelector("#cart-button"),
+  cartButton = document.querySelector("#cart-button"),
   close = document.querySelector(".close"),
   modal = document.querySelector(".modal"),
   buttonAuth = document.querySelector('.button-auth'),
@@ -34,8 +34,22 @@ let login = localStorage.getItem('deliveriLocal');
 // //todo: toogle dobavlaet klass esli klassa netu, udalaet esli klass est
 // modalAuth.classList.toggle('hello');
 
+const getData = async function(url) {
+  const response = await fetch(url);
+
+  if(!response.ok) {
+    throw new Error(`Ошибка по адресу ${url}, статус: ${response}`);
+  }
+
+  return response.json();
+};
+
+
+
+
 // ! Funkciya validacii dla logina
-function validName(str) {
+// sdes slovo function zamenena const
+const validName = function(str) {
   const regName = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
   return regName.test(str);
 }
