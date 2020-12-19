@@ -19,24 +19,24 @@ const imgURL = "https://image.tmdb.org/t/p/w185_and_h278_bestv2",
     serv = `https://api.themoviedb.org/3`;
 
 // Объявление переменных
-const leftMenu = document.querySelector('.left-menu'),
-    hamburger = document.querySelector('.hamburger'),
+const leftMenu = document.querySelector('.left-menu'), //!
+    hamburger = document.querySelector('.hamburger'), //!
     tvShowsList = document.querySelector('.tv-shows__list'),
-    modal = document.querySelector('.modal'),
+    modal = document.querySelector('.modal'), //!
     tvShows = document.querySelector('.tv-shows'),
-    tvCardImg = document.querySelector('.tv-card__img'),
-    modalTitle = document.querySelector('.modal__title'),
+    tvCardImg = document.querySelector('.tv-card__img'),//!
+    modalTitle = document.querySelector('.modal__title'), //?
     genresList = document.querySelector('.genres-list'),
     rating = document.querySelector('.rating'),
     description = document.querySelector('.description'),
-    modalLink = document.querySelector('.modal__link'),
+    modalLink = document.querySelector('.modal__link'), //?
     searchForm = document.querySelector('.search__form'),
     searchFormInput = document.querySelector('.search__form-input'),
     dropdown = document.querySelectorAll('.dropdown'),
     tvShowsHead = document.querySelector('.tv-shows__head'),
     plagination = document.querySelector('.plagination');
-const loading = document.createElement('div');
-loading.className = 'loading';
+const loading = document.createElement('div'); //!
+loading.className = 'loading'; //! 
 
 // Получение данных с сервера 
 class DBService {
@@ -144,7 +144,7 @@ searchForm.addEventListener('submit', event => {
     dbService.getSearchResult(value).then(renderCard);
 });
 
-// Функции
+// Функции //!
 const toggleMenu = () => {
         leftMenu.classList.toggle('openMenu');
         hamburger.classList.toggle('open');

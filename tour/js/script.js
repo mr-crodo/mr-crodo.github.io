@@ -30,6 +30,8 @@ closeBtn.addEventListener('click', function() {
   modal.style.display = 'none';
   text.value = '';
   nameInput.value = '';
+  phoneInput.value = '';
+  mailInput.value = "";
 });
 
 nameInput.addEventListener('input', function() {

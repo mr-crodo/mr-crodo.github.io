@@ -1,7 +1,7 @@
 // NAxodim nunnie Elementi
 const form = document.querySelector('#newTaskForm'),
-  inputText = document.querySelector('#addNewTask'),
-  listUlGroup = document.querySelector('#list-group'),
+  input = document.querySelector('#addNewTask'),
+  tasksList = document.querySelector('#list-group'),
   emptyListItem = document.querySelector('#empty-list-item');
 
 
@@ -13,7 +13,7 @@ form.addEventListener('submit', function (event) {
   event.preventDefault();
 
   // Berem tekst vvedenniy polzovatelem v pole vvoda
-  const taskText = inputText.value;
+  const taskText = input.value;
 
   // Sdes posle toqo kak vzali tekst iz inputa mi berem prototip sayta i vstavlaem 
   // v neqo naw tekst, dla etoqo v prototipe teksta mi delaem formu kuda budem vstavlat
@@ -30,7 +30,7 @@ form.addEventListener('submit', function (event) {
   // na stranice html obrashayas k ney cerez id
   // pervoe znacenie eto kuda dobavim eto v nacalo - afterbegin, 
   // eto naw kusok html ili prototip to cto mi budem dobavlat
-  listUlGroup.insertAdjacentHTML('afterbegin', taskHTML);
+  tasksList.insertAdjacentHTML('afterbegin', taskHTML);
 
 
 
@@ -39,27 +39,71 @@ form.addEventListener('submit', function (event) {
   toggleEmptyListPusto();
 
   //oceshaem pole vvoda 
-  inputText.value = '';
+  input.value = '';
 
   //vozvraswaem focus inputu
-  inputText.focus();
+  input.focus();
 });
+
+
+
+// 2 knobka" qotovo" i "Udalit"
+// Proslushivaem klik vnutri vseqo spiska s zadacami
+tasksList.addEventListener('click', function (event) {
+  // console.log(event.target);
+
+  // Proveraem cto klik proizoshel po knopke "Udalit"
+  if (event.target.getAttribute('data-action') == 'delete-task') {
+
+    // NAxodim roditelskiy teg <Li> po klassu "list-group-item" i udalaem eqo
+    event.target.closest('.list-group-item').remove();
+
+    // Skrit ili pokazat zapis o tom cto spisok del pust
+    toggleEmptyListPusto();
+
+    // proveraem cto klik proizoshel po knopke "Qotovo"
+  } else if (event.target.getAttribute('data-action') == 'ready') {
+    const parentElement = event.target.closest('li.list-group-item');
+    // console.log(parentElement);
+
+    // v selektorax mi piwem s tockoy ('.list-group-item')
+    //  a s classlist i v nekotorix slucayax mi ne zapisivaem tocku
+    parentElement.querySelector('span.task-title').classList.add('task-title--done');
+
+    // vishe napisannoe mojno zapisat tak
+    //event.target.closest('li.list-group-item').querySelector('span.task-title').classList.add('task-title--done');
+
+
+    // Uberaem u tega span otribut 
+    parentElement.querySelector('span.task-title').setAttribute('contenteditable', 'false');
+
+
+    // Peremewaem zapis v konec spiska
+    tasksList.insertAdjacentElement('beforeend', parentElement);
+
+    //Udalit knopku qotova i Udalit
+    parentElement.querySelector('button[data-action="ready"]').remove();
+    // parentElement.querySelector('button[data-action="delete-task"]').remove();
+  }
+
+});
+
+
 
 // Piwem funkciyu dla toqo ctobi on proveral est li v tege ul zadaci, 
 //esli tam est odna zadaca to forma s nazvanieem spisok pust menaet svoyo svoystvo na display none
 // i skrivaetsa
 function toggleEmptyListPusto() {
   // proveraet esli kolicestvo docernix elementov bolwe cem 1
-  if (listUlGroup.children.length > 1) {
+  if (tasksList.children.length > 1) {
     //obrashayas k nemu mi izmenaem eqo svoystvo cerez css
     //emptyListItem.style.color = "red";
-    emptyListItem.style.color = "none";
+    emptyListItem.style.display = "none";
   } else {
     emptyListItem.style.display = "block";
   }
 }
 
-const [a, ...b] = [1, 2, 3, 4, 5]
-console.log(a);
-console.log(b);
-
+// const [a, ...b] = [1, 2, 3, 4, 5]
+// console.log(a);
+// console.log(b);

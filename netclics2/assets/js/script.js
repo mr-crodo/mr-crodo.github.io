@@ -219,7 +219,7 @@ leftMenu.addEventListener('click', event => {
 });
 
 
-//открытие модального окна
+//открытие модального окна //!
 tvShowsList.addEventListener('click', event => {
     event.preventDefault();
 
@@ -272,7 +272,7 @@ tvShowsList.addEventListener('click', event => {
 
 });
 
-//закрытие
+//закрытие //!
 
 modal.addEventListener('click', event => {
 
@@ -300,7 +300,7 @@ const changeImage = event => {
 };
 
 
-
+//  для анимации картинки при наведении мышки
 tvShowsList.addEventListener('mouseover', changeImage);
 tvShowsList.addEventListener('mouseout', changeImage);
 

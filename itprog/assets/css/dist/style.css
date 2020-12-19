@@ -1,5 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Raleway:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: aquamarine;
+  background-color: #d6dad8;
   border: 1px solid red;
+}
+
+.container {
+  background-color: #e8ffc4;
+}
+
+.container-fluid {
+  background-color: azure;
+}
+
+.main {
+  background-color: antiquewhite;
+}
+
+.title-p {
+  background-color: red;
+  font-size: 24px;
+  text-align: center;
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 80px;
+}
+
+.nes1 {
+  background-color: #ecad78;
+}
+
+.nes2 {
+  background-color: #9eec45;
+}
+
+.nes3 {
+  background-color: #e64ac4;
+}
+
+.nes4 {
+  background-color: #c9d612;
+}
+
+.nes5 {
+  background-color: aqua;
+}
+
+.nes6 {
+  background-color: #ff6600;
 }
