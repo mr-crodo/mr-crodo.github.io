@@ -131,10 +131,10 @@ function js() {
 
     .pipe(
       rename({
-        extname: ".min.js"
+        extname: "*.min.js"
       })
     )
-    .pipe(concat('.min.js'))
+    .pipe(concat('*.min.js'))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
     
