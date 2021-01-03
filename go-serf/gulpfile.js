@@ -1,7 +1,7 @@
 // const fileinclude = require('gulp-file-include');
 
 let project_folder = require("path").basename(__dirname);
-let source_folder = "#src";
+let source_folder = "src";
 
 let fs = require('fs');
 
@@ -131,10 +131,10 @@ function js() {
 
     .pipe(
       rename({
-        extname: "*.min.js"
+        extname: ".min.js"
       })
     )
-    .pipe(concat('*.min.js'))
+    .pipe(concat('script-all.min.js'))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
     
