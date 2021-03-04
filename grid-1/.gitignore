@@ -1,0 +1,7 @@
+/node_modules/
+/source/
+/debug.log
+.idea/
+/.idea/
+/.vscode/
+.DS_Store
