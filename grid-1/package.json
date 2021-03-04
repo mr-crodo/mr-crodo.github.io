@@ -20,7 +20,7 @@
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^4.0.2",
     "gulp-surge": "^0.1.4",
-    "jquery": "^1.9.1",
+    "jquery": "^3.5.0",
     "node-sass": "^4.12.0",
     "popper.js": "^1.15.0",
     "rimraf": "^2.6.3",
