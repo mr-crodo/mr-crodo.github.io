@@ -12,11 +12,24 @@ body {
 	word-wrap: break-word;
 }
 
-.container {
-	@include min-max(320px, 100%, 0);
-	background-color: $primary;
+a {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
 }
 
 .wrap {
-	@include min-max(320px, 1200px, 15px);
+	// @include min-max(320px, 100%, 0);
+	background-color: $primary;
+}
+
+// .wrap {
+// 	@include min-max(320px, 1200px, 15px);
+// }
+
+.z-mp-0 {
+	padding: 0;
+	margin: 0;
 }

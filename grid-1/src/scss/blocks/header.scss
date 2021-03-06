@@ -17,6 +17,7 @@ $lh: 18;
   font-size: $fz + px;
   line-height: $lh + px;
 }
+
 .header {
   border-bottom: 4px solid $second;
 
@@ -29,23 +30,62 @@ $lh: 18;
     padding-top: 55px;
     padding-bottom: 55px;
   }
-}
 
-#logo {
-	border: 1px solid red;
+  &__logo {
+    cursor: default;
+  }
+
+  &__menu {
+    // display: flex;
+    // border: 1px solid red;
+    list-style: none;
+
+    li~li {
+      margin-left: 35px;
+    }
+
+    a {
+      font-family: 'Raleway', sans-serif;
+      font-size: 12px;
+      line-height: 1.67;
+      color: $text-color;
+      text-transform: uppercase;
+      transition-duration: 500ms;
+      transition-property: color;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: $second;
+        margin-bottom: 2px;
+        opacity: 0;
+        transition-duration: 500ms;
+        transition-property: opacity;
+      }
+
+      &:hover {
+        color: $second;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
 
 .logo-svg {
-	// font-size: 56px;
-	font-size: 3em;
-  // @include fzlh(56,20);
-  // @include adaptiv-font(56, 24);
-	fill: $white;
-	font-family: 'Capture Smallz', sans-serif;
+  // font-size: 56px;
+  font-size: 3em;
+  fill: $white;
+  font-family: 'Capture Smallz', sans-serif;
   transition: all 0.3s;
+  cursor: pointer;
 
-	&:hover {
-		fill: $second;
-	}
+  &:hover {
+    fill: $second;
+  }
 
 }
