@@ -15,7 +15,7 @@ let path = {
   },
 
   src: {
-    html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
+    html: [source_folder + "/**/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/scss/style.scss",
     js: source_folder + "/js/script.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
@@ -74,8 +74,6 @@ function html() {
     .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
-
-
 }
 
 // TODO: sdes sozdaem fayli dla SCSS

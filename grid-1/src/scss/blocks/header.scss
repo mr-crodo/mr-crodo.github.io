@@ -1,0 +1,51 @@
+$maxWidth: 1440;
+
+//! for responsive font
+@mixin adaptiv-font($pcSize, $mobSize) {
+  $addSize: $pcSize - $mobSize;
+  $addMobSize: $addSize + $addSize * 0.7;
+
+  @media (max-width: 1305px) {
+    font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+  }
+}
+
+$fz: 28;
+$lh: 18;
+
+@mixin fzlh($fz, $lh) {
+  font-size: $fz + px;
+  line-height: $lh + px;
+}
+.header {
+  border-bottom: 4px solid $second;
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+#logo {
+	border: 1px solid red;
+}
+
+.logo-svg {
+	// font-size: 56px;
+	font-size: 3em;
+  // @include fzlh(56,20);
+  // @include adaptiv-font(56, 24);
+	fill: $white;
+	font-family: 'Capture Smallz', sans-serif;
+  transition: all 0.3s;
+
+	&:hover {
+		fill: $second;
+	}
+
+}
