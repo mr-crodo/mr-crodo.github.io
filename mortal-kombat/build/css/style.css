@@ -7,6 +7,7 @@
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  color: #fff;
   background: #010202;
 }
 
@@ -41,4 +42,93 @@ header .user-photo {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%;
+}
+
+.app {
+  background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.webp) no-repeat top right;
+  background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.webp) no-repeat top right;
+  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.webp) no-repeat top right;
+  min-height: 100vh;
+}
+
+.film {
+  max-width: 460px;
+  height: calc(100vh - 155px);
+  padding: 7% 0;
+  border: 1px solid red;
+}
+
+.film-logo {
+  width: 100%;
+}
+
+.film .tags > * {
+  margin-right: 15px;
+}
+
+.film .tags > *:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.film .tags a {
+  font-size: 16px;
+  line-height: 140%;
+  color: #E5E5E5;
+  opacity: 0.4;
+}
+
+.film .tags a:hover {
+  opacity: 1;
+}
+
+.film .tags-right a ~ a {
+  margin-left: 10px;
+}
+
+.film .tags-right .age {
+  padding: 1px 5px;
+  opacity: 0.5;
+  border: 1px solid #FFFFFF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.film .description {
+  font-size: 21px;
+  line-height: 140%;
+  color: #FFFFFF;
+  margin-bottom: 36px;
+}
+
+.button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 16px;
+  line-height: 140%;
+  color: #fff;
+  padding: 11px 26px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #2F2F2F;
+}
+
+.button ~ .button {
+  margin-left: 15px;
+}
+
+.button-primary {
+  background: #EA6E20;
+}
+
+#play {
+  margin-right: 10px;
+  fill: #fff;
 }
