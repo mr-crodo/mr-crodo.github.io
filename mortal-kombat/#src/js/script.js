@@ -1,4 +1,6 @@
 
+
+
 function testWebP(callback) {
 
   var webP = new Image();
@@ -15,4 +17,13 @@ function testWebP(callback) {
   }else{
   document.querySelector('body').classList.add('no-webp');
   }
+  });
+
+  $(document).ready(function(){
+    $('#app').vide({
+      mp4: 'video/video.mp4',
+      webm: 'video/video.webm',
+      ogv: 'video/video.ogv',
+      poster: 'img/cover-image.png'
+    });
   });

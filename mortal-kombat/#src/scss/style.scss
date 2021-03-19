@@ -59,8 +59,8 @@ header {
 }
 
 .app {
-  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%),
-    url(../img/cover-image.webp) no-repeat top right;
+  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 43.9%);
+    // url(../img/cover-image.webp) no-repeat center right;
   min-height: 100vh;
 }
 
@@ -68,15 +68,17 @@ header {
   max-width: 460px;
   height: calc(100vh - 155px);
   padding: 7% 0;
-  border: 1px solid red;
+  // border: 1px solid red;
 
   &-logo {
-    width: 100%;
+    max-width: 100%;
   }
 
   .tags {
     &>* {
       margin-right: 15px;
+      margin-bottom: 10px;
+
       &:nth-last-child(1) {
         margin-right: 0;
       }
@@ -147,3 +149,87 @@ header {
   margin-right: 10px;
   fill: #fff;
 }
+
+@media (max-width: 1200px) {
+  // .app {
+  //   background-size: 50%;
+  // }
+}
+
+
+// Large devices (desktops, 992px and up) (min-width: 992px)
+@media (max-width: 992px) {
+  .app {
+    background-position: bottom right;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+  .app {
+    height: auto;
+    background: url(../img/cover-image.webp) no-repeat bottom center/ 40%;
+  }
+
+  video {
+    display: none;
+  }
+  .film {
+    padding-top: 2%;
+
+
+
+    .description {
+      font-size: 16px;
+      max-width: 333px;
+    }
+  }
+
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  .button {
+    margin-bottom: 10px;
+
+    span {
+      display: none;
+    }
+  }
+
+  #play {
+    margin-right: 0;
+  }
+
+  header {
+    .user {
+
+      &-name {
+        display: none;
+      }
+    }
+  }
+
+  .app {
+    padding-bottom: 250px;
+    background-size: 300px;
+  }
+
+
+}
+
+
+// /* landscape (альбомный) - это режим, в котором наоборот ширина viewport больше её высоты */
+// @media (orientation: landscape) {
+//   #background-image {
+//     background: url(image1.png) no-repeat;
+//   }
+// }
+
+// /* portrait (портретный) - это режим, в котором высота viewport больше ширины */
+// @media (orientation: portrait) {
+//   #background-image {
+//     background: url(image2.png) no-repeat;
+//   }
+// }

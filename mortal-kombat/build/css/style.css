@@ -47,9 +47,9 @@ header .user-photo {
 }
 
 .app {
-  background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(44.9%, rgba(1, 2, 2, 0.2))), url(../img/cover-image.webp) no-repeat top right;
-  background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.webp) no-repeat top right;
-  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 44.9%), url(../img/cover-image.webp) no-repeat top right;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-2.88%, #010202), color-stop(43.9%, rgba(1, 2, 2, 0.2)));
+  background: -o-linear-gradient(left, #010202 -2.88%, rgba(1, 2, 2, 0.2) 43.9%);
+  background: linear-gradient(90deg, #010202 -2.88%, rgba(1, 2, 2, 0.2) 43.9%);
   min-height: 100vh;
 }
 
@@ -57,15 +57,15 @@ header .user-photo {
   max-width: 460px;
   height: calc(100vh - 155px);
   padding: 7% 0;
-  border: 1px solid red;
 }
 
 .film-logo {
-  width: 100%;
+  max-width: 100%;
 }
 
 .film .tags > * {
   margin-right: 15px;
+  margin-bottom: 10px;
 }
 
 .film .tags > *:nth-last-child(1) {
@@ -131,4 +131,53 @@ header .user-photo {
 #play {
   margin-right: 10px;
   fill: #fff;
+}
+
+@media (max-width: 992px) {
+  .app {
+    background-position: bottom right;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: auto;
+    background: url(../img/cover-image.webp) no-repeat bottom center/40%;
+  }
+
+  video {
+    display: none;
+  }
+
+  .film {
+    padding-top: 2%;
+  }
+
+  .film .description {
+    font-size: 16px;
+    max-width: 333px;
+  }
+}
+
+@media (max-width: 576px) {
+  .button {
+    margin-bottom: 10px;
+  }
+
+  .button span {
+    display: none;
+  }
+
+  #play {
+    margin-right: 0;
+  }
+
+  header .user-name {
+    display: none;
+  }
+
+  .app {
+    padding-bottom: 250px;
+    background-size: 300px;
+  }
 }

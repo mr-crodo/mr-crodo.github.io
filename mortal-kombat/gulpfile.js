@@ -10,14 +10,16 @@ let path = {
     js: project_folder + "/js/",
     img: project_folder + "/img/",
     fonts: project_folder + "/fonts/",
+    video: project_folder + "/video/",
   },
 
   src: {
     html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
     css: source_folder + "/scss/*.scss",
-    js: source_folder + "/js/script.js",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/**/*.ttf",
+    video: source_folder + "/video/**/*.{mp4,ogv,webm,avi}",
   },
 
   watch: {
@@ -25,6 +27,7 @@ let path = {
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    video: source_folder + "/video/**/*.{mp4,ogv,webm,avi}",
   },
 
   clean: "./" + project_folder + "/"
@@ -72,8 +75,14 @@ function html() {
     .pipe(webphtml())
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream())
+}
 
-
+function video() {
+  return src(path.src.video)
+    // .pipe(fileinclude())
+    // .pipe(webphtml())
+    .pipe(dest(path.build.video))
+    .pipe(browsersync.stream())
 }
 
 // TODO: sdes sozdaem fayli dla SCSS
@@ -116,7 +125,7 @@ function css() {
 function js() {
   return src([
       // eto jquery esli est neobxodimist mojno podklycit
-      // 'node_modules/jquery/dist/jquery.min.js',
+      'node_modules/jquery/dist/jquery.min.js',
       path.src.js
     ])
 
@@ -236,23 +245,27 @@ function watchFiles(params) {
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
+  gulp.watch([path.watch.video], video);
 }
 
 function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video), fontsStyle);
 // TODO: eto scenariy vipolneniya funktiy
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
-exports.fontsStyle = fontsStyle;
-exports.fonts = fonts;
-exports.images = images;
+
+
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.fonts = fonts;
+exports.video = video;
+exports.images = images;
+exports.fontsStyle = fontsStyle;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;
