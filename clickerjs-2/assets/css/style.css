@@ -1,0 +1,20 @@
+.container {
+  margin: auto;
+  width: 90%;
+  height: 100vh;
+}
+
+.reaction-time {
+  margin-left: 10px;
+  color: #42b983;
+}
+
+#shape {
+  width: 50px;
+  height: 50px;
+  background-color:blueviolet;
+  border-radius: 12px;
+  display: none;
+  position: relative;
+ 
+}
