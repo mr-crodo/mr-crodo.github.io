@@ -1,7 +1,5 @@
-// const fileinclude = require('gulp-file-include');
-
 let project_folder = 'build/';
-let source_folder = "src";
+let source_folder = "#src";
 
 let fs = require('fs');
 
@@ -12,14 +10,16 @@ let path = {
     js: project_folder + "/js/",
     img: project_folder + "/img/",
     fonts: project_folder + "/fonts/",
+    video: project_folder + "/video/",
   },
 
   src: {
     html: [source_folder + "/**/*.html", "!" + source_folder + "/_*.html"],
-    css: source_folder + "/scss/style.scss",
-    js: source_folder + "/js/script.js",
+    css: source_folder + "/scss/*.scss",
+    js: source_folder + "/js/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: source_folder + "/fonts/**/*.ttf",
+    video: source_folder + "/video/**/*.{mp4,ogv,webm,avi}",
   },
 
   watch: {
@@ -27,6 +27,7 @@ let path = {
     css: source_folder + "/scss/**/*.scss",
     js: source_folder + "/js/**/*.js",
     img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+    video: source_folder + "/video/**/*.{mp4,ogv,webm,avi}",
   },
 
   clean: "./" + project_folder + "/"
@@ -76,6 +77,14 @@ function html() {
     .pipe(browsersync.stream())
 }
 
+function video() {
+  return src(path.src.video)
+    // .pipe(fileinclude())
+    // .pipe(webphtml())
+    .pipe(dest(path.build.video))
+    .pipe(browsersync.stream())
+}
+
 // TODO: sdes sozdaem fayli dla SCSS
 function css() {
   return src(path.src.css)
@@ -120,7 +129,7 @@ function js() {
       path.src.js
     ])
 
-    
+
     .pipe(fileinclude())
     .pipe(dest(path.build.js))
     .pipe(
@@ -135,7 +144,7 @@ function js() {
     .pipe(concat('.min.js'))
     .pipe(dest(path.build.js))
     .pipe(browsersync.stream())
-    
+
 }
 
 // TODO: Dla img
@@ -205,9 +214,9 @@ gulp.task('svgSprite', function () {
 
 function fontsStyle(params) {
 
-  let file_content = fs.readFileSync(source_folder + '/scss/fonts.scss');
+  let file_content = fs.readFileSync(source_folder + '/scss/_fonts.scss');
   if (file_content == '') {
-    fs.writeFile(source_folder + '/scss/fonts.scss', '', cb);
+    fs.writeFile(source_folder + '/scss/_fonts.scss', '', cb);
     return fs.readdir(path.build.fonts, function (err, items) {
       if (items) {
         let c_fontname;
@@ -215,7 +224,7 @@ function fontsStyle(params) {
           let fontname = items[i].split('.');
           fontname = fontname[0];
           if (c_fontname != fontname) {
-            fs.appendFile(source_folder + '/scss/fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
+            fs.appendFile(source_folder + '/scss/_fonts.scss', '@include font("' + fontname + '", "' + fontname + '", "400", "normal");\r\n', cb);
           }
           c_fontname = fontname;
         }
@@ -236,23 +245,27 @@ function watchFiles(params) {
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
+  gulp.watch([path.watch.video], video);
 }
 
 function clean(params) {
   return del(path.clean);
 }
 
-let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, video), fontsStyle);
 // TODO: eto scenariy vipolneniya funktiy
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
 
-exports.fontsStyle = fontsStyle;
-exports.fonts = fonts;
-exports.images = images;
+
+
 exports.js = js;
 exports.css = css;
 exports.html = html;
+exports.fonts = fonts;
+exports.video = video;
+exports.images = images;
+exports.fontsStyle = fontsStyle;
 exports.build = build;
 exports.watch = watch;
 exports.default = watch;

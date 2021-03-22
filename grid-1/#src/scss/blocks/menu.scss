@@ -1,0 +1,41 @@
+$text-color: #707070;
+
+.menu {
+  list-style: none;
+  
+
+  li~li {
+    margin-left: 35px;
+  }
+
+  a {
+    display: inline-block;
+    font-family: 'Raleway';
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 1.67;
+    color: $text-color;
+    text-decoration: none;
+    transition-duration: 500ms;
+    transition-property: color;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 2px;
+      background-color: $second;
+      margin-bottom: 2px;
+      opacity: 0;
+      transition-duration: 500ms;
+      transition-property: opacity;
+    }
+
+    &:hover {
+      color: $second;
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -11,8 +11,9 @@
 
 @import "fonts";
 @import "normalize";
-@import "variables";
-@import "mixins";
+@import "mixins/vars";
+@import "mixins/mixins";
 @import "core";
 @import "blocks/header";
+@import "blocks/menu";
 
