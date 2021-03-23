@@ -193,7 +193,7 @@ gulp.task('otf2ttf', function () {
 })
 
 gulp.task('svgSprite', function () {
-  return gulp.src([source_folder + '/iconsprite/*.svg'])
+  return gulp.src([source_folder + '/img/svg/*.svg'])
     .pipe(svgSprite({
       mode: {
         stack: {
