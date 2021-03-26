@@ -50,10 +50,11 @@ modalCart.addEventListener('click', function (event) {
 	}
 }
 
+
 //goods
 
 const more = document.querySelector('.more');
-const navigationItem = document.querySelectorAll('.navigation-item');
+const navigationLink = document.querySelectorAll('.navigation-link');
 const longGoodsList = document.querySelector('.long-goods-list');
 
 const getGoods = async function () {
@@ -68,18 +69,23 @@ const getGoods = async function () {
 // 	console.log(data);
 // });
 
-const creatCard = function (objCard) {
+const createCard = function ({ label, name, img, description, id, price }) {
 	const card = document.createElement('div');
 	card.className = 'col-lg-3 col-sm-6';
 
+	// const { label, name, img, description, id, price } = objCard;
+
+	// label == objCard.label
 	card.innerHTML = `
-		<div class = "goods-card" >
-			<span class = "label" > New < /span>
-			<img src = "img/image-119.jpg" alt = "image: Hoodie" class = "goods-image" >
-			<h3 class = "goods-title" > Embroidered Hoodie < /h3>
-			<p class = "goods-description" >${objCard.description}< /p>
-			<button class = "button goods-card-btn add-to-cart" data - id = "012" >
-			<span class = "button-price" > $89 < /span>
+		<div class="goods-card">
+		${label ?
+			 `<span class="label">${label}</span>` : ''}
+			
+			<img src="db/${img}" alt = "${name}" class="goods-image">
+			<h3 class="goods-title"> ${name} </h3>
+			<p class="goods-description">${description}</p>
+			<button class="button goods-card-btn add-to-cart" data-id ="${id}">
+			<span class="button-price"> $ ${price} </span>
 			</button> 
 		</div>
     `;
@@ -88,48 +94,38 @@ const creatCard = function (objCard) {
 
 const renderCards = function (data) {
 	longGoodsList.textContent = '';
-	console.log(data);
+
 	const cards = data.map(createCard);
 	// cards.forEach(function(card) {
 	// 	longGoodsList.append(card)
 	// })
-	// longGoodsList.append(...cards)
-	console.log(cards);
-	document.body.classList.add('show-goods')
+	longGoodsList.append(...cards); // spred operators 
+
+	document.body.classList.add('show-goods');
 };
 
-// renderCards();
-// getGoods().then(renderCards);
+more.addEventListener('click', function (event) {
+	event.preventDefault();
+	getGoods().then(renderCards);
+});
 
+const filterCards = function (field, value) {
+	getGoods().then(function (data) {
+			const filterGoods = data.filter(function (good) {
+				return good[field] === value
+			});
+			return filterGoods;
+		})
+		.then(renderCards);
+};
 
-const arrM = [{"id": "003",
-		"img": "img/61SVZdHi1SL.jpg",
-		"name": "TOMS Women's Alpargata Loafer",
-		"label": "Bestseller",
-		"description": "Red",
-		"price": "219",
-		"category": "Shoes",
-		"gender": "Womens"
-	},
-	{
-		"id": "003",
-		"img": "img/61SVZdHi1SL.jpg",
-		"name": "TOMS Women's Alpargata Loafer",
-		"label": "Bestseller",
-		"description": "Red",
-		"price": "219",
-		"category": "Shoes",
-		"gender": "Womens"
-	},
-	{
-		"id": "003",
-		"img": "img/61SVZdHi1SL.jpg",
-		"name": "TOMS Women's Alpargata Loafer",
-		"label": "Bestseller",
-		"description": "Red",
-		"price": "219",
-		"category": "Shoes",
-		"gender": "Womens"
-	}];
-
-renderCards(arrM);
+navigationLink.forEach(function(link) {
+	link.addEventListener('click', function(event){
+		event.preventDefault();
+		const field = link.dataset.field;
+		const value = link.textContent;
+		console.log(field);
+		console.log(value);
+		filterCards(field, value);
+	})
+})
