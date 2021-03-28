@@ -1,0 +1,209 @@
+$bg: #202020;
+$lineColor: #2f2f2f;
+$worksText: #464646;
+$descriptionColr: #959595;
+
+.works {
+  background-color: $bg;
+
+  &__title-hide {
+    @include visually-hidden;
+  }
+
+  &__list {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(60px, auto));
+    grid-auto-rows: minmax(270px, auto);
+
+  }
+
+  li {
+    position: relative;
+
+    &:first-child {
+      max-width: 270px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(17, 17, 17, 0.85);
+      z-index: -1;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 500ms;
+    }
+
+    &:hover {
+      &::before {
+        z-index: 1;
+        opacity: 1;
+      }
+
+      .works__info {
+        border-color: $second;
+        z-index: 2;
+        opacity: 1;
+      }
+    }
+
+    &:nth-child(2) {
+      background: url('/img/img1.webp') center no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(3) {
+      background: url('/img/img2.webp') center no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(4) {
+      background: url('/img/img3.webp') center no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(5) {
+      background: url('/img/img4.webp') center no-repeat;
+      background-size: cover;
+    }
+
+    &:nth-child(6) {
+      background: url('/img/img5.webp') center no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  &__element--three {
+    grid-column: span 3;
+  }
+
+  &__element--four {
+    grid-column: span 4;
+  }
+
+  &__element--five {
+    grid-column: span 5;
+  }
+
+  &__element--six {
+    grid-column: span 6;
+  }
+
+  &__title {
+    position: relative;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+    color: $white;
+    margin: 25px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -25px;
+      width: 70px;
+      height: 2px;
+      background-color: $lineColor;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: $worksText;
+    margin: 20px 0;
+  }
+
+  &__info {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: solid 5px transparent;
+    box-sizing: border-box;
+    padding: 10px 25px 80px;
+    z-index: -1;
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, border-color;
+  }
+
+  &__name {
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $white;
+    margin: 20px 0;
+  }
+
+  &__btn {
+    display: flex;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 1.67;
+    text-transform: uppercase;
+    color: $descriptionColr;
+    margin: 20px 0;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      z-index: 200;
+      margin-top: 20px;
+      background-color: $second;
+    }
+  }
+
+  &__zoom,
+  &__link {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+    background-color: $primary;
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    margin: 0 2px;
+    padding: 0;
+    border: none;
+    appearance: none;
+    transition-property: background-color;
+    transition-duration: 500ms;
+
+    &:hover, &:active {
+      background-color: $second;
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      fill: $white;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
