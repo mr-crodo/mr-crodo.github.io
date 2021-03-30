@@ -192,7 +192,8 @@ $descriptionColr: #959595;
     transition-property: background-color;
     transition-duration: 500ms;
 
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background-color: $second;
     }
 
@@ -204,6 +205,59 @@ $descriptionColr: #959595;
       fill: $white;
       width: 15px;
       height: 15px;
+    }
+  }
+
+  &__element--active {
+    &::before {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    .works__info {
+      border-color: $second;
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .works {
+    &__title {
+      font-size: 24px;
+    }
+
+    &__name {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .works {
+    &__list {
+      grid-template-columns: repeat(2, minmax(145px, auto));
+    }
+
+    li {
+      grid-column: span 1;
+
+      &:first-child {
+        grid-column: 1 / -1;
+        max-width: 100%;
+      }
+
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .works {
+    &__list {
+      grid-template-columns: minmax(290px, auto);
+      padding-top: 40px;
+      padding-bottom: 80px;
     }
   }
 }

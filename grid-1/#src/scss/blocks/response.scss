@@ -1,0 +1,80 @@
+.responsive {
+  &__wrap {
+    padding-top: 100px;
+    padding-bottom: 10px;
+    background: url('../img/bg-two.png') left bottom no-repeat;
+  }
+
+  &__information {
+    max-width: 360px;
+    margin-left: auto;
+  }
+
+  &__title {
+    position: relative;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.1;
+    color: $white;
+    margin: 20px 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 70px;
+      height: 2px;
+      left: 0;
+      top: -20px;
+      background-color: $lineColor;
+    }
+  }
+
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: $worksText;
+    margin: 20px 0;
+  }
+
+  &__list {
+    margin: 20px 0;
+  }
+
+  &__button {
+    @include button($thirty) {
+      margin-top: 50px;
+    }
+
+    ;
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive {
+    &__wrap {
+      background-image: none;
+    }
+
+    &__information {
+      left: 0;
+      max-width: 100%;
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .responsive {
+    &__wrap {
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__information {
+      left: 0;
+      max-width: 100%;
+    }
+  }
+}

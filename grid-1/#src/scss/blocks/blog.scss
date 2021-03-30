@@ -1,0 +1,243 @@
+$lineColor: #2f2f2f;
+
+.blog {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, minmax(130px, auto));
+    list-style: none;
+    padding-top: 115px;
+    padding-bottom: 130px;
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(17, 17, 17, 0.1), #25252585);
+        transition-duration: 500ms;
+        transition-property: background-color;
+      }
+
+      &:nth-child(1) {
+        background: url('../img/img6.jpg') center no-repeat;
+        background-size: cover;
+        grid-row: 1 / 4;
+
+        .blog__title {
+          font-size: 30px;
+        }
+      }
+
+      &:nth-child(2) {
+        grid-row: 1 / 3;
+
+        &::before {
+          display: none;
+        }
+
+        .blog__title {
+          position: relative;
+          margin: 20px 0;
+          font-size: 30px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -30px;
+            width: 70px;
+            height: 2px;
+            background-color: $lineColor;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        background: url('../img/img7.jpg') center no-repeat;
+        background-size: cover;
+        grid-row: 4 / 6;
+      }
+
+      &:nth-child(4) {
+        background: url('../img/img8.jpg') center no-repeat;
+        background-size: cover;
+        grid-row: 4 / 6;
+      }
+
+      &:nth-child(5) {
+        background: url('../img/img9.jpg') center no-repeat;
+        background-size: cover;
+        grid-row: 3 / 6;
+      }
+
+      &:hover {
+        &::before {
+          background-image: linear-gradient(to top, rgba(17, 17, 17, 0.6), #252525);
+        }
+
+        .blog__info {
+          border-color: $second;
+        }
+
+        .blog__link {
+          background-color: $second;
+        }
+      }
+    }
+  }
+
+
+  &__element-three {
+    grid-column: span 3;
+  }
+
+  &__element-four {
+    grid-column: span 4;
+  }
+
+  &__element-five {
+    grid-column: span 5;
+  }
+
+  &__element-eight {
+    grid-column: span 8;
+  }
+
+
+  &__text {
+    font-size: 14px;
+    line-height: 1.43;
+    color: $worksText;
+  }
+
+  &__title {
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    color: $white;
+    text-transform: uppercase;
+    margin: 20px 0;
+    text-decoration: none;
+  }
+
+  &__description {
+    font-size: 12px;
+    line-height: 1.17;
+    color: $listColor;
+    text-transform: uppercase;
+
+
+    &::after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 2px;
+      margin-top: 25px;
+      background-color: $second;
+    }
+
+    span {
+      color: $white;
+    }
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    width: 41px;
+    height: 41px;
+    background-color: $black;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    outline: none;
+    transition-duration: 500ms;
+    transition-property: background-color;
+
+    &:focus {
+      background-color: $second;
+    }
+
+    svg {
+      fill: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 21px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 2;
+    padding: 10px 25px;
+    height: 100%;
+    border: 5px solid transparent;
+    transition-duration: 500ms;
+    transition-property: border-color;
+  }
+
+}
+
+@media (max-width: 980px) {
+  .blog {
+    &__list {
+      li {
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          .blog__title {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .blog {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+
+      li {
+        grid-column: span 1;
+        grid-row: span 1 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .blog {
+    &__list {
+      grid-template-columns: minmax(290px, auto);
+      padding-top: 55px;
+      padding-bottom: 76px;
+
+      li {
+        &:nth-child(2) {
+          grid-row: 1 / 2 !important;
+        }
+      }
+    }
+
+  }
+}
