@@ -6,3 +6,4 @@
 
 * Если вы хотите рекурсивно удалить:
 * rimraf .\**\node_modules
+<!-- npm run public -- public build site for surge.sh -->
