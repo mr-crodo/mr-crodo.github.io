@@ -54,6 +54,7 @@ let {
   svgSprite = require('gulp-svg-sprite'), // gulp-svg-sprite
   ttf2woff = require('gulp-ttf2woff'),
   ttf2woff2 = require('gulp-ttf2woff2'),
+  // surge = require('gulp-surge'),
   fonter = require('gulp-fonter');
 
 const concat = require('gulp-concat');
@@ -210,6 +211,12 @@ gulp.task('svgSprite', function () {
 })
 
 // *****************************
+// gulp.task('publicWeb', [], function () {
+//   return surge({
+//     project: './build', // Path to your static build directory
+//     domain: 'crodo-grid.surge.sh' // Your domain or Surge subdomain
+//   });
+// });
 // TODO: sozdaem tut funkciyu ctobu podklycit ix k stilam
 
 function fontsStyle(params) {

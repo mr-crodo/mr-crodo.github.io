@@ -34,9 +34,7 @@
     "jquery": "^3.5.1",
     "lazysizes": "^5.2.2",
     "npm-check-updates": "^7.0.2",
+    "surge": "^0.22.1",
     "webp-converter": "^2.2.3"
-  },
-  "dependencies": {
-    "surge": "^0.21.7"
   }
 }
