@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
   // todo: Tabs
-  const 
+  const
     tabs = document.querySelectorAll('.tabheader__item'),
     tabsContent = document.querySelectorAll('.tabcontent'),
     tabsParent = document.querySelector('.tabheader__items');
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
   tabsParent.addEventListener('click', (event) => {
     const target = event.target;
 
-    if(target && target.classList.contains('tabheader__item')) {
+    if (target && target.classList.contains('tabheader__item')) {
       tabs.forEach((item, i) => {
         if (target == item) {
           hideTabContent();
@@ -56,7 +56,7 @@ window.addEventListener('DOMContentLoaded', () => {
       'hours': hours,
       'minutes': minutes,
       'seconds': seconds
-      };
+    };
   }
 
   function getZero(num) {
@@ -64,18 +64,18 @@ window.addEventListener('DOMContentLoaded', () => {
     if (num >= 0 && num < 10) {
       return `0${num}`;
     } else {
-        return num;
-      }
+      return num;
+    }
   }
 
   function setClock(selector, endtime) {
     const
-        timer = document.querySelector(selector),
-        days = timer.querySelector('#days'),
-        hours = timer.querySelector('#hours'),
-        minutes = timer.querySelector('#minutes'),
-        seconds = timer.querySelector('#seconds'),
-        timeInterval = setInterval(updateClock, 1000);
+      timer = document.querySelector(selector),
+      days = timer.querySelector('#days'),
+      hours = timer.querySelector('#hours'),
+      minutes = timer.querySelector('#minutes'),
+      seconds = timer.querySelector('#seconds'),
+      timeInterval = setInterval(updateClock, 1000);
 
     updateClock(); // dla toqo ctobi ne morqala stranica srazu zapuskaem funkciyu
 
@@ -94,5 +94,57 @@ window.addEventListener('DOMContentLoaded', () => {
   }
 
   setClock('.timer', deadLine);
+
+
+  //todo: Modal
+  const
+    modalTriger = document.querySelectorAll('[data-modal]'),
+    modal = document.querySelector('.modal'),
+    modalCloseBtn = document.querySelector('[data-modal-close]');
+
+
+  function openModal() {
+    // modal.classList.add('show');
+    // modal.classList.remove('hide');
+    modal.classList.toggle('show');
+    document.body.style.overflow = 'hidden';
+    clearInterval(modalTimerId);
+  }
+
+  function closeModal() {
+    // modal.classList.add('hide');
+    // modal.classList.remove('show');
+    modal.classList.toggle('show');
+    document.body.style.overflow = '';
+  }
+
+  modalTriger.forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  modalCloseBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Escape' && modal.classList.contains('show')) {
+      closeModal();
+    }
+  });
+
+  const modalTimerId = setTimeout(openModal, 6000);
+
+  function showModalByScroll() {
+    if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
+      openModal();
+      window.removeEventListener('scroll', showModalByScroll);
+    }
+  }
+
+  window.addEventListener('scroll', showModalByScroll);
 
 });
