@@ -1,0 +1,33 @@
+/**
+ * Основные стили
+ **/
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: 'Mulish', sans-serif;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+}
+
+button,
+a,
+input {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	outline: none;
+}
+
+.container {
+	@include min-max(320px, 100%, 0);
+	// background-color: $primary;
+}
+
+.wrap {
+	@include min-max(320px, 1200px, 15px);
+}

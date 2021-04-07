@@ -1,0 +1,35 @@
+.input-group {
+  display: flex;
+   align-items: center;
+  justify-content: space-between;
+  background-color: $search-bg;
+  border-radius: 22px;
+  padding-right: 17px;
+  max-width: 830px;
+width: 50%; 
+}
+
+.input-search {
+  background-color: transparent;
+  border: none;
+  padding: 12px 23px;
+  width: 100%;
+}
+
+.button-search {
+  width: 19px;
+  height: 19px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+}
+
+.icon-search {
+  fill: $black;
+}

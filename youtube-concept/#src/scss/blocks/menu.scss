@@ -1,0 +1,24 @@
+.container-fluid {
+  background-color: rgba(144, 231, 144, 0.933);
+}
+
+.menu-button {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: $white;
+  width: 20px;
+  height: 17px;
+  border: none;
+  margin-right: 28px;
+  cursor: pointer;
+}
+
+.menu-line {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: $burger-m;
+  border-radius: 20px;
+}
