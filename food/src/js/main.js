@@ -177,15 +177,15 @@
         }
 
         element.innerHTML = `
-        <img src=${this.src} alt=${this.alt}>
-        <h3 class="menu__item-subtitle">${this.title}</h3>
-        <div class="menu__item-descr">${this.descr}</div>
-        <div class="menu__item-divider"></div>
-        <div class="menu__item-price">
-            <div class="menu__item-cost">Цена:</div>
-            <div class="menu__item-total"><span>${this.price}</span> грн/день<div>
-        </div>
-    `;
+          <img src=${this.src} alt=${this.alt}>
+          <h3 class="menu__item-subtitle">${this.title}</h3>
+          <div class="menu__item-descr">${this.descr}</div>
+          <div class="menu__item-divider"></div>
+          <div class="menu__item-price">
+              <div class="menu__item-cost">Цена:</div>
+              <div class="menu__item-total"><span>${this.price}</span> грн/день<div>
+          </div>
+      `;
 
         this.parent.append(element);
       }
@@ -252,10 +252,17 @@
         const request = new XMLHttpRequest();
         request.open('POST', 'server.php');
 
-        // request.setRequestHeader('Content-type', 'multipart/form-data');
+        request.setRequestHeader('Content-type', 'application/json');
         const formData = new FormData(form);
 
-        request.send(formData);
+        const object = {};
+        formData.forEach(function (value, key) {
+          object[key] = value;
+        });
+
+        const json = JSON.stringify(object);
+
+        request.send(json);
 
         request.addEventListener('load', () => {
 
