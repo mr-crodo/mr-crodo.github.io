@@ -53,9 +53,10 @@ modalCart.addEventListener('click', function (event) {
 
 //goods
 
-const more = document.querySelector('.more');
-const navigationLink = document.querySelectorAll('.navigation-link');
+// const more = document.querySelector('.more');
+const navigationLink = document.querySelectorAll('.navigation-link:not(.view-all)');
 const longGoodsList = document.querySelector('.long-goods-list');
+const viewAll = document.querySelectorAll('.view-all');
 
 const getGoods = async function () {
 	const result = await fetch('db/db.json');
@@ -69,7 +70,14 @@ const getGoods = async function () {
 // 	console.log(data);
 // });
 
-const createCard = function ({ label, name, img, description, id, price }) {
+const createCard = function ({
+	label,
+	name,
+	img,
+	description,
+	id,
+	price
+}) {
 	const card = document.createElement('div');
 	card.className = 'col-lg-3 col-sm-6';
 
@@ -104,10 +112,15 @@ const renderCards = function (data) {
 	document.body.classList.add('show-goods');
 };
 
-more.addEventListener('click', function (event) {
+const showAll = function(event) {
 	event.preventDefault();
 	getGoods().then(renderCards);
+}
+
+viewAll.forEach(function (elem) {
+	elem.addEventListener('click', showAll);
 });
+
 
 const filterCards = function (field, value) {
 	getGoods().then(function (data) {
@@ -119,13 +132,11 @@ const filterCards = function (field, value) {
 		.then(renderCards);
 };
 
-navigationLink.forEach(function(link) {
-	link.addEventListener('click', function(event){
+navigationLink.forEach(function (link) {
+	link.addEventListener('click', function (event) {
 		event.preventDefault();
 		const field = link.dataset.field;
 		const value = link.textContent;
-		console.log(field);
-		console.log(value);
 		filterCards(field, value);
-	})
-})
+	});
+});

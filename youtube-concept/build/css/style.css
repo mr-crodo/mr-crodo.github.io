@@ -583,6 +583,7 @@ input {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px 55px 20px 17px;
+  margin-bottom: 30px;
 }
 
 .header .logo {
@@ -691,4 +692,9 @@ input {
 
 .icon-search {
   fill: #000;
+}
+
+.nav {
+  margin-top: 0;
+  margin-bottom: 60px;
 }
