@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/taxi/taxi/assets/css/normalize.css">
+  <link rel="stylesheet" href="/taxi/taxi/assets/css/slick.css">
+  <link rel="stylesheet" href="/taxi/taxi/assets/css/slick-theme.css">
+  <link rel="stylesheet" href="/taxi/taxi/assets/css/css/style.css">
+  <title>My Taxi</title>
+</head>
+
+<body>
+
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header-top">
+        <div class="logo">
+          <a href="/" class="logo-a-image">
+            <svg width="35" height="35" class=header-icon>
+              <use xlink:href="/taxi/assets/svg/icons.svg#taxi"></use>
+            </svg>
+
+            <p class="logo-span"><span>My</span> Taxi</p>
+          </a>
+          <!-- /.logo-a-image -->
+
+        </div>
+        <!-- /.logo -->
+
+
+        <div class="h3-menu none">
+          <h3>Menu</h3>
+        </div>
+
+
+        <div class="m-menu">
+
+
+
+          <div class="navigation">
+            <ul class="main-ul">
+              <li><a class="navigation-link-clients" href="#">For clients
+                  <svg width="10" height="10" class=down-icon>
+                    <use xlink:href="/taxi/assets/svg/icons.svg#down"></use>
+                  </svg>
+                </a>
+                <ul id="tuktuk" class="for-clients">
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                  <li><a class="sub-menu-li-clients" href="#">For clients</a></li>
+                </ul>
+              </li>
+              <li><a class="navigation-link-partners" href="#">For partners
+                  <svg width="10" height="10" class=down-icon>
+                    <use xlink:href="/taxi/assets/svg/icons.svg#down"></use>
+                  </svg>
+                </a>
+                <ul class="for-partners">
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                  <li><a class="sub-menu-li-partners" href="#">For partners</a></li>
+                </ul>
+              </li>
+              <li><a class="navigation-link telfon" href="tel:89022881056"> 8-902-288-10-56</a></li>
+            </ul>
+
+
+          </div>
+          <!-- /.navigation -->
+        </div>
+
+        <!-- ! burger -->
+        <div class="mobile-buttons">
+          <div class="menu-icon-wrapper m-menu-button active">
+            <div class="menu-icon"></div>
+          </div>
+        </div>
+        <!-- !burger-menu -->
+
+
+      </div>
+      <!-- /.header-top -->
+      <div class="header-main">
+
+
+        <div class="description">
+          <div class="left-description eng-xy">
+            <p class="description-p-xy"><span>Subscribe</span></p>
+            <!-- /.description-p-xy -->
+          </div>
+          <div class="center-description">
+            <h1 class="header-h1">
+              Book a transfer online
+            </h1>
+            <!-- /.header-h1 -->
+            <p class="header-p">Safe and comfortable travel<br> with a professional volunteer</p>
+          </div>
+          <!-- /.center-description -->
+        </div>
+        <!-- /.main-description -->
+
+        <div class="header-button">
+          <div class="social-left">
+            <a href="#" class="social-left-link">
+              <svg width="15" height="15" class=vk-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#vk-cir"></use>
+              </svg>
+            </a>
+            <!-- /.social-left-link -->
+            <a href="#" class="social-left-link">
+              <svg width="15" height="15" class=facebook-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#facebook-cir"></use>
+              </svg>
+
+            </a>
+            <!-- /.social-left-link -->
+            <a href="#" class="social-left-link">
+              <svg width="15" height="15" class=twitter-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#twitter-cir"></use>
+              </svg>
+            </a>
+            <!-- /.social-left-link -->
+          </div>
+          <!-- /.social-left -->
+          <div class="lang-right">
+            <a href="/taxi/english.html" class="link-lang active-lang">En</a>
+            <!-- /.link-lang -->
+            <a href="/taxi/index.html" class="link-lang">Ru</a>
+            <!-- /.link-lang -->
+          </div>
+          <!-- /.lang-right -->
+        </div>
+        <!-- /.header-button -->
+
+        <section class="wrapper">
+          <form class="form-search">
+            <div class="wrapper__search">
+              <div class="input" style="display: block;">
+                <label>
+                  <p class="input-text-data">From where</p>
+                  <input type="text" class="input__cities-from" required placeholder="Airport, city, station">
+                </label>
+                <ul class="dropdown dropdown__cities-from">
+
+                </ul>
+              </div>
+              <div class="transfer">
+                <svg width="15" height="15" class=transfer-cir>
+                  <use xlink:href="/taxi/assets/svg/icons.svg#transfer"></use>
+                </svg>
+              </div>
+              <div class="input">
+                <label>
+                  <p class="input-text-data">Where</p>
+                  <input type="text" class="input__cities-to" required placeholder="Airport, city, station">
+                </label>
+                <ul class="dropdown dropdown__cities-to">
+
+                </ul>
+              </div>
+
+              <div class="input input__cities-from">
+                <label>
+                  <p class="input-text-data">Date</p>
+                  <input type="text" class="input__date-depart" placeholder="15/08/2019" required>
+                </label>
+              </div>
+            </div>
+
+            <div class="wrapper__button">
+              <button type="submit" class="button button__search">
+                <span class="button__search-text">Find</span>
+
+              </button>
+            </div>
+          </form>
+        </section>
+        <!-- /.header-data -->
+
+      </div>
+      <!-- /.header-main -->
+    </div>
+    <!-- /.container -->
+  </header>
+  <!-- /.header -->
+
+
+  <main class="main">
+    <div class="container-m">
+      <div class="reviews ">
+        <div class="reviews-h2">
+          <h2>Reviews</h2>
+        </div>
+        <!-- /.reviews-h2 -->
+
+        <!-- !!!!!!!!!!!!!!!! -->
+        <!-- ! Slider -->
+        <!-- ! Slider -->
+        <div class="slick">
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+
+          <div class="slick-block">
+            <div class="man-flex">
+              <div class="image-slick">
+                <div class="user-img">
+                  <img src="/taxi/assets/img/users/user1.png" alt="User" class="user-photo">
+                </div>
+                <!-- /.user-img -->
+                <div class="user-text">
+                  <p class="user-name">Michael</p>
+                </div>
+                <!-- /.user-name -->
+              </div>
+              <!-- /.image-slick -->
+              <div class="description-slick">
+                <h3 class="location-description">
+                  Phuket Airport - Karon
+                </h3>
+                <!-- /.location-description -->
+                <p class="date-slick">03.06.2018</p>
+                <!-- /.date-slick -->
+                <p class="reviews-description">
+                  We were very worried, because for the first time we flew with small years, but still dispersed when we
+                  met
+                  a driver with a sign, as it turned out, our fellow countryman! Thanks to Semyon and My Taxi company.
+                </p>
+                <!-- /.reviews-description -->
+
+                <div class="estimation">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                  <img src="/taxi/assets/img/slider-star/star.svg" alt="Star" width="20">
+                </div>
+                <!-- /.estimation -->
+
+              </div>
+              <!-- /.description-slick -->
+            </div>
+          </div>
+          <!-- /.slick-block -->
+
+
+        </div>
+        <!-- /.slider -->
+        <!-- ????????????????????????? -->
+
+
+
+
+        <div class="block-reviews">
+          <h2>Our advantages</h2>
+          <div class="advantage">
+            <div class="advantage-left">
+              <div class="advantage-left-top">
+                <div class="top-img">
+                  <img src="/taxi/assets/img/model/model1.png" alt="">
+                </div>
+                <div class="top-text">
+                  <h3>Experience</h3>
+                  <p>11 years on the market, more than 1,000,000 trips. The service is constantly being improved.</p>
+                </div>
+              </div>
+              <!-- /.advantage-left-top -->
+              <div class="advantage-left-down">
+                <div class="top-img">
+                  <img src="/taxi/assets/img/model/model2.png" alt="">
+                </div>
+                <div class="top-text">
+                  <h3>Cost</h3>
+                  <p>Prices are 5% -40% below market prices. Instant settlement.</p>
+                </div>
+              </div>
+              <!-- /.advantage-left-down -->
+            </div>
+            <!-- /.advantage-left -->
+            <div class="advantage-right">
+              <div class="right-top">
+                <div class="top-img">
+                  <img src="/taxi/assets/img/model/model3.png" alt="">
+                </div>
+                <div class="top-text">
+                  <h3>Support</h3>
+                  <p>In touch 24/7. Car delivery time on average 25 minutes.</p>
+                </div>
+              </div>
+              <!-- /.right-top -->
+              <div class="right-down">
+                <div class="top-img">
+                  <img src="/taxi/assets/img/model/model4.png" alt="">
+                </div>
+                <div class="top-text">
+                  <h3>Professionalism</h3>
+                  <p>Russian speaking drivers with over 10 years of experience. The qualification exam is passed twice a year.</p>
+                </div>
+              </div>
+              <!-- /.right-down -->
+            </div>
+            <!-- /.advantage-right -->
+          </div>
+          <!-- /.advantage -->
+
+        </div>
+        <!-- /.block-reviews -->
+      </div>
+      <!-- /.reviews -->
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="alfa-text">
+          <p class="">© 2008-2019, ООО «Alpha Alliance»</p>
+        </div>
+        <!-- /.alfa-text -->
+        <div class="tel-footer">
+          <a class="telfon" href="tel:89022881056"> 8-902-288-10-56</a>
+        </div>
+        <!-- /.tel-footer -->
+        <div class="navigation-footer">
+          <nav>
+            <a class="navigation-link-footer" href="#">For clients</a>
+            <a class="navigation-link-footer" href="#">For partners</a>
+          </nav>
+
+          <div class="social-link-footer">
+            <a href="#" class="social-left-link-footer">
+              <svg width="15" height="15" class=vk-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#vk-cir"></use>
+              </svg>
+            </a>
+            <!-- /.social-left-link -->
+            <a href="#" class="social-left-link-footer">
+              <svg width="15" height="15" class=facebook-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#facebook-cir"></use>
+              </svg>
+            </a>
+            <!-- /.social-left-link -->
+            <a href="#" class="social-left-link-footer">
+              <svg width="15" height="15" class=twitter-cir>
+                <use xlink:href="/taxi/assets/svg/icons.svg#twitter-cir"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <!-- /.navigation -->
+      </div>
+      <!-- /.footer-main -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
+
+
+  <!--! Подключаем JQuery -->
+  <script src="/taxi/assets/js/jquery-3.5.1.min.js"></script>
+  <!--! Подключаем слайдер SlickJS -->
+  <script src="/taxi/assets/js/slick.min.js"></script>
+ <!-- ! Vodkabears -->
+ <script src="/taxi/assets/js/jquery.vide.min.js"></script>
+  <!-- ! Подключаем файл скриптов -->
+  <script src="/taxi/assets/js/main.js"></script>
+</body>
+
+</html>
