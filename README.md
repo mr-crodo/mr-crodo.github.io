@@ -9,7 +9,7 @@
 ## Notes
 
 * Each folder is a separate site.
-* In order to see the site, you must enter the link `mr-crodo.github.io/{Folder}/` if suddenly the link does not open add to the end of the link `/build`
+* In order to see the site, you must enter the link `https://mr-crodo.github.io/{Folder}/` if suddenly the link does not open add to the end of the link `/build`
 * If the link does not open in this case, then the site is not yet ready 🤔
 * Some android devices play video, some not — go figure. So video for android is disabled, only fullscreen poster will be used.
 
