@@ -23,7 +23,7 @@
 - [Site Portfolio](https://mr-crodo.github.io/site1/)
 - [Site Yatunes](https://mr-crodo.github.io/itunes/)
 - [Search Movies Site](https://mr-crodo.github.io/netclics1/)
-- [Цebsite using a framework Bootstrap](https://mr-crodo.github.io/tinyone/)
+- [Website using a framework Bootstrap](https://mr-crodo.github.io/tinyone/)
 - [website using parallax effect](https://mr-crodo.github.io/parallax1/)
 - [Todo Application in JavaScript](https://mr-crodo.github.io/todo/)
 
