@@ -42,7 +42,7 @@ scor.src = "sounds/score.mp3";
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-  bY -= 30;
+  bY -= 25;
   fly.play();
 }
 
