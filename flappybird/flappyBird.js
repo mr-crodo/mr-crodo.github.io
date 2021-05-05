@@ -19,7 +19,7 @@ pipeSouth.src = "images/pipeSouth.png";
 
 // some letiables
 
-let gap = 105;
+let gap = 85;
 let constant;
 
 
@@ -94,7 +94,7 @@ function draw() {
 
   ctx.fillStyle = "#000";
   ctx.font = "20px Verdana";
-  ctx.fillText("Score : "+score,10,cvs.height-20);
+  ctx.fillText("Score : "+score,10,cvs.height-35);
 
   requestAnimationFrame(draw);
 }
