@@ -11,10 +11,10 @@ let
   pipeSouth = new Image();
 
 bird.src = "images/bird.png";
-bg.src = "images/bg-1.png";
-fg.src = "images/fbs-04.png";
-pipeNorth.src = "images/pipe3.png";
-pipeSouth.src = "images/pipe4.png";
+bg.src = "images/bg.png";
+fg.src = "images/fg.png";
+pipeNorth.src = "images/pipeNorth.png";
+pipeSouth.src = "images/pipeSouth.png";
 
 
 // some letiables
