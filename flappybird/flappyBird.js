@@ -19,7 +19,7 @@ pipeSouth.src = "images/pipeSouth.png";
 
 // some letiables
 
-let gap = 70;
+let gap = 95;
 let constant;
 
 
