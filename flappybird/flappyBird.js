@@ -19,7 +19,7 @@ pipeSouth.src = "images/pipeSouth.png";
 
 // some letiables
 
-let gap = 95;
+let gap = 105;
 let constant;
 
 
@@ -42,7 +42,7 @@ scor.src = "sounds/score.mp3";
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-  bY -= 25;
+  bY -= 30;
   fly.play();
 }
 
