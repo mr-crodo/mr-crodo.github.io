@@ -13,8 +13,8 @@ var mainState = {
 
     game.stage.backgroundColor = '#71c5cf';
 
-    game.load.image('bird', 'assets/kakashka/fly.png');
-    game.load.image('pipe', 'assets/image/fbs-24.png');
+    game.load.image('bird', 'assets/kakashka/osa.png');
+    game.load.image('pipe', 'assets/kakashka/flowers.png');
 
     // Load the jump sound
     game.load.audio('jump', 'assets/sound/bee.wav');
