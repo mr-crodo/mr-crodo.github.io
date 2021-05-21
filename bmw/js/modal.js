@@ -1,9 +1,10 @@
 //delegirovanie
-const moreElems = document.querySelectorAll('.more');
+const moreElems = document.querySelector('.more');
 const modalElem = document.querySelector('.modal');
 
 const openModal = () => {
   modalElem.classList.remove('hidden');
+  disableScroll();
 };
 
 const closeModal = () => {
@@ -19,6 +20,7 @@ modalElem.addEventListener('click', (event) => {
   if (target.classList.contains('overlay') ||
       target.classList.contains('modal__close')) {
         closeModal();
+        document.body.style.overflow = 'auto';
       } 
       
       // if (target.classList.contains('modal__title')) {

@@ -1,26 +1,27 @@
 const menuElem = document.querySelector('.menu');
 const humburgerMenu = document.querySelector('.humburger-menu');
-const body = document.querySelector('body');
 
 const toggleMenu = () => {
   menuElem.classList.toggle('menu-active');
   humburgerMenu.classList.toggle('humburger-menu-active');
+  disableScroll();
 
-  if (humburgerMenu.classList.contains('humburger-menu-active')) {
-    body.style.overflow = 'hidden';
-    humburgerMenu.classList.add('merko');
-  } else {
-    body.style.overflow = 'auto';
-  }
+  // if (humburgerMenu.classList.contains('humburger-menu-active')) {
+  //   document.body.style.overflow = 'hidden';
+  //   humburgerMenu.classList.add('merko');
+  // } else {
+  //   document.body.style.overflow = 'auto';
+  // }
 };
 
 const closeMenu = () => {
   menuElem.classList.remove('menu-active');
   humburgerMenu.classList.remove('humburger-menu-active');
+  enableScroll();
 
-  if(humburgerMenu.classList.contains('merko')) {
-    body.style.overflow = 'auto';
-  }
+  // if(humburgerMenu.classList.contains('merko')) {
+  //   document.body.style.overflow = 'auto';
+  // }
 };
 
   humburgerMenu.addEventListener('click', toggleMenu);
