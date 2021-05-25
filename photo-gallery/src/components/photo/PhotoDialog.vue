@@ -1,10 +1,32 @@
 <template>
-$END$
+  <v-dialog
+      transition="dialog-top-transition"
+      max-width="600"
+      v-model="$store.getters.getDialogVisible"
+      @click:outside="$store.commit('hideDialog')"
+  >
+    <v-card>
+      <v-card-title>{{ full_title }}</v-card-title>
+
+      <v-card-text>
+        <v-img
+            :src="$store.getters.getCurrentPhoto.url"
+        />
+      </v-card-text>
+    </v-card>
+
+  </v-dialog>
 </template>
 
 <script>
 export default {
-name: "PhotoDialog"
+
+  computed: {
+    full_title() {
+      return `Название фотографии - ${this.$store.getters.title}`
+    }
+  }
+
 }
 </script>
 
