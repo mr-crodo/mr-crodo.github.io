@@ -1,0 +1,8 @@
+/node_modules/
+/psd/
+/debug.log
+.idea/
+/.idea/
+/.vscode/
+.DS_Store
+/#src/
