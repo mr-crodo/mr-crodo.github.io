@@ -1,8 +1,6 @@
 @charset "UTF-8";
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;
-
-700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;  700;900&display=swap");
 /**
  * Основные стили
  **/
@@ -80,81 +78,8 @@ input {
   background: #1A75E8;
 }
 
-.container-fluid {
-  background-color: rgba(144, 231, 144, 0.933);
-}
-
-.menu-button {
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #fff;
-  width: 20px;
-  height: 17px;
-  border: none;
-  margin-right: 28px;
-  cursor: pointer;
-}
-
-.menu-line {
-  display: block;
-  width: 20px;
-  height: 3px;
-  background-color: #111238;
-  border-radius: 20px;
-}
-
-.input-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  background-color: #EBEBEB;
-  border-radius: 22px;
-  padding-right: 17px;
-  max-width: 830px;
-  width: 50%;
-}
-
-.input-search {
-  background-color: transparent;
-  border: none;
-  padding: 12px 23px;
+.main-image {
+  max-width: 545px;
   width: 100%;
-}
-
-.button-search {
-  width: 19px;
-  height: 19px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.icon {
-  width: 19px;
-  height: 19px;
-}
-
-.icon-search {
-  fill: #000;
-}
-
-.nav {
-  margin-top: 0;
-  margin-bottom: 60px;
+  height: 558px;
 }
