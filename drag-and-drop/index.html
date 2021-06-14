@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag & Drop | Проект 2</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div>
+      <div class="row">
+          <div class="col-header start">
+            <p>Начать</p>
+            <div>
+              <svg data-target="options1" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+            </div>
+            <div class="drag-options" id="options1"></div>
+          </div>
+          <div class="col-header progress">
+            <p>В процессе</p>
+            <div>
+              <svg data-target="options2" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+            </div>
+            <div class="drag-options" id="options2"></div>
+          </div>
+          <div class="col-header done">
+            <p>Готовы</p>
+            <div>
+              <svg data-target="options3" class="drag-header-more" fill="#FFFFFF" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"/</svg>
+            </div>
+            <div class="drag-options" id="options3"></div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="placeholder">
+
+          <div class="item" draggable="true">Перетащи меня</div>
+          <div class="item" draggable="true">Перетащи меня</div>
+        </div>
+        <div class="placeholder">
+
+        </div>
+        <div class="placeholder">
+
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
