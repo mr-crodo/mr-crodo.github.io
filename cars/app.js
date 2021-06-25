@@ -1,132 +1,247 @@
-const
-  score = document.querySelector('.score'),
-  start = document.querySelector('.start'),
+const HEIGHT_ELEM = 100;
+
+const score = document.querySelector('.score'),
+  scoreContainer = document.querySelector('.score_container'),
+  scoreRecord = document.querySelector('.score_record'),
+  startMenu = document.querySelector('.start__menu'),
+  startBtn = document.querySelector('.start'),
+  diffBtn = document.querySelectorAll('.difficulty__button'),
+  diffSelected = document.querySelector('.difficulty-selected'),
   gameArea = document.querySelector('.gameArea'),
+  recordModal = document.querySelector('.record_alert__wrapper'),
+  recordAlert = document.querySelector('.record_alert'),
+  closeBtn = document.querySelector('.close'),
   car = document.createElement('div');
+
+let JSONMaxScore;
+let maxScore;
+let currentMusic
+
+
+const music = [
+  './audio/let-me-die.mp3'
+]
+const audio = new Audio();
+audio.src = music[0]
+audio.volume = 0.1
 
 car.classList.add('car');
 
+startBtn.addEventListener('click', startGame);
+closeBtn.addEventListener('click', closeRecordModal);
+document.addEventListener('keydown', startRun);
+document.addEventListener('keyup', stopRun);
+
+
+diffBtn.forEach((item) => {
+  item.addEventListener('click', () => {
+    if (item.classList.contains('easy')) {
+      setting.speed = 3;
+      setting.traffic = 3.5;
+      diffSelected.textContent = 'Выбрана сложность: легкая'
+      diffBtn.forEach((item) => {
+        item.classList.remove('active')
+      })
+      item.classList.add('active')
+    } else if (item.classList.contains('medium')) {
+      setting.speed = 5;
+      setting.traffic = 3;
+      diffSelected.textContent = 'Выбрана сложность: средняя'
+      diffBtn.forEach((item) => {
+        item.classList.remove('active')
+      })
+      item.classList.add('active')
+    } else if (item.classList.contains('hard')) {
+      setting.speed = 7;
+      setting.traffic = 2.5;
+      diffSelected.textContent = 'Выбрана сложность: сложная'
+      diffBtn.forEach((item) => {
+        item.classList.remove('active')
+      })
+      item.classList.add('active')
+    };
+  });
+});
+
 const keys = {
   ArrowUp: false,
-  ArrowDown: false,
   ArrowRight: false,
-  ArrowLeft: false,
-}
+  ArrowDown: false,
+  ArrowLeft: false
+};
 
 const setting = {
   start: false,
   score: 0,
-  speed: 3,
+  speed: 5,
   traffic: 3
 };
 
-// sozdaem liniyi stolko skolko nado po razmeru ekrana
-function getQualityElements(heightElement) {
-  return document.documentElement.clientHeight / heightElement + 1;
+
+const enemyStyles = ['enemy1', 'enemy2', 'enemy3', 'enemy4', 'enemy5']
+
+
+function random(num) {
+  return Math.floor(Math.random() * num)
 }
 
-//  i dobavlaem eti liniyi v zapusk iqri
+function getQuantityElements(heightElement) {
+  return (gameArea.offsetHeight / heightElement) + 1
+};
+
 function startGame() {
-  start.classList.add('hide');
-  for (let i = 0; i < getQualityElements(100); i++) {
+  gameArea.style.minHeight = ''
+  gameArea.style.minHeight = Math.floor((document.documentElement.clientHeight - (scoreContainer.offsetHeight + 40)) / HEIGHT_ELEM) * HEIGHT_ELEM;
+
+  gameArea.innerHTML = '';
+  startMenu.classList.add('hide')
+  scoreContainer.classList.remove('hide');
+  gameArea.classList.remove('hide');
+
+  for (let i = 0; i < getQuantityElements(HEIGHT_ELEM); i++) {
     const line = document.createElement('div');
     line.classList.add('line');
-    line.style.top = (i * 100) + 'px';
-    line.y = (i * 100);
-    gameArea.appendChild(line);
-  }
+    line.style.top = (i * HEIGHT_ELEM) + 'px';
+    line.style.height = (HEIGHT_ELEM / 2) + 'px';
+    line.y = (i * HEIGHT_ELEM);
+    gameArea.append(line);
+  };
 
-  // ! 100 eto dlinna mawini
-  // sozdaem trafic na stranice v zavisimosti ot znaceniya trafika budet slojnee obyijat
-  for(let i = 0; i < getQualityElements(100 * setting.traffic); i++) {
-    const enemy = document.createElement('div')
+  for (let i = 0; i < getQuantityElements(HEIGHT_ELEM * setting.traffic); i++) {
+    const enemy = document.createElement('div');
     enemy.classList.add('enemy');
-    enemy.y = -100 * setting.traffic * (i * 1);
+    enemy.y = -HEIGHT_ELEM * setting.traffic * (i + 1);
     enemy.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
-    enemy.style.top = enemy.y + 'px'
-    enemy.style.background = `transparent url(../image/enemy.png) center/ cover no-repeat`
-    gameArea.appendChild(enemy);
-  }
+    enemy.style.top = enemy.y + 'px';
+    enemy.style.background = 'rgba(0, 0, 0, 0) url(./image/' + enemyStyles[random(enemyStyles.length)] + '.png) center / cover no-repeat';
+    gameArea.append(enemy);
+  };
 
+  setting.score = 0
   setting.start = true;
-  gameArea.appendChild(car)
+  gameArea.append(car);
+  car.style.left = ((gameArea.offsetWidth / 2) - (car.offsetWidth / 2)) + 'px';
+  car.style.top = 'auto'
+  car.style.bottom = '10px';
   setting.x = car.offsetLeft;
   setting.y = car.offsetTop;
+  audio.autoplay = true
+  audio.play()
+  // playMusic(0)
   requestAnimationFrame(playGame);
-}
-// !old version
-// start.onclick = function() {
-//   start.classList.add('hide');
-// }
+};
 
 function playGame() {
+  setting.score += setting.speed
+  score.innerHTML = 'SCORE<br> ' + setting.score
+  // if (localStorage.getItem('maxScore') !== null) {
+  //     scoreRecord.innerHTML = 'Record<br> ' + maxScore
+  // } else {
+  //     JSONMaxScore = JSON.stringify(setting.score)
+  // }
+  moveRoad();
+  moveEnemy();
   if (setting.start) {
-      moveRoad();
-      moveEnemy();
-    if (keys.ArrowLeft && setting.x > 0) {
-      setting.x -= setting.speed;
-      car.style.transform = 'rotate(-10deg)';
-    } else if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
-      setting.x += setting.speed
-      car.style.transform = 'rotate(10deg)';
-    } else {
-      car.style.transform = 'rotate(0deg)';
-    }
-
     if (keys.ArrowUp && setting.y > 0) {
-      setting.y -= setting.speed
-    }
-
+      setting.y -= 4
+    };
     if (keys.ArrowDown && setting.y < (gameArea.offsetHeight - car.offsetHeight)) {
-      setting.y += setting.speed
-    }
-
-    
+      setting.y += 4
+    };
+    if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
+      setting.x += 4
+    };
+    if (keys.ArrowLeft && setting.x > 0) {
+      setting.x -= 4
+    };
     car.style.left = setting.x + 'px';
     car.style.top = setting.y + 'px';
-
-
-    // eto nazivaetsa Rekursiya vizov samoqo seba
-    requestAnimationFrame(playGame)
+    requestAnimationFrame(playGame);
   }
-}
+};
 
 function startRun(event) {
-  event.preventDefault();
-  keys[event.key] = true;
-}
+  if (keys.hasOwnProperty(event.key)) {
+    event.preventDefault();
+    keys[event.key] = true
+  }
+};
 
 function stopRun(event) {
-  event.preventDefault();
-  keys[event.key] = false;
-}
+  if (keys.hasOwnProperty(event.key)) {
+    event.preventDefault();
+    keys[event.key] = false
+  }
+};
 
-function moveRoad () {
+function moveRoad() {
   let lines = document.querySelectorAll('.line')
   lines.forEach(function (line) {
-    line.y += setting.speed
+    line.y += setting.speed * 1.5;
     line.style.top = line.y + 'px';
-    if(line.y >= document.documentElement.clientHeight) {
-      line.y = -100;
+    if (line.y >= gameArea.offsetHeight) {
+      line.y = -HEIGHT_ELEM;
     }
-  })
-}
+  });
+};
 
 function moveEnemy() {
   let enemy = document.querySelectorAll('.enemy');
-  enemy.forEach(function(item){
+  enemy.forEach(function (item) {
+    let carRect = car.getBoundingClientRect();
+    let enemyRect = item.getBoundingClientRect();
+    if (carRect.top + 2 <= enemyRect.bottom - 2 &&
+      carRect.right - 5 >= enemyRect.left + 2 &&
+      carRect.left + 5 <= enemyRect.right - 2 &&
+      carRect.bottom - 2 >= enemyRect.top + 2) {
+      setting.start = false;
+
+      audio.pause();
+      audio.currentTime = 0;
+      audio.autoplay = false;
+
+      startMenu.classList.remove('hide');
+      setting.speed = 5;
+      setting.traffic = 3;
+      diffSelected.textContent = ''
+      diffBtn.forEach((item) => {
+        item.classList.remove('active')
+      })
+
+      // if (setting.score > maxScore) {
+      //     JSONMaxScore = JSON.stringify(setting.score)
+      //     localStorage.setItem('maxScore', JSONMaxScore)
+      //     openRecordModal()
+      // }
+    }
     item.y += setting.speed / 2;
     item.style.top = item.y + 'px';
-      if (item.y >= document.documentElement.clientHeight) {
-        item.y = -100 * setting.traffic;
-        item.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
-      }
+
+    if (item.y >= gameArea.offsetHeight) {
+      item.y = -HEIGHT_ELEM * setting.traffic;
+      item.style.left = Math.floor(Math.random() * (gameArea.offsetWidth - 50)) + 'px';
+      item.style.background = 'rgba(0, 0, 0, 0) url(./image/' + enemyStyles[random(enemyStyles.length)] + '.png) center / cover no-repeat';
+    }
   });
+};
+
+function openRecordModal() {
+  recordModal.classList.remove('hide')
+  recordAlert.innerHTML = 'Поздравляем!<br>Вы установили новый рекорд:<br>' + maxScore
 }
 
+function closeRecordModal() {
+  recordModal.classList.add('hide')
+}
 
-start.addEventListener('click', startGame);
-//? sobitiye dla obrabotki sobitiya n klaviature
-document.addEventListener('keydown', startRun)
-//? sobitie koqda otpuskaem knopku
-document.addEventListener('keyup', stopRun)
+// function playMusic(num) {
+//     currentMusic = num;
+//     audio.src = music[num];
+//     audio.play();
+//     audio.autoplay = true;
+//     currentMusic += 1;
+//     if(currentMusic > music.length) {
+//         currentMusic = 0
+//     }
+//     setTimeout(playMusic(currentMusic), audio.duration * 1000)
+// }
