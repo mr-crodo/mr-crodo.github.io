@@ -2,24 +2,32 @@ const
   headerCityButton = document.querySelector('.header__city-button'),
   subheaderCart = document.querySelector('.subheader__cart'),
   cartOverlay = document.querySelector('.cart-overlay');
+
 // obrazaem hash s substring
   let hash = location.hash.substring(1);
   
-
-
 // ternarniy operator
-headerCityButton.textContent = localStorage.getItem('lomoda-location') || 'Ваш город?';
-
+const updateLocation = () => {
+  headerCityButton.textContent =
+    localStorage.getItem('lomoda-location') || 'Ваш город?';
+}
+updateLocation
 headerCityButton.addEventListener('click', () => {
-  const city = prompt('Укажите ваш город');
-  headerCityButton.textContent = city;
+  const city = prompt('Укажите ваш город').trim();
+  if (city !== null){
   localStorage.setItem('lomoda-location', city)
+  }
+  updateLocation();
 });
+updateLocation();
 
 // ! no scroll
 // ? dla toqo ctobi scroll ne priqal
 const disableScroll = () => {
+  if(document.disableScroll) return;
+
   const widthScroll = window.innerWidth - document.body.offsetWidth
+  document.disableScroll = true;
   document.body.dbScrollY = window.scrollY;
   document.body.style.cssText = `
     position: fixed;
@@ -32,6 +40,7 @@ const disableScroll = () => {
   `;
 };
 const enableScroll = () => {
+  document.disableScroll = false;
   document.body.style.cssText = '';
   window.scroll({
     top: document.body.dbScrollY
@@ -156,7 +165,8 @@ try {
 
   const renderGoodsList = data => {
     goodsList.textContent = '';
-    
+    const arr = data.map(createCard)
+    goodsList.append(...arr)
     // for (let i =0; i < data.length; i++) {
     //   console.log('for',data[i]);
     // }
@@ -165,21 +175,24 @@ try {
     //   console.log('for of', item);
     // }
 
-    data.forEach((item) => {
-      const card = createCard(item);
-      goodsList.append(card)
-    })
+    // data.forEach((item) => {
+    //   const card = createCard(item);
+    //   goodsList.append(card)
+    // })
   };
 
+      const goodsTitle = document.querySelector('.goods__title');
+      const changeTitle = () => {
+        goodsTitle.textContent = document.querySelector(`[href*="#${hash}"]`).textContent;
+      };
+
   window.addEventListener('hashchange', () => {
-    const goodsTitle = document.querySelector('.goods__title');
     hash = location.hash.substring(1)
-    if()
-      goodsTitle.innerHTML = `
-      <span class="goods__title">${hash}</span>
-      `
     getGoods(renderGoodsList, hash)
-  })
+     changeTitle();
+  });
+
+   changeTitle();
 // !peredaem hash
   getGoods(renderGoodsList, hash);
 } catch (err) {
