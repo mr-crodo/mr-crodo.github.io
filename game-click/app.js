@@ -110,7 +110,6 @@ function createRandomCurcle() {
 
 function getRandomNumber(min, max) {
   return Math.round(Math.random() * (max - min) + min)
-
 }
 
 // !hack the game

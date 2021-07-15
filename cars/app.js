@@ -134,6 +134,7 @@ function startGame() {
 function playGame() {
   setting.score += setting.speed
   score.innerHTML = 'SCORE<br> ' + setting.score
+  car.style.transition = 'transform .15s ease';
   // if (localStorage.getItem('maxScore') !== null) {
   //     scoreRecord.innerHTML = 'Record<br> ' + maxScore
   // } else {
@@ -142,18 +143,28 @@ function playGame() {
   moveRoad();
   moveEnemy();
   if (setting.start) {
+    if (keys.ArrowLeft && setting.x > 0) {
+      setting.x -= 4 //setting.speed;
+      car.style.transform = 'rotate(-10deg)';
+    } else if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
+      setting.x += 4 //setting.speed
+      car.style.transform = 'rotate(10deg)';
+    } else {
+      car.style.transform = 'rotate(0deg)';
+    }
+    // 2222222
     if (keys.ArrowUp && setting.y > 0) {
       setting.y -= 4
     };
     if (keys.ArrowDown && setting.y < (gameArea.offsetHeight - car.offsetHeight)) {
       setting.y += 4
     };
-    if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
-      setting.x += 4
-    };
-    if (keys.ArrowLeft && setting.x > 0) {
-      setting.x -= 4
-    };
+    // if (keys.ArrowRight && setting.x < (gameArea.offsetWidth - car.offsetWidth)) {
+    //   setting.x += 4
+    // };
+    // if (keys.ArrowLeft && setting.x > 0) {
+    //   setting.x -= 4
+    // };
     car.style.left = setting.x + 'px';
     car.style.top = setting.y + 'px';
     requestAnimationFrame(playGame);
