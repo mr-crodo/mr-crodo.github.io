@@ -1,17 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.5" height="15" viewBox="0 0 8.5 15">
-
-<defs>
-    <style>
-      .cls-1 {
-        fill-rule: evenodd;
-        filter: url(#filter);
-      }
-    </style>
-    <filter id="filter" x="384" y="4441.53" width="8.5" height="15" filterUnits="userSpaceOnUse">
-      <feFlood result="flood" flood-color="#464646"/>
-      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
-      <feBlend result="blend" in2="SourceGraphic"/>
-    </filter>
-  </defs>
-  <path id="arrow" class="cls-1" d="M384.293,4449.75l6.411,6.45a1.045,1.045,0,0,0,1.476-1.48l-5.672-5.71,5.672-5.7a1.06,1.06,0,0,0,0-1.49,1.039,1.039,0,0,0-1.476,0l-6.411,6.45A1.048,1.048,0,0,0,384.293,4449.75Z" transform="translate(-384 -4441.53)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.5" height="15" viewBox="0 0 8.5 15"><defs><style>.cls-1{fill-rule:evenodd;filter:url(#filter)}</style><filter id="filter" width="8.5" height="15" x="384" y="4441.53" filterUnits="userSpaceOnUse"><feFlood flood-color="#464646" result="flood"/><feComposite in2="SourceGraphic" operator="in" result="composite"/><feBlend in2="SourceGraphic" result="blend"/></filter></defs><path id="arrow" d="M384.293,4449.75l6.411,6.45a1.045,1.045,0,0,0,1.476-1.48l-5.672-5.71,5.672-5.7a1.06,1.06,0,0,0,0-1.49,1.039,1.039,0,0,0-1.476,0l-6.411,6.45A1.048,1.048,0,0,0,384.293,4449.75Z" class="cls-1" transform="translate(-384 -4441.53)"/></svg>
